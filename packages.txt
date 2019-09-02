@@ -1,7 +1,7 @@
-git
-make
 apt-transport-https
 ca-certificates
 curl
+git
 gnupg-agent
+make
 software-properties-common
