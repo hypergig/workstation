@@ -1,0 +1,19 @@
+[user]
+	name = Jordan Cohen
+	email = hypergig@gmail.com
+
+[merge]
+tool = sublimerge
+
+[mergetool "sublimerge"]
+cmd = subl -n --wait \"$REMOTE\" \"$BASE\" \"$LOCAL\" \"$MERGED\" --command \"sublimerge_diff_views\"
+trustExitCode = false
+
+[diff]
+tool = sublimerge
+
+[difftool "sublimerge"]
+cmd = export REMOTE LOCAL && /home/jordan/repos/workstation/lib/sublimerge_difftool.sh
+
+[core]
+editor = "subl -n -w"

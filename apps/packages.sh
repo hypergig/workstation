@@ -9,6 +9,7 @@ dazl
 docker
 fusepy
 kubernetes
+pip
 pipenv
 progressbar
 pycodestyle

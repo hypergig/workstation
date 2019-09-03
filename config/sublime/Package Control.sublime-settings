@@ -1,0 +1,58 @@
+{
+	"bootstrapped": true,
+	"channels":
+	[
+		"https://packagecontrol.io/channel_v3.json"
+	],
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Anaconda",
+		"ANSIescape",
+		"ASCII Decorator",
+		"Bats",
+		"CircleCi Status",
+		"DataConverter",
+		"Diagram",
+		"Dockerfile Syntax Highlighting",
+		"Emacs-like Modelines",
+		"FileIcons",
+		"Github Tools",
+		"Gitignore",
+		"i3 wm",
+		"Indent XML",
+		"INI",
+		"Jinja2",
+		"jsonnet syntax",
+		"Kubernetes Manifest autocomplete",
+		"Markdown Table Formatter",
+		"MarkdownLivePreview",
+		"MarkdownPreview",
+		"MarkdownTOC",
+		"nginx",
+		"OpenBazelBUILDFile",
+		"Package Control",
+		"Package Syncing",
+		"Pretty JSON",
+		"PyTest",
+		"Random Everything",
+		"Refresh File and Folders",
+		"RemoveDuplicateLines",
+		"SerializedDataConverter",
+		"SideBarEnhancements",
+		"Solarized Color Scheme",
+		"SublimeLinter",
+		"SublimeLinter-pycodestyle",
+		"Sublimerge Pro",
+		"Text Pastry",
+		"Theme - Afterglow",
+		"Theme - Soda SolarizedDark",
+		"Theme - Solarized Flat",
+		"Theme - Solarized Space",
+		"TOML",
+		"VIM Navigation",
+		"Wrap Plus"
+	]
+}
