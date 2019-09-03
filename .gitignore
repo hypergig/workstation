@@ -1,1 +1,2 @@
-target/
+test/apt-cache/
+test/docker.id

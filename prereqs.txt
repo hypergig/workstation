@@ -1,7 +1,5 @@
 apt-transport-https
 ca-certificates
-curl
-git
 gnupg-agent
-make
+python3-pip
 software-properties-common
