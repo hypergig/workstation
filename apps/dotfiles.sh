@@ -6,4 +6,4 @@ grep -q "${line}" ~/.profile || {
 }
 
 # .gitconfig
-[ -L ~/.gitconfig ] || ln -s ${PWD}/config/.gitconfig ~/.gitconfig
+[ -L ~/.gitconfig ] || ln -vs ${PWD}/config/.gitconfig ~/.gitconfig
