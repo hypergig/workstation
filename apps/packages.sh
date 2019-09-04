@@ -1,6 +1,7 @@
 apts+='
 git
-make'
+make
+vim'
 
 pips+='
 changelog-cli
