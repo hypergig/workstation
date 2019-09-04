@@ -5,7 +5,7 @@ SHELL := time /usr/bin/env bash
 # install
 .PHONY: install
 install:
-	sudo ./install.sh
+	sudo ./install.sh $(apps)
 
 
 # test in docker as if this was a fresh build (sorta)
@@ -16,12 +16,12 @@ test: test/docker.id
 		-v ~/.ssh:/home/jordan/.ssh:ro \
 		-v $(PWD):/test:ro \
 		-v $(PWD)/test/apt-cache/:/var/cache/apt/archives/ \
-		$(shell cat $<) bash $(if $(IN),#) -c '/test/bootstrap.sh /test/ || exec bash'
+		$(shell cat $<) bash $(if $(in),#) -c '/test/bootstrap.sh /test/ || exec bash'
 
 
 # test environment
 test/docker.id: %/docker.id: %/Dockerfile
-	docker build $(if $(PULL),--pull) --iidfile $@ $*
+	docker build $(if $(pull),--pull) --iidfile $@ $*
 
 
 # clean
