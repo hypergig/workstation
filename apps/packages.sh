@@ -1,5 +1,5 @@
 apts+='
-git
+curl
 make
 vim'
 
