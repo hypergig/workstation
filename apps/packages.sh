@@ -1,6 +1,9 @@
 apts+='
 curl
+jq
 make
+pavucontrol
+tree
 vim'
 
 pips+='
