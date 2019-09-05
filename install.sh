@@ -46,7 +46,7 @@ if [ -n "${apts}" ]; then
 fi
 
 if [ -n "${pips}" ]; then
-    pip3 install --upgrade --user ${pips}
+    su jordan -c "pip3 install --user ${pips}"
 fi
 
 
@@ -61,7 +61,8 @@ done
 test_result=0
 for test in ${!tests[@]}; do
     echo "testing ${test}"
-    ${tests[${test}]} || ( echo "$TEST '{test}' FAILED"; test_result=1; )
+    PATH="/home/jordan/.local/bin:${PATH}" bash -c "${tests[${test}]}" || {
+        echo "${test} '{test}' FAILED"; test_result=1; }
 done
 
 

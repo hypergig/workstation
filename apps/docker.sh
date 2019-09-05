@@ -7,6 +7,12 @@ add-apt-repository -yn \
    $(lsb_release -cs) \
    stable"
 
-apts+=' docker-ce docker-ce-cli containerd.io'
 posts['docker-group']="usermod -a -G docker jordan"
+
+apts+=' docker-ce docker-ce-cli containerd.io'
 tests['docker']="docker --version"
+
+# docker compose
+pips+=' docker-compose'
+curl -fsSL https://raw.githubusercontent.com/docker/compose/1.24.1/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
+tests['docker-compose']="docker-compose --version"
