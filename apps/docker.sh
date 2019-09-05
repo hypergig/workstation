@@ -8,4 +8,5 @@ add-apt-repository -yn \
    stable"
 
 apts+=' docker-ce docker-ce-cli containerd.io'
+posts['docker-group']="usermod -a -G docker jordan"
 tests['docker']="docker --version"

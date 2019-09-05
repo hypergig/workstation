@@ -18,9 +18,10 @@ fi
 
 
 # prep and arrogate packages that need to be installed
-declare -A tests
 apts=''
 pips=''
+declare -A posts
+declare -A tests
 for app in ${apps}; do
     echo "preparing for ${app} install..."
     source ${app}
@@ -47,6 +48,13 @@ fi
 if [ -n "${pips}" ]; then
     pip3 install --upgrade --user ${pips}
 fi
+
+
+# post actions
+for post in ${!posts[@]}; do
+    echo "post action ${post}"
+    ${posts[${post}]}
+done
 
 
 # quick tests
