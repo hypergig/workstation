@@ -2,6 +2,7 @@ apts+='
 curl
 jq
 make
+neofetch
 pavucontrol
 tree
 vim'

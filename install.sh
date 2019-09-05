@@ -46,7 +46,7 @@ if [ -n "${apts}" ]; then
 fi
 
 if [ -n "${pips}" ]; then
-    su jordan -c "pip3 install --user ${pips}"
+    su jordan -c "pip3 install --user $(tr '\n' ' ' <<< "${pips}")"
 fi
 
 
