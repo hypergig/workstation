@@ -1,5 +1,3 @@
-
-
 add-apt-repository -yn ppa:samoilov-lex/sway
 
 [ -d /etc/sway ] || mkdir -v /etc/sway

@@ -1,5 +1,6 @@
 apts+='
 curl
+htop
 jq
 make
 neofetch
