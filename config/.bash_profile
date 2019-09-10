@@ -5,6 +5,7 @@ set -o vi
 # default vars
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export GTK_THEME="Solarized-Dark-GTK"
 _repos_dir="$HOME/repos"
 _bash_profile_lib_loc="${_repos_dir}/workstation/lib"
 _fav_containers=(alpine:latest ubuntu:latest debian:latest python:3 hypergig/parrotsay)
