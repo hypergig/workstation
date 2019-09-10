@@ -1,11 +1,15 @@
 {
 	"color_scheme": "Packages/Theme - Solarized Flat/Solarized Flat Dark.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
-	"font_size": 14,
+	"font_size": 12,
 	"overlay_scroll_bars": "disabled",
+	"rulers":
+	[
+		79,
+		100
+	],
 	"spell_check": true,
 	"theme": "Soda SolarizedDark.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true,
-	"rulers": [79,100]
+	"trim_trailing_white_space_on_save": true
 }
