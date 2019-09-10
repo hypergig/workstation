@@ -1,4 +1,5 @@
 apts+='
+bpython3
 curl
 htop
 jq
