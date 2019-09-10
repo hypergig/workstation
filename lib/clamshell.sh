@@ -6,7 +6,7 @@ set -euo pipefail
 if [ $(ps -o etimes= -p $(pidof sway)) -lt 10 ]; then
     # TODO - figure out what we are actually waiting for and check that instead
     # of a random sleep
-    echo "sway is just starting up, lets give her 2 seconds to get her shit together..."
+    echo "sway is just starting up, lets give her a few seconds to boot..."
     sleep 2
 fi
 
