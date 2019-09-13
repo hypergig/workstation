@@ -6,6 +6,8 @@ set -o vi
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export GTK_THEME="Solarized-Dark-Orange-GTK"
+export _JAVA_AWT_WM_NONREPARENTING=1
+export MOZ_ENABLE_WAYLAND=1
 _repos_dir="$HOME/repos"
 _bash_profile_lib_loc="${_repos_dir}/workstation/lib"
 _fav_containers=(alpine:latest ubuntu:latest debian:latest python:3 hypergig/parrotsay)
