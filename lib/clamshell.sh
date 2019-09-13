@@ -12,7 +12,7 @@ fi
 
 
 state=enable
-if [[ $(swaymsg -t get_outputs) =~ Dell ]]; then
+if [[ $(swaymsg -rt get_outputs | jq .[].make) =~ Goldstar|Dell ]]; then
     state=disable
 fi
 swaymsg output eDP-1 ${state}
