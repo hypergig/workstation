@@ -2,6 +2,9 @@
 	"color_scheme": "Packages/Theme - Solarized Flat/Solarized Flat Dark.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"font_size": 12,
+	"ignored_packages":
+	[
+	],
 	"overlay_scroll_bars": "disabled",
 	"rulers":
 	[
