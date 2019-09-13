@@ -4,3 +4,10 @@ curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --key
 apts+=' google-cloud-sdk kubectl'
 tests['gcloud']="gcloud --version"
 tests['kubectl']="kubectl version --client"
+
+(
+    cd /tmp && curl -fLO https://github.com/istio/istio/releases/download/1.1.14/istio-1.1.14-linux.tar.gz
+)&
+
+posts['istioctl']+="tar xzvf /tmp/istio-1.1.14-linux.tar.gz -C /usr/local/bin --strip-components=2 istio-1.1.14/bin/istioctl"
+tests['istioctl']+="istioctl version"
