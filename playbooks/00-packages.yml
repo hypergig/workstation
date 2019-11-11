@@ -1,0 +1,45 @@
+---
+- name: install apts
+  apt:
+    cache_valid_time: 3600
+    name:
+    - apt-transport-https
+    - bpython3
+    - ca-certificates
+    - curl
+    - gnupg-agent
+    - htop
+    - jq
+    - make
+    - neofetch
+    - pavucontrol
+    - python3-pip
+    - software-properties-common
+    - tree
+    - vim
+  become: true
+  register: apts
+
+- debug:
+    msg: "{{apts | to_json | from_json | json_query('stdout_lines[?starts_with(@,`Setting up `)]')}}"
+  when: apts is changed
+
+- name: downloading debs
+  get_url:
+    url: "{{item}}"
+    dest: "cache/{{item | basename}}"
+  with_items:
+    - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  register: downloads
+
+- name: installing debs
+  apt:
+    cache_valid_time: 3600
+    deb: "{{item}}"
+  with_items: "{{downloads.results | json_query('[*].dest')}}"
+  become: true
+
+- name: install snaps
+  snap:
+    name:
+    - pycharm-community

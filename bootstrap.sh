@@ -1,9 +1,11 @@
 #! /usr/bin/env bash
 set -xeuo pipefail
-mkdir -v ~/repos
-sudo apt-get update
-sudo apt-get install -y git curl
+mkdir -vp ~/repos
 cd ~/repos
-git clone git@github.com:hypergig/workstation.git
-cd ${1:-workstation}
-exec sudo ./install.sh
+sudo apt-get update
+sudo apt-get install -y software-properties-common
+sudo apt-add-repository --yes --update ppa:ansible/ansible
+sudo apt-get install -y git make ansible
+[ -d 'workstation' ] || git clone git@github.com:hypergig/workstation.git
+cd workstation
+exec make install

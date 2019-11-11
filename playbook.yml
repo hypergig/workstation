@@ -1,0 +1,8 @@
+- hosts: 127.0.0.1
+  connection: local
+  vars:
+    apps: "{{ app | default(lookup('fileglob', 'playbooks/*').split(',') | sort)}}"
+  tasks:
+    - include_tasks: "{{item}}"
+      with_items: "{{apps}}"
+

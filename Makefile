@@ -5,29 +5,13 @@ SHELL := time /usr/bin/env bash
 # install
 .PHONY: install
 install:
-	sudo ./install.sh $(apps)
-
-
-# test in docker as if this was a fresh build (sorta)
-.PHONY: test
-test: test/docker.id
-	docker run --rm -it \
-		-u jordan:jordan \
-		-v ~/.ssh:/home/jordan/.ssh:ro \
-		-v $(PWD):/test:ro \
-		-v $(PWD)/test/apt-cache/:/var/cache/apt/archives/ \
-		$(shell cat $<) bash $(if $(in),#) -c '/test/bootstrap.sh /test/ || exec bash'
-
-
-# test environment
-test/docker.id: %/docker.id: %/Dockerfile
-	docker build $(if $(pull),--pull) --iidfile $@ $*
-
+	sudo -v
+	ansible-playbook playbook.yml $(if $(app),-e app=playbooks/$(app).yml)
 
 # clean
 .PHONY: clean
 clean:
-	-rm -v test/docker.id
+	-rm -vrf cache
 
 .PHONY: clean-cache
 clean-cache:
