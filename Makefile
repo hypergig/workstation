@@ -4,15 +4,14 @@ SHELL := time /usr/bin/env bash
 
 # install
 .PHONY: install
-install:
+install: | cache
 	sudo -v
-	ansible-playbook playbook.yml $(if $(app),-e app=playbooks/$(app).yml)
+	ansible-playbook -v playbook.yml $(if $(app),-e app=playbooks/$(app).yml)
+
+cache:
+	mkdir -pv $@
 
 # clean
 .PHONY: clean
 clean:
-	-rm -vrf cache
-
-.PHONY: clean-cache
-clean-cache:
-	-sudo rm -vrf test/apt-cache
+	-rm -vrf cache/*

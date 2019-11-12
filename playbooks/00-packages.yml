@@ -1,7 +1,7 @@
+# -*- ansible -*-
 ---
 - name: install apts
   apt:
-    cache_valid_time: 3600
     name:
     - apt-transport-https
     - bpython3
@@ -13,6 +13,8 @@
     - make
     - neofetch
     - pavucontrol
+    - python-jmespath
+    - python3-jmespath
     - python3-pip
     - software-properties-common
     - tree
@@ -20,21 +22,17 @@
   become: true
   register: apts
 
-- debug:
-    msg: "{{apts | to_json | from_json | json_query('stdout_lines[?starts_with(@,`Setting up `)]')}}"
-  when: apts is changed
-
 - name: downloading debs
   get_url:
     url: "{{item}}"
     dest: "cache/{{item | basename}}"
+    checksum: sha256:77c7627818630d73bedcfc0b38dde145d2554bea2d49616fe9b3cf8eb5f290db
   with_items:
     - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   register: downloads
 
 - name: installing debs
   apt:
-    cache_valid_time: 3600
     deb: "{{item}}"
   with_items: "{{downloads.results | json_query('[*].dest')}}"
   become: true
@@ -43,3 +41,6 @@
   snap:
     name:
     - pycharm-community
+    - code
+    classic: true
+  become: true

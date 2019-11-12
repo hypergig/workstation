@@ -1,3 +1,4 @@
+# -*- ansible -*-
 ---
 - name: add docker repo key
   apt_key:
@@ -12,17 +13,12 @@
 
 - name: install docker
   apt:
-    cache_valid_time: 3600
     name:
     - docker-ce
     - docker-ce-cli
     - containerd.io
   become: true
   register: docker_apts
-
-- debug:
-    msg: "{{ docker_apts | to_json | from_json | json_query('stdout_lines[?starts_with(@,`Setting up `)]')}}"
-  when: docker_apts is changed
 
 - name: install docker compose
   pip:
