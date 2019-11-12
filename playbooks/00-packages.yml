@@ -24,11 +24,12 @@
 
 - name: downloading debs
   get_url:
-    url: "{{item}}"
-    dest: "cache/{{item | basename}}"
-    checksum: sha256:77c7627818630d73bedcfc0b38dde145d2554bea2d49616fe9b3cf8eb5f290db
+    url: "{{item.url}}"
+    dest: "cache/{{item.url | basename}}"
+    checksum: "sha256:{{item.sha256}}"
   with_items:
-    - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  - url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    sha256: 77c7627818630d73bedcfc0b38dde145d2554bea2d49616fe9b3cf8eb5f290db
   register: downloads
 
 - name: installing debs

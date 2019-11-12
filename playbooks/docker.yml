@@ -28,6 +28,7 @@
   get_url:
     url:  https://raw.githubusercontent.com/docker/compose/1.24.1/contrib/completion/bash/docker-compose
     dest: /etc/bash_completion.d/docker-compose
+    checksum: sha256:dca94a0f3e5629dfabbb1a69785d0a812570704986f49e1b214f823bbb9a7dc3
   become: true
 
 - name: add jordan to docker group
