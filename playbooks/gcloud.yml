@@ -1,0 +1,35 @@
+# -*- ansible -*-
+---
+- name: gcloud apt key
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    keyring: /usr/share/keyrings/cloud.google.gpg
+  become: true
+
+- name: add gcloud apt repo
+  apt_repository:
+    repo: "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main"
+  become: true
+
+- name: install gcloud apts
+  apt:
+    name:
+    - google-cloud-sdk
+    - kubectl
+  become: true
+
+- name: download istio bins
+  get_url:
+    url: https://github.com/istio/istio/releases/download/1.3.1/istio-1.3.1-linux.tar.gz
+    dest: cache/istio-1.3.1-linux.tar.gz
+    checksum: sha256:72cf2a931dd20509ea21bdceb16d8330d53d7e236e1a26fffc24a54404998389
+
+- name: istioctl bin
+  unarchive:
+    dest: /usr/local/bin
+    extra_opts:
+    - --strip-components=2
+    - istio-1.3.1/bin/istioctl
+    remote_src: yes
+    src: cache/istio-1.3.1-linux.tar.gz
+  become: true
