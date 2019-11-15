@@ -8,6 +8,8 @@
       cache_valid_time: 3600
     get_url:
       force: no
+    pip:
+      extra_args: --user
   vars:
     apps: "{{ app | default(lookup('fileglob', 'playbooks/*').split(',') | sort)}}"
   tasks:

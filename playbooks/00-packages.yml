@@ -44,3 +44,20 @@
     - pycharm-community
     classic: true
   become: true
+
+- name: install pips
+  pip:
+    name:
+    - ansible
+    - changelog-cli
+    - click
+    - dazl
+    - fusepy
+    - jmespath
+    - pip
+    - pipenv
+    - progressbar
+    - pycodestyle
+    - PyYAML
+    - semver
+    - yq
