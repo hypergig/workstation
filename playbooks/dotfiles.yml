@@ -11,9 +11,3 @@
     path: ~/.property_file.env
   register: result
   changed_when: not result.size
-
-- name: git config
-  file:
-    state: link
-    path: ~/.gitconfig
-    src: "{{playbook_dir}}/config/.gitconfig"
