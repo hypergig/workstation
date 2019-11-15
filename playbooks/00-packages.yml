@@ -14,8 +14,6 @@
     - make
     - neofetch
     - pavucontrol
-    - python-jmespath
-    - python3-jmespath
     - python3-pip
     - software-properties-common
     - tree
