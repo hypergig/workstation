@@ -3,10 +3,13 @@ SHELL := time /usr/bin/env bash
 
 
 # install
-.PHONY: install
-install: | cache
+apps := $(patsubst playbooks/%.yml,%,$(wildcard playbooks/*.yml))
+install_targets := install $(addprefix install-,$(apps))
+
+.PHONY: $(install_targets)
+$(install_targets): install%: | cache
 	sudo -v
-	ansible-playbook -v playbook.yml $(if $(app),-e app=playbooks/$(app).yml)
+	ansible-playbook -$(or $(v),v) playbook.yml $(if $*,-e app=playbooks/$(subst -,,$*).yml)
 
 cache:
 	mkdir -pv $@
