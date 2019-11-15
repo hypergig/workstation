@@ -11,9 +11,16 @@
     pip:
       extra_args: --user
   vars:
-    apps: "{{ app | default(lookup('fileglob', 'playbooks/*').split(',') | sort)}}"
+    special_playbooks:
+    - "{{playbook_dir}}/playbooks/packages.yml"
+    - "{{playbook_dir}}/playbooks/upgrade.yml"
+    ordered_playbooks:
+    - "{{special_playbooks.0}}"
+    - "{{lookup('fileglob', 'playbooks/*.yml').split(',') | difference(special_playbooks)}}"
+    - "{{special_playbooks.1}}"
+    playbooks: "{{ordered_playbooks | flatten}}"
   tasks:
     - include_tasks: "{{playbook}}"
-      with_items: "{{apps}}"
+      with_items: "{{ app | default(playbooks)}}"
       loop_control:
         loop_var: playbook
