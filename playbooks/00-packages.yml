@@ -21,7 +21,6 @@
     - tree
     - vim
   become: true
-  register: apts
 
 - name: downloading debs
   get_url:
@@ -42,7 +41,8 @@
 - name: install snaps
   snap:
     name:
-    - pycharm-community
     - code
+    - goland
+    - pycharm-community
     classic: true
   become: true

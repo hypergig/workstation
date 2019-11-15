@@ -18,7 +18,6 @@
     - docker-ce-cli
     - containerd.io
   become: true
-  register: docker_apts
 
 - name: install docker compose
   pip:
