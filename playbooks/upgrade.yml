@@ -1,0 +1,17 @@
+# -*- ansible -*-
+---
+- name: upgrade apts
+  apt:
+    upgrade: yes
+  become: true
+
+- name: upgrade pips
+  pip:
+    name: "{{lookup('lines', 'pip3 freeze --user | cut -d= -f1')}}"
+    state: latest
+
+- name: upgrade snaps
+  shell: snap refresh
+  register: result
+  changed_when: result.stderr != 'All snaps up to date.'
+  become: true
