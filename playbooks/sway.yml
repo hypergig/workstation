@@ -5,16 +5,24 @@
     repo: "ppa:samoilov-lex/sway"
   become: true
 
-- name: install sway
+- name: install sway, wayland tools, and prereqs
   apt:
     name:
     - brightnessctl
+    - grim
     - rofi
+    - slurp
     - sway
     - sway-backgrounds
     - swaybg
     - swayidle
     - swaylock
+    - wl-clipboard
+    # prereqs for i3-status-rust
+    - cargo
+    - fonts-font-awesome
+    - fonts-powerline
+    - libdbus-1-dev
   become: true
 
 - name: link sway config
@@ -22,3 +30,22 @@
     state: link
     src: "{{playbook_dir}}/config/sway/config.d"
     dest: /etc/sway/config.d
+
+- name: clone i3status-rust repo
+  git:
+    repo: git@github.com:greshake/i3status-rust.git
+    dest: ~/repos/i3status-rust
+
+- name: build i3-status-rust
+  shell: cargo build --release
+  args:
+    chdir: ~/repos/i3status-rust
+  register: result
+  changed_when: "'Compiling' in result.stderr"
+
+- name: linking i3status-rs bin
+  file:
+    state: link
+    src:  /home/jordan/repos/i3status-rust/target/release/i3status-rs
+    dest:  /usr/local/bin/i3status-rs
+  become: true
