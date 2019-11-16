@@ -1,5 +1,0 @@
-apt-transport-https
-ca-certificates
-gnupg-agent
-python3-pip
-software-properties-common
