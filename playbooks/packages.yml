@@ -28,6 +28,8 @@
   with_items:
   - url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     sha256: 77c7627818630d73bedcfc0b38dde145d2554bea2d49616fe9b3cf8eb5f290db
+  - url: https://zoom.us/client/latest/zoom_amd64.deb
+    sha256: db66edba75184af31b7282c5a9a1d50328ba4eb39928ae97b51b766dc9cfa408
   register: downloads
 
 - name: installing debs
