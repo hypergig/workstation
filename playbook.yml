@@ -1,0 +1,26 @@
+# -*- ansible -*-
+---
+- hosts: 127.0.0.1
+  connection: local
+  module_defaults:
+    apt:
+      force_apt_get: yes
+      cache_valid_time: 3600
+    get_url:
+      force: no
+    pip:
+      extra_args: --user
+  vars:
+    special_playbooks:
+    - "{{playbook_dir}}/playbooks/packages.yml"
+    - "{{playbook_dir}}/playbooks/upgrade.yml"
+    ordered_playbooks:
+    - "{{special_playbooks.0}}"
+    - "{{lookup('fileglob', 'playbooks/*.yml').split(',') | difference(special_playbooks)}}"
+    - "{{special_playbooks.1}}"
+    playbooks: "{{ordered_playbooks | flatten}}"
+  tasks:
+    - include_tasks: "{{playbook}}"
+      with_items: "{{ app | default(playbooks)}}"
+      loop_control:
+        loop_var: playbook

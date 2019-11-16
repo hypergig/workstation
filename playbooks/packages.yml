@@ -1,0 +1,65 @@
+# -*- ansible -*-
+---
+- name: install apts
+  apt:
+    name:
+    - apt-transport-https
+    - bpython3
+    - ca-certificates
+    - curl
+    - git
+    - gnupg-agent
+    - htop
+    - jq
+    - make
+    - neofetch
+    - pavucontrol
+    - python3-pip
+    - software-properties-common
+    - tree
+    - vim
+  become: true
+
+- name: downloading debs
+  get_url:
+    url: "{{item.url}}"
+    dest: "cache/{{item.url | basename}}"
+    checksum: "sha256:{{item.sha256}}"
+  with_items:
+  - url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    sha256: 77c7627818630d73bedcfc0b38dde145d2554bea2d49616fe9b3cf8eb5f290db
+  - url: https://zoom.us/client/latest/zoom_amd64.deb
+    sha256: db66edba75184af31b7282c5a9a1d50328ba4eb39928ae97b51b766dc9cfa408
+  register: downloads
+
+- name: installing debs
+  apt:
+    deb: "{{item}}"
+  with_items: "{{downloads.results | json_query('[*].dest')}}"
+  become: true
+
+- name: install snaps
+  snap:
+    name:
+    - code
+    - goland
+    - pycharm-community
+    classic: true
+  become: true
+
+- name: install pips
+  pip:
+    name:
+    - ansible
+    - changelog-cli
+    - click
+    - dazl
+    - fusepy
+    - jmespath
+    - pip
+    - pipenv
+    - progressbar
+    - pycodestyle
+    - PyYAML
+    - semver
+    - yq

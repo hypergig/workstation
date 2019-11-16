@@ -1,0 +1,24 @@
+# -*- ansible -*-
+---
+- name: add sway repo
+  apt_repository:
+    repo: "ppa:samoilov-lex/sway"
+  become: true
+
+- name: install sway
+  apt:
+    name:
+    - brightnessctl
+    - rofi
+    - sway
+    - sway-backgrounds
+    - swaybg
+    - swayidle
+    - swaylock
+  become: true
+
+- name: link sway config
+  file:
+    state: link
+    src: "{{playbook_dir}}/config/sway/config.d"
+    dest: /etc/sway/config.d

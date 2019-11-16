@@ -1,0 +1,13 @@
+# -*- ansible -*-
+---
+- name: bash profile
+  lineinfile:
+    path: ~/.profile
+    line: "source {{playbook_dir}}/config/.bash_profile"
+
+- name: property file
+  file:
+    state: touch
+    path: ~/.property_file.env
+  register: result
+  changed_when: not result.size

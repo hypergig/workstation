@@ -3,32 +3,18 @@ SHELL := time /usr/bin/env bash
 
 
 # install
-.PHONY: install
-install:
-	sudo ./install.sh $(apps)
+apps := $(patsubst playbooks/%.yml,%,$(wildcard playbooks/*.yml))
+install_targets := install $(addprefix install-,$(apps))
 
+.PHONY: $(install_targets)
+$(install_targets): install%: | cache
+	sudo -v
+	ansible-playbook -$(or $(v),v) playbook.yml $(if $*,-e app=playbooks/$(subst -,,$*).yml)
 
-# test in docker as if this was a fresh build (sorta)
-.PHONY: test
-test: test/docker.id
-	docker run --rm -it \
-		-u jordan:jordan \
-		-v ~/.ssh:/home/jordan/.ssh:ro \
-		-v $(PWD):/test:ro \
-		-v $(PWD)/test/apt-cache/:/var/cache/apt/archives/ \
-		$(shell cat $<) bash $(if $(in),#) -c '/test/bootstrap.sh /test/ || exec bash'
-
-
-# test environment
-test/docker.id: %/docker.id: %/Dockerfile
-	docker build $(if $(pull),--pull) --iidfile $@ $*
-
+cache:
+	mkdir -pv $@
 
 # clean
 .PHONY: clean
 clean:
-	-rm -v test/docker.id
-
-.PHONY: clean-cache
-clean-cache:
-	-sudo rm -vrf test/apt-cache
+	-rm -vrf cache/*

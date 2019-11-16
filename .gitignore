@@ -1,2 +1,2 @@
-test/apt-cache/
-test/docker.id
+cache/
+*.retry
