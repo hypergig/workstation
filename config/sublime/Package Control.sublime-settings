@@ -10,6 +10,8 @@
 	"installed_packages":
 	[
 		"Anaconda",
+		"Ansible",
+		"AnsibleSnippets",
 		"ANSIescape",
 		"ASCII Decorator",
 		"Bats",
