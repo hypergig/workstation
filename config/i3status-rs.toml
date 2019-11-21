@@ -2,6 +2,16 @@ theme = "solarized-dark"
 icons = "awesome"
 
 [[block]]
+block = "disk_space"
+path = "/"
+alias = "/"
+info_type = "available"
+unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+
+[[block]]
 block = "weather"
 format = "{weather} ({location}) {temp}°, {wind} m/s {direction}"
 service = { name = "openweathermap", units = "imperial" }
@@ -27,16 +37,6 @@ interval = 5
 block = "custom"
 command = "kubectl config current-context | cut -d'_' -f4"
 interval = 60
-
-[[block]]
-block = "disk_space"
-path = "/"
-alias = "/"
-info_type = "available"
-unit = "GB"
-interval = 20
-warning = 20.0
-alert = 10.0
 
 [[block]]
 block = "memory"
