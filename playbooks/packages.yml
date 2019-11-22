@@ -47,6 +47,14 @@
     classic: true
   become: true
 
+- name: install snaps (edge)
+  snap:
+    name:
+    - node
+    classic: true
+    channel: latest/edge
+  become: true
+
 - name: install pips
   pip:
     name:
@@ -63,3 +71,8 @@
     - PyYAML
     - semver
     - yq
+
+- name: install npms
+  npm:
+    name: bats
+    path: ~/.node

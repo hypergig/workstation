@@ -12,6 +12,9 @@ _repos_dir="$HOME/repos"
 _bash_profile_lib_loc="${_repos_dir}/workstation/lib"
 _fav_containers=(alpine:latest ubuntu:latest debian:latest python:3 hypergig/parrotsay)
 
+# path mods
+PATH="${PATH}:${HOME}/.node/node_modules/.bin"
+
 # property_file.sh looks like, needs to be in the $HOME directory
 # export private_docker_repo=something.io/this
 # export most_common_repo=foo
