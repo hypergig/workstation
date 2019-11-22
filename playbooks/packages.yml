@@ -42,6 +42,7 @@
   snap:
     name:
     - code
+    - go
     - goland
     - pycharm-community
     classic: true
