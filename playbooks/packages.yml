@@ -44,6 +44,7 @@
     - code
     - go
     - goland
+    - protobuf
     - pycharm-community
     classic: true
   become: true
