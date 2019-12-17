@@ -27,9 +27,9 @@
     checksum: "sha256:{{item.sha256}}"
   with_items:
   - url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    sha256: 06ce37a4ae8bb93c35bf874681e12766f10bdedff96717f6a03fc84d60cbdace
+    sha256: eb9dfc7bb27ca6373fd51e7a1daeac59cd6dd2600431861710bed160208bcf37
   - url: https://zoom.us/client/latest/zoom_amd64.deb
-    sha256: db66edba75184af31b7282c5a9a1d50328ba4eb39928ae97b51b766dc9cfa408
+    sha256: e52fb0e6754ff25dd16635d77bbe38a11389f07fa69d4c5063f76d00ebd11ed7
   register: downloads
 
 - name: installing debs
