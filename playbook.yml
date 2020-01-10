@@ -10,6 +10,7 @@
       force: no
     pip:
       extra_args: --user
+      state: latest
   vars:
     special_playbooks:
     - "{{playbook_dir}}/playbooks/packages.yml"

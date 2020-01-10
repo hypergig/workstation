@@ -8,7 +8,6 @@
 - name: upgrade pips
   pip:
     name: "{{lookup('lines', 'pip3 list --user --outdated --not-required --format=freeze | cut -d= -f1')}}"
-    state: latest
 
 - name: upgrade snaps
   shell: snap refresh
