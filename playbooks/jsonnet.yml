@@ -1,0 +1,14 @@
+# -*- ansible -*-
+---
+- name: download jsonnet bins
+  get_url:
+    url: https://github.com/google/jsonnet/releases/download/v0.14.0/jsonnet-bin-v0.14.0-linux.tar.gz
+    dest: cache/jsonnet-bin-v0.14.0-linux.tar.gz
+    checksum: sha256:30ba7b243ddb24231882ae3aa1930e76b6050bb76b5ccd0d97410b21fb784039
+
+- name: jsonnet bins
+  unarchive:
+    dest: /usr/local/bin
+    remote_src: yes
+    src: "{{playbook_dir}}/cache/jsonnet-bin-v0.14.0-linux.tar.gz"
+  become: true
