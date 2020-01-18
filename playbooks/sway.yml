@@ -31,6 +31,13 @@
     src: "{{playbook_dir}}/config/sway/config.d"
     dest: /etc/sway/config.d
 
+- name: add jordan to docker group
+  user:
+    name: jordan
+    groups: video
+    append: yes
+  become: true
+
 - name: clone i3status-rust repo
   git:
     repo: git@github.com:greshake/i3status-rust.git
