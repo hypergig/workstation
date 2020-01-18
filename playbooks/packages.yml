@@ -15,6 +15,7 @@
     - neofetch
     - pavucontrol
     - python3-pip
+    - python3-venv
     - software-properties-common
     - tree
     - vim
