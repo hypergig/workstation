@@ -5,7 +5,7 @@ set -o vi
 # default vars
 export VISUAL=vim
 export EDITOR="$VISUAL"
-export GTK_THEME="Solarized-Dark-Orange-GTK"
+export GTK_THEME="Solarized-Dark-Orange"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export MOZ_ENABLE_WAYLAND=1
 _repos_dir="$HOME/repos"
