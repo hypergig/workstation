@@ -1,5 +1,4 @@
 {
-	"vintage_ctrl_keys": true,
 	"color_scheme": "Packages/Theme - Solarized Flat/Solarized Flat Dark.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"font_size": 12,
@@ -16,5 +15,6 @@
 	"tab_size": 2,
 	"theme": "Soda SolarizedDark.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
+	"vintage_ctrl_keys": true
 }

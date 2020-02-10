@@ -1,0 +1,5 @@
+{
+    "cmd": ["jsonnetfmt", "-i", "$file"],
+    "selector": "source.python",
+    "file_patterns": ["*.jsonnet", "*.libsonnet"]
+}
