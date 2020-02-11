@@ -7,6 +7,7 @@
     - bpython3
     - ca-certificates
     - curl
+    - gimp
     - git
     - gnupg-agent
     - htop
@@ -28,9 +29,9 @@
     checksum: "sha256:{{item.sha256}}"
   with_items:
   - url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    sha256: 613e4fb84fbc064b4ebbd4832060940bf0f947c05ec808015afbd1618976a094
+    sha256: 85e07dee624d3c7eec6a6194efcb070b353ee52c0e5980517760230128a3ba61
   - url: https://zoom.us/client/latest/zoom_amd64.deb
-    sha256: e52fb0e6754ff25dd16635d77bbe38a11389f07fa69d4c5063f76d00ebd11ed7
+    sha256: 069afc06abdd6e5534c417e8e92fb7167ed023df06ab10110b759ff8b56f5e3a
   register: downloads
 
 - name: installing debs
