@@ -1,10 +1,5 @@
 # -*- ansible -*-
 ---
-- name: add sway repo
-  apt_repository:
-    repo: "ppa:samoilov-lex/sway"
-  become: true
-
 - name: install sway, wayland tools, and prereqs
   apt:
     name:
@@ -30,6 +25,7 @@
     state: link
     src: "{{playbook_dir}}/config/sway/config.d"
     dest: /etc/sway/config.d
+  become: true
 
 - name: add jordan to docker group
   user:
@@ -42,6 +38,8 @@
   git:
     repo: git@github.com:greshake/i3status-rust.git
     dest: ~/repos/i3status-rust
+    # pinning version until upgrade to cargo 2
+    version: dae7dd0f6f4ab87bf268b0d745a38d505bb7ed20
 
 - name: build i3-status-rust
   shell: cargo build --release
