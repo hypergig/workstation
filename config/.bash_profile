@@ -9,11 +9,12 @@ export GTK_THEME="Solarized-Dark-Orange"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export MOZ_ENABLE_WAYLAND=1
 _repos_dir="$HOME/repos"
-_bash_profile_lib_loc="${_repos_dir}/workstation/lib"
+_workstation_dir="${_repos_dir}/workstation"
+_bash_profile_lib_dir="${_repos_dir}/workstation/lib"
 _fav_containers=(alpine:latest ubuntu:latest debian:latest python:3 hypergig/parrotsay)
 
 # path mods
-PATH="${PATH}:${HOME}/.node/node_modules/.bin"
+PATH="${PATH}:${_workstation_dir}/bin:${HOME}/.node/node_modules/.bin"
 
 # property_file.sh looks like, needs to be in the $HOME directory
 # export private_docker_repo=something.io/this
@@ -24,7 +25,7 @@ PATH="${PATH}:${HOME}/.node/node_modules/.bin"
 # aliases
 alias gr="cd $_repos_dir"
 alias ga="cd $_repos_dir/$_most_common_repo"
-alias jork="${_bash_profile_lib_loc}/jork.sh"
+alias jork="${_bash_profile_lib_dir}/jork.sh"
 alias copy='tee /dev/stderr | xclip -sel clip'
 
 
