@@ -13,11 +13,24 @@
     - swayidle
     - swaylock
     - wl-clipboard
-    # prereqs for i3-status-rust
-    - cargo
+    # prereqs waybar (as per 19.10)
     - fonts-font-awesome
-    - fonts-powerline
-    - libdbus-1-dev
+    - libgtkmm-3.0-dev
+    - libjsoncpp-dev
+    - libinput-dev
+    - libsigc++-2.0-dev
+    - libpulse-dev
+    - libnl-3-dev
+    - libdbusmenu-gtk3-dev
+    - libnl-genl-3-dev
+    - libfmt-dev
+    - clang-tidy
+    - libmpdclient-dev
+    - libwayland-dev
+    - libgtk-3-dev
+    - gobject-introspection
+    - libgirepository1.0-dev
+    - scdoc
   become: true
 
 - name: link sway config
@@ -27,30 +40,34 @@
     dest: /etc/sway/config.d
   become: true
 
-- name: add jordan to docker group
+- name: add jordan to video group so he can control brightness
   user:
     name: jordan
     groups: video
     append: yes
   become: true
 
-- name: clone i3status-rust repo
+- name: clone waybar repo
   git:
-    repo: git@github.com:greshake/i3status-rust.git
-    dest: ~/repos/i3status-rust
-    # pinning version until upgrade to cargo 2
-    version: dae7dd0f6f4ab87bf268b0d745a38d505bb7ed20
+    repo: git@github.com:Alexays/Waybar.git
+    dest: ~/repos/Waybar
 
-- name: build i3-status-rust
-  shell: cargo build --release
+- name: build waybar
+  shell: meson build && ninja -C build
   args:
-    chdir: ~/repos/i3status-rust
+    chdir: ~/repos/Waybar
   register: result
-  changed_when: "'Compiling' in result.stderr"
+  changed_when: "'ninja: no work to do.' not in result.stdout"
 
-- name: linking i3status-rs bin
+- name: install waybar
+  shell: ninja -C build install
+  args:
+    chdir: /home/jordan/repos/Waybar
+  become: true
+  changed_when: result.changed
+
+- name: linking waybar config
   file:
     state: link
-    src:  /home/jordan/repos/i3status-rust/target/release/i3status-rs
-    dest:  /usr/local/bin/i3status-rs
-  become: true
+    src:  "{{playbook_dir}}/config/waybar"
+    dest:  ~/.config/waybar
