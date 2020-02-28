@@ -13,7 +13,7 @@
     - swayidle
     - swaylock
     - wl-clipboard
-    # prereqs waybar (as per 19.10)
+    # prereqs for waybar (as per 19.10)
     - fonts-font-awesome
     - libgtkmm-3.0-dev
     - libjsoncpp-dev
@@ -31,6 +31,8 @@
     - gobject-introspection
     - libgirepository1.0-dev
     - scdoc
+    # prereqs for mako
+    - libsystemd-dev
   become: true
 
 - name: link sway config
@@ -71,3 +73,22 @@
     state: link
     src:  "{{playbook_dir}}/config/waybar"
     dest:  ~/.config/waybar
+
+- name: clone mako repo
+  git:
+    repo: git@github.com:emersion/mako.git
+    dest: ~/repos/mako
+
+- name: build mako
+  shell: meson build && ninja -C build
+  args:
+    chdir: ~/repos/mako
+  register: result
+  changed_when: "'ninja: no work to do.' not in result.stdout"
+
+- name: install mako
+  shell: ninja -C build install
+  args:
+    chdir: /home/jordan/repos/mako
+  become: true
+  changed_when: result.changed
