@@ -43,11 +43,18 @@
 - name: install snaps
   snap:
     name:
+      - signal-desktop
+  become: true
+
+- name: install snaps (classic)
+  snap:
+    name:
     - code
     - go
     - goland
     - protobuf
     - pycharm-community
+    - slack
     classic: true
   become: true
 
@@ -68,6 +75,7 @@
     - dazl
     - fusepy
     - jmespath
+    - pex
     - pip
     - poetry
     - progressbar
