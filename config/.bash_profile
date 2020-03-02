@@ -86,3 +86,5 @@ eval "$(pyenv init -)"
 # my screen
 [ $((1 + RANDOM % 10)) == 1 ] && docker run -t hypergig/parrotsay || true
 
+# start sway session if applicable
+[ "$(tty)" == '/dev/tty2' ] && exec start-sway
