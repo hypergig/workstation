@@ -9,7 +9,6 @@
 	],
 	"installed_packages":
 	[
-		"Anaconda",
 		"Ansible",
 		"AnsibleSnippets",
 		"ANSIescape",
