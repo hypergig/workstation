@@ -14,6 +14,7 @@
     - jq
     - make
     - neofetch
+    - net-tools
     - pavucontrol
     - python3-pip
     - python3-venv
