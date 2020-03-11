@@ -9,6 +9,7 @@ export GTK_THEME="Solarized-Dark-Orange"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export MOZ_ENABLE_WAYLAND=1
 export PYENV_ROOT="$HOME/.pyenv"
+export XCURSOR_PATH=/usr/share/icons/
 _repos_dir="$HOME/repos"
 _workstation_dir="${_repos_dir}/workstation"
 _bash_profile_lib_dir="${_repos_dir}/workstation/lib"
