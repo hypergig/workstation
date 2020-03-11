@@ -77,7 +77,6 @@
     - jmespath
     - pex
     - pip
-    - poetry
     - progressbar
     - pycodestyle
     - semver
