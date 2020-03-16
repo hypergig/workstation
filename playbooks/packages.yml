@@ -8,6 +8,7 @@
     - ca-certificates
     - curl
     - gimp
+    - flatpak
     - git
     - gnupg-agent
     - htop
@@ -23,22 +24,25 @@
     - vim
   become: true
 
-- name: downloading debs
-  get_url:
-    url: "{{item.url}}"
-    dest: "cache/{{item.url | basename}}"
-    checksum: "sha256:{{item.sha256}}"
-  with_items:
-  - url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    sha256: 85e07dee624d3c7eec6a6194efcb070b353ee52c0e5980517760230128a3ba61
-  - url: https://zoom.us/client/latest/zoom_amd64.deb
-    sha256: 069afc06abdd6e5534c417e8e92fb7167ed023df06ab10110b759ff8b56f5e3a
-  register: downloads
+- name: add flat remote
+  command: flatpak remote-add -v --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  register: result
+  changed_when: "'F: Imported 1 GPG key to remote \"flathub\"' in result.stderr"
+  become: true
 
+- name: install flatpaks
+  flatpak:
+    name: >
+      us.zoom.Zoom
+  register: result
+  changed_when: "'Installation complete.' in result.stdout"
+
+# debs need to be able to update them selves
 - name: installing debs
   apt:
     deb: "{{item}}"
-  with_items: "{{downloads.results | json_query('[*].dest')}}"
+  with_items:
+  - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   become: true
 
 - name: install snaps
