@@ -7,7 +7,6 @@
     - bpython3
     - ca-certificates
     - curl
-    - gimp
     - flatpak
     - git
     - gnupg-agent
@@ -48,7 +47,9 @@
 - name: install snaps
   snap:
     name:
-      - signal-desktop
+    - signal-desktop
+    - spotify
+    - gimp
   become: true
 
 - name: install snaps (classic)
@@ -75,16 +76,10 @@
   pip:
     name:
     - ansible
-    - changelog-cli
-    - click
     - dazl
-    - fusepy
     - jmespath
-    - pex
     - pip
-    - progressbar
     - pycodestyle
-    - semver
     - yq
 
 - name: install npms
