@@ -24,16 +24,16 @@
 
 - name: download istio bins
   get_url:
-    url: https://github.com/istio/istio/releases/download/1.4.3/istio-1.4.3-linux.tar.gz
-    dest: cache/istio-1.4.3-linux.tar.gz
-    checksum: sha256:781e2c4391ba344d86fb6a4c321b76af31543e7479ea689dd7c7395fb1a41ff0
+    url: https://github.com/istio/istio/releases/download/1.5.0/istio-1.5.0-linux.tar.gz
+    dest: cache/istio-1.5.0-linux.tar.gz
+    checksum: sha256:fba603390074b1b9da9b3bd1492a278740fe725ac8ff07b8ec54fb7d66e03c33
 
 - name: istioctl bin
   unarchive:
     dest: /usr/local/bin
     extra_opts:
     - --strip-components=2
-    - istio-1.4.3/bin/istioctl
+    - istio-1.5.0/bin/istioctl
     remote_src: yes
-    src: "{{playbook_dir}}/cache/istio-1.4.3-linux.tar.gz"
+    src: "{{playbook_dir}}/cache/istio-1.5.0-linux.tar.gz"
   become: true
