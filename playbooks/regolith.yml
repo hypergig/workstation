@@ -1,0 +1,11 @@
+# -*- ansible -*-
+---
+- name: add regolith repo
+  apt_repository:
+    repo: "ppa:regolith-linux/release"
+  become: true
+
+- name: install regolith
+  apt:
+    name: regolith-desktop
+  become: true
