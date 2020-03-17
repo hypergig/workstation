@@ -7,5 +7,12 @@
 
 - name: install regolith
   apt:
-    name: regolith-desktop
+    name:
+    - regolith-desktop
+    - regolith-look-solarized-dark
   become: true
+
+- name: setting look
+  shell: regolith-look set solarized-dark && regolith-look refresh || echo "look is already set"
+  register: result
+  changed_when: "'look is already set' not in result.stdout"
