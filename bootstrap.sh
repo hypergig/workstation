@@ -7,4 +7,5 @@ sudo apt-get install -y git make python3-pip
 pip3 install --user ansible jmespath
 [ -d 'workstation' ] || git clone git@github.com:hypergig/workstation.git
 cd workstation
+PATH="~/.local/bin:${PATH}"
 exec make install
