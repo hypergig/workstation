@@ -7,9 +7,9 @@ apps := $(patsubst playbooks/%.yml,%,$(wildcard playbooks/*.yml))
 install_targets := install $(addprefix install-,$(apps))
 
 .PHONY: $(install_targets)
-$(install_targets): install%: | cache
+$(install_targets): install-%: | cache
 	sudo -v
-	ansible-playbook -$(or $(v),v) playbook.yml $(if $*,-e app=playbooks/$(subst -,,$*).yml)
+	ansible-playbook -$(or $(v),v) playbook.yml $(if $(subst -,,$*),-e app=playbooks/$*.yml)
 
 cache:
 	mkdir -pv $@

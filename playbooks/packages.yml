@@ -4,7 +4,6 @@
   apt:
     name:
     - apt-transport-https
-    - bpython3
     - ca-certificates
     - curl
     - flatpak
@@ -17,7 +16,6 @@
     - net-tools
     - pavucontrol
     - python3-pip
-    - python3-venv
     - software-properties-common
     - tree
     - vim
