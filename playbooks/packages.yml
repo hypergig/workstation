@@ -8,6 +8,7 @@
     - curl
     - flatpak
     - git
+    - gnome-tweaks
     - gnupg-agent
     - htop
     - jq
@@ -56,6 +57,7 @@
     - code
     - go
     - goland
+    - intellij-idea-ultimate
     - protobuf
     - pycharm-community
     - slack
