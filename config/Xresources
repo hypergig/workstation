@@ -1,0 +1,8 @@
+#define icons DMZ-Black
+
+gnome.wallpaper:        /home/jordan/repos/workstation/config/backgrounds/solarized.png
+Xcursor.theme:          icons
+gnome.icon.theme:       icons
+rofi.drun-icon-theme:   icons
+gnome.gtk.theme:        Solarized-Dark-Orange
+i3xrocks.date.format2:  + %A %x %r
