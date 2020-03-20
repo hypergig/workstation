@@ -12,11 +12,16 @@
     - regolith-look-solarized-dark
   become: true
 
-- name: link alacritty config
+- name: link regolith configs
   file:
     state: link
-    src: "{{playbook_dir}}/config/Xresources"
+    src: "{{item.src}}"
+    dest: "{{item.dest}}"
+  with_items:
+  - src: "{{playbook_dir}}/config/Xresources"
     dest: ~/.config/regolith/Xresources
+  - src: "{{playbook_dir}}/config/i3.config"
+    dest: ~/.config/regolith/i3/config
 
 - name: setting look
   shell: regolith-look set solarized-dark && regolith-look refresh || echo "look is already set"
