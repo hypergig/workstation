@@ -8,6 +8,7 @@
 - name: install regolith
   apt:
     name:
+    - dunst
     - regolith-desktop
     - regolith-look-solarized-dark
   become: true
