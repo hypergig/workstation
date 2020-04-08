@@ -29,12 +29,13 @@
   changed_when: "'F: Imported 1 GPG key to remote \"flathub\"' in result.stderr"
   become: true
 
-- name: install flatpaks
-  flatpak:
-    name: >
-      us.zoom.Zoom
-  register: result
-  changed_when: "'Installation complete.' in result.stdout"
+# stubbed out for future use
+# - name: install flatpaks
+#   flatpak:
+#     name: >
+#       # us.stub.flatpak
+#   register: result
+#   changed_when: "'Installation complete.' in result.stdout"
 
 # debs need to be able to update them selves
 - name: installing debs
@@ -42,6 +43,7 @@
     deb: "{{item}}"
   with_items:
   - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  - https://zoom.us/client/latest/zoom_amd64.deb
   become: true
 
 - name: install snaps
