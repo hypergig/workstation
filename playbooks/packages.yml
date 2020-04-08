@@ -49,9 +49,10 @@
 - name: install snaps
   snap:
     name:
+    - discord
+    - gimp
     - signal-desktop
     - spotify
-    - gimp
   become: true
 
 - name: install snaps (classic)
