@@ -8,14 +8,17 @@
 
 - name: add gcloud apt repo
   apt_repository:
-    repo: "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main"
+    repo: "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] {{item}}"
+  with_items:
+    - "https://packages.cloud.google.com/apt cloud-sdk main"
+    - "https://apt.kubernetes.io/ kubernetes-xenial main"
   become: true
 
 - name: install gcloud apts
   apt:
     name:
     - google-cloud-sdk
-    - kubectl
+    - kubectl=1.17.4-00
   become: true
 
 - name: kubernetes pip package
