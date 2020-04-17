@@ -15,6 +15,7 @@
     - make
     - neofetch
     - net-tools
+    - paprefs
     - pavucontrol
     - python3-pip
     - software-properties-common
