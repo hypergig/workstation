@@ -1,5 +1,15 @@
 # -*- ansible -*-
 ---
+- name: add git repo
+  apt_repository:
+    repo: "ppa:git-core/ppa"
+  become: true
+
+- name: install git
+  apt:
+    name: git
+  become: true
+
 - name: installing git prompt
   git:
     repo: git@github.com:magicmonty/bash-git-prompt.git
@@ -10,4 +20,3 @@
     state: link
     path: ~/.gitconfig
     src: "{{playbook_dir}}/config/.gitconfig"
-
