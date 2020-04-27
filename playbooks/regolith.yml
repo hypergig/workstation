@@ -9,8 +9,25 @@
   apt:
     name:
     - dunst
+    - i3xrocks-battery
+    - i3xrocks-cpu-usage
+    - i3xrocks-media-player
+    - i3xrocks-memory
+    - i3xrocks-net-traffic
+    - i3xrocks-temp
+    - i3xrocks-time
+    - i3xrocks-volume
+    - i3xrocks-weather
+    - i3xrocks-wifi
+    - regolith-compositor-none
     - regolith-desktop
     - regolith-look-solarized-dark
+  become: true
+
+- name: yank rofication package
+  apt:
+    name: regolith-rofication
+    state: absent
   become: true
 
 - name: link regolith configs
@@ -21,8 +38,6 @@
   with_items:
   - src: "{{playbook_dir}}/config/Xresources"
     dest: ~/.config/regolith/Xresources
-  - src: "{{playbook_dir}}/config/i3.config"
-    dest: ~/.config/regolith/i3/config
 
 - name: setting look
   shell: regolith-look set solarized-dark && regolith-look refresh || echo "look is already set"
