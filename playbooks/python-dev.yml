@@ -29,3 +29,9 @@
   command: python3.7 cache/get-poetry.py
   register: result
   changed_when: "'Latest version already installed.' not in result.stdout"
+
+- name: fixing python version
+  lineinfile:
+    path: /home/jordan/.poetry/bin/poetry
+    regexp: '#!/usr/bin/env python'
+    line: '#!/usr/bin/env python3.7'
