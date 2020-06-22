@@ -23,7 +23,6 @@
   pip:
     name:
     - docker-compose
-    - docker
 
 - name: docker compose bash completion
   get_url:

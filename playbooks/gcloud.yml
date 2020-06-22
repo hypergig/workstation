@@ -21,10 +21,6 @@
     - kubectl=1.17.4-00
   become: true
 
-- name: kubernetes pip package
-  pip:
-    name: kubernetes
-
 - name: download istio bins
   get_url:
     url: https://github.com/istio/istio/releases/download/1.5.0/istio-1.5.0-linux.tar.gz

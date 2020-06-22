@@ -4,8 +4,6 @@
   apt:
     name:
     - bpython3
-    - python
-    - python3-venv
   become: true
 
 - name: clone pyenv repo
@@ -18,20 +16,3 @@
     state: link
     src: ~/repos/pyenv
     dest: ~/.pyenv
-
-- name: downloading poetry installer
-  get_url:
-    url: https://raw.githubusercontent.com/python-poetry/poetry/1.0.5/get-poetry.py
-    dest: cache/get-poetry.py
-    checksum: sha256:40cf7b39a926acae9d1d0293983a508c58a6788554c6120a84e65d18ce044e51
-
-- name: installing poetry
-  command: python3.7 cache/get-poetry.py
-  register: result
-  changed_when: "'Latest version already installed.' not in result.stdout"
-
-- name: fixing python version
-  lineinfile:
-    path: /home/jordan/.poetry/bin/poetry
-    regexp: '#!/usr/bin/env python'
-    line: '#!/usr/bin/env python3.7'
