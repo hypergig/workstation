@@ -19,7 +19,6 @@
     - i3xrocks-volume
     - i3xrocks-weather
     - i3xrocks-wifi
-    - regolith-compositor-none
     - regolith-desktop
     - regolith-look-solarized-dark
   become: true
