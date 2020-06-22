@@ -1,8 +1,0 @@
-#! /usr/bin/env bash
-exec &> >(tee -a /var/log/sway.log)
-
-echo -e '\n\n=========== starting sway session now ===========\n\n'
-date
-sway
-date
-echo -e '\n\n=========== sway session exited ===========\n\n'
