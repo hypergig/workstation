@@ -1,10 +1,5 @@
 # -*- ansible -*-
 ---
-- name: add alacritty repo
-  apt_repository:
-    repo: "ppa:mmstick76/alacritty"
-  become: true
-
 - name: install alacritty
   apt:
     name: alacritty

@@ -18,6 +18,7 @@
     - paprefs
     - pavucontrol
     - python3-pip
+    - snapd
     - software-properties-common
     - tree
     - vim
@@ -36,6 +37,11 @@
 #       # us.stub.flatpak
 #   register: result
 #   changed_when: "'Installation complete.' in result.stdout"
+
+- name: Create cache directory
+  file:
+    dest: "{{playbook_dir}}/cache"
+    state: directory
 
 # debs need to be able to update them selves
 - name: installing debs
