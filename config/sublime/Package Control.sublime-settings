@@ -10,7 +10,6 @@
 	"installed_packages":
 	[
 		"Ansible",
-		"AnsibleSnippets",
 		"ANSIescape",
 		"ASCII Decorator",
 		"Bats",
@@ -19,7 +18,6 @@
 		"Dockerfile Syntax Highlighting",
 		"Emacs-like Modelines",
 		"FileIcons",
-		"GitHub Markdown Snippets",
 		"Github Tools",
 		"Gitignore",
 		"HTMLBeautify",
@@ -34,6 +32,7 @@
 		"MarkdownPreview",
 		"MarkdownTOC",
 		"nginx",
+		"One Dark Material - Theme",
 		"OpenBazelBUILDFile",
 		"Package Control",
 		"Package Syncing",
@@ -52,6 +51,7 @@
 		"Sublimerge Pro",
 		"Text Pastry",
 		"Theme - Afterglow",
+		"Theme - Darkmatter",
 		"Theme - Soda SolarizedDark",
 		"Theme - Solarized Flat",
 		"Theme - Solarized Space",
