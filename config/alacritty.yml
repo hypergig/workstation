@@ -157,7 +157,7 @@
   #use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-#draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
 
 # popos colors
@@ -308,11 +308,11 @@ colors:
 background_opacity: .80
 
 
-#selection:
+selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  #save_to_clipboard: false
+  save_to_clipboard: true
 
 # Allow terminal applications to change Alacritty's window title.
 #dynamic_title: true
