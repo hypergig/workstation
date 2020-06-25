@@ -4,6 +4,8 @@
   apt:
     name:
     - bpython3
+    - libssl-dev
+    - python3-venv
   become: true
 
 - name: clone pyenv repo
