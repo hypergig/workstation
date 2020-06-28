@@ -29,6 +29,11 @@
     state: absent
   become: true
 
+- name: Create config directories
+  file:
+    dest: ~/.config/regolith/i3
+    state: directory
+
 - name: link regolith configs
   file:
     state: link
