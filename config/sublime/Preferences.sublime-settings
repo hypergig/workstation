@@ -13,7 +13,7 @@
 	],
 	"spell_check": true,
 	"tab_size": 2,
-	"theme": "Afterglow-orange.sublime-theme",
+	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"vintage_ctrl_keys": true
