@@ -15,6 +15,7 @@
     - make
     - neofetch
     - net-tools
+    - openjdk-11-jdk
     - paprefs
     - pavucontrol
     - python3-pip
