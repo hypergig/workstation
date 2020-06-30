@@ -19,6 +19,7 @@
     - i3xrocks-volume
     - i3xrocks-weather
     - i3xrocks-wifi
+    - imwheel
     - regolith-desktop
     - regolith-look-solarized-dark
   become: true
@@ -44,6 +45,8 @@
     dest: ~/.config/regolith/Xresources
   - src: "{{playbook_dir}}/config/i3.config"
     dest: ~/.config/regolith/i3/config
+  - src: "{{playbook_dir}}/config/.imwheelrc"
+    dest: ~/.imwheelrc
 
 - name: setting look
   shell: regolith-look set solarized-dark && regolith-look refresh || echo "look is already set"
