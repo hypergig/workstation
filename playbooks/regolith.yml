@@ -9,19 +9,21 @@
   apt:
     name:
     - dunst
-    - i3xrocks-battery
-    - i3xrocks-cpu-usage
-    - i3xrocks-media-player
-    - i3xrocks-memory
-    - i3xrocks-net-traffic
-    - i3xrocks-temp
-    - i3xrocks-time
-    - i3xrocks-volume
-    - i3xrocks-weather
-    - i3xrocks-wifi
     - imwheel
     - regolith-desktop
     - regolith-look-solarized-dark
+    # for xfce4-panel
+    - xfce4-battery-plugin
+    - xfce4-cpugraph-plugin
+    - xfce4-genmon-plugin
+    - xfce4-mpc-plugin
+    - xfce4-netload-plugin
+    - xfce4-panel
+    - xfce4-pulseaudio-plugin
+    - xfce4-sensors-plugin
+    - xfce4-statusnotifier-plugin
+    - xfce4-systemload-plugin
+    - xfce4-weather-plugin
   become: true
 
 - name: yank rofication package

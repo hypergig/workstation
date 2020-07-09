@@ -8,3 +8,4 @@ i3xrocks.date.format2:  + %A %x %r
 rofi.drun-icon-theme:   icons
 Xcursor.theme:          icons
 i3-wm.program.1:        imwheel --kill --buttons "4 5"
+i3-wm.program.2:        xfce4-panel -d

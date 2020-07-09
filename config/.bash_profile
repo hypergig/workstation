@@ -15,7 +15,7 @@ _bash_profile_lib_dir="${_repos_dir}/workstation/lib"
 _fav_containers=(alpine:latest ubuntu:latest debian:latest python:3 hypergig/parrotsay)
 
 # path mods
-PATH="${PYENV_ROOT}/bin:${PATH}:${HOME}/.node/node_modules/.bin"
+PATH="${_workstation_dir}/bin:${PYENV_ROOT}/bin:${PATH}:${HOME}/.node/node_modules/.bin"
 
 # property_file.sh looks like, needs to be in the $HOME directory
 # export private_docker_repo=something.io/this
