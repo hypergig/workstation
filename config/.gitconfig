@@ -4,3 +4,6 @@
 
 [core]
 editor = "subl -n -w"
+
+[pull]
+rebase = false
