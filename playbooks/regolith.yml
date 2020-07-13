@@ -8,7 +8,6 @@
 - name: install regolith
   apt:
     name:
-    - dunst
     - imwheel
     - regolith-desktop
     - regolith-look-solarized-dark
