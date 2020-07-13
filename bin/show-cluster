@@ -1,3 +1,4 @@
 #! /usr/bin/env bash
 set -euo pipefail
-echo "☸ $(kubectl config current-context | cut -f4 -d_)"
+echo -n "☸ "
+kubectl config current-context | cut -f4 -d_ || echo "no cluster selected"
