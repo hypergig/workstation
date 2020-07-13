@@ -1,20 +1,31 @@
 SHELL := time /usr/bin/env bash
 .SHELLFLAGS := -euo pipefail -c
 
+ansible := ansible-playbook -$(or $(v),v) playbook.yml
 
-# install
+
+.PHONY: install
+install: sudo | cache
+	$(ansible)
+
+
 apps := $(patsubst playbooks/%.yml,%,$(wildcard playbooks/*.yml))
-install_targets := install $(addprefix install-,$(apps))
+app_targets := $(addprefix install-,$(apps))
+.PHONY: $(app_targets)
+$(app_targets): install-%: sudo | cache
+	 $(ansible) -e app=playbooks/$*.yml
 
-.PHONY: $(install_targets)
-$(install_targets): install-%: | cache
-	sudo -v
-	ansible-playbook -$(or $(v),v) playbook.yml $(if $(filter-out install,$*),-e app=playbooks/$*.yml)
 
+.PHONY: cache
 cache:
 	mkdir -pv $@
 
-# clean
+
+.PHONY: sudo
+sudo:
+	sudo -v
+
+
 .PHONY: clean
 clean:
-	-rm -vrf cache/*
+	-rm -vrf cache
