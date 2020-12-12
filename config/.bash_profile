@@ -80,7 +80,7 @@ complete -C '/usr/local/bin/aws_completer' aws
 source <(kubectl completion bash)
 
 # my screen
-[ $((1 + RANDOM % 10)) == 1 ] && docker run -t hypergig/parrotsay || true
+(( RANDOM % 10 )) || docker run -t hypergig/parrotsay
 
 # direnv
 eval "$(direnv hook bash)"
