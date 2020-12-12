@@ -7,14 +7,3 @@
     - libssl-dev
     - python3-venv
   become: true
-
-- name: clone pyenv repo
-  git:
-    repo: git://github.com/yyuu/pyenv.git
-    dest: ~/repos/pyenv
-
-- name: link pyenv
-  file:
-    state: link
-    src: ~/repos/pyenv
-    dest: ~/.pyenv
