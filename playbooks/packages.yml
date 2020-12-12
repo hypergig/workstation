@@ -16,7 +16,7 @@
     - make
     - neofetch
     - net-tools
-    - openjdk-11-jdk
+    - openjdk-14-jdk
     - paprefs
     - pavucontrol
     - python3-pip
@@ -56,9 +56,7 @@
 - name: install snaps
   snap:
     name:
-    - discord
     - gimp
-    - signal-desktop
     - spotify
   become: true
 
