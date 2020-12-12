@@ -49,7 +49,7 @@
   - src: "{{playbook_dir}}/config/.imwheelrc"
     dest: ~/.imwheelrc
 
-- name: setting look
-  shell: regolith-look set solarized-dark && regolith-look refresh || echo "look is already set"
-  register: result
-  changed_when: "'look is already set' not in result.stdout"
+# - name: setting look
+#   shell: regolith-look set solarized-dark && regolith-look refresh || echo "look is already set"
+#   register: result
+#   changed_when: "'look is already set' not in result.stdout"
