@@ -1,0 +1,16 @@
+# -*- ansible -*-
+---
+- name: add typora repo key
+  apt_key:
+    url: https://typora.io/linux/public-key.asc
+  become: true
+
+- name: add typora repo
+  apt_repository:
+    repo: "deb https://typora.io/linux ./"
+  become: true
+
+- name: install typora
+  apt:
+    name: typora
+  become: true
