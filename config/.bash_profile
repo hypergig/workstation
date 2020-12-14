@@ -5,7 +5,7 @@ set -o vi
 # default vars
 export VISUAL=vim
 export EDITOR="$VISUAL"
-export GTK_THEME="Solarized-Dark-Orange"
+export GTK_THEME="Solarized-Dark-Blue"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export XCURSOR_PATH="/usr/share/icons:${XCURSOR_PATH}"
 _repos_dir="$HOME/repos"
@@ -84,3 +84,8 @@ source <(kubectl completion bash)
 
 # direnv
 eval "$(direnv hook bash)"
+
+# sway
+if [ "$(tty)" = "/dev/tty2" ]; then
+  exec start-sway
+fi
