@@ -1,4 +1,3 @@
 #! /usr/bin/env bash
 set -euo pipefail
-sudo modprobe v4l2loopback exclusive_caps=1 card_label=WfRecorder
-exec wf-recorder --muxer=v4l2 --codec=rawvideo --file=/dev/video6 -x yuv420p
+exec wf-recorder --muxer=v4l2 --codec=rawvideo --file=/dev/video10 -x yuv420p

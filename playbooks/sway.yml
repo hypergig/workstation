@@ -39,10 +39,20 @@
   register: result
   become: true
 
-- name: setting up v4l
+- name: setting up v4l module
   copy:
     dest: /etc/modules-load.d/v4l2loopback.conf
-    content: v4l2loopback exclusive_caps=1 card_label=WfRecorder
+    content: |
+      v4l2loopback
+  become: true
+
+- name: setting up v4l module options
+  copy:
+    dest: /etc/modprobe.d/v4l2loopback.conf
+    content: |
+      options v4l2loopback exclusive_caps=1
+      options v4l2loopback card_label=WfRecorder
+      options v4l2loopback video_nr=10
   become: true
 
 - name: waybar config
