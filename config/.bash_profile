@@ -26,7 +26,6 @@ PATH="${_workstation_dir}/bin:${PATH}:${HOME}/.node/node_modules/.bin"
 alias gr="cd $_repos_dir"
 alias ga="cd $_repos_dir/$_most_common_repo"
 alias jork="${_bash_profile_lib_dir}/jork.sh"
-alias copy='tee /dev/stderr | xclip -sel clip'
 
 
 # docker functions
@@ -76,7 +75,6 @@ export GIT_PROMPT_THEME=Minimal
 source ~/repos/bash-git-prompt/gitprompt.sh
 
 # you complete me
-complete -C '/usr/local/bin/aws_completer' aws
 source <(kubectl completion bash)
 
 # my screen
