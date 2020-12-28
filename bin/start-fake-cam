@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+set -euo pipefail
+exec wf-recorder --muxer=v4l2 --codec=rawvideo --file=/dev/video10 -x yuv420p

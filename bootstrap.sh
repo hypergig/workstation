@@ -5,6 +5,8 @@ cd ~/repos
 sudo apt-get update
 sudo apt-get install -y git make python3-pip
 pip3 install --user ansible jmespath
+xdg-open https://github.com/settings/keys
+read -p 'Create your ssh key...'
 [ -d 'workstation' ] || git clone git@github.com:hypergig/workstation.git
 cd workstation
 PATH="~/.local/bin:${PATH}"

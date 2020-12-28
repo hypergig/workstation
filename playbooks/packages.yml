@@ -8,7 +8,6 @@
     - curl
     - dconf-editor
     - direnv
-    - flatpak
     - gnome-tweaks
     - gnupg-agent
     - htop
@@ -24,20 +23,6 @@
     - tree
     - vim
   become: true
-
-- name: add flat remote
-  command: flatpak remote-add -v --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-  register: result
-  changed_when: "'F: Imported 1 GPG key to remote \"flathub\"' in result.stderr"
-  become: true
-
-# stubbed out for future use
-# - name: install flatpaks
-#   flatpak:
-#     name: >
-#       # us.stub.flatpak
-#   register: result
-#   changed_when: "'Installation complete.' in result.stdout"
 
 - name: Create cache directory
   file:
@@ -65,9 +50,7 @@
     name:
     - code
     - go
-    - goland
     - intellij-idea-ultimate
-    - protobuf
     - pycharm-community
     - slack
     classic: true
@@ -85,13 +68,6 @@
   pip:
     name:
     - ansible
-    - dazl
     - jmespath
     - pip
     - pycodestyle
-    - yq
-
-- name: install npms
-  npm:
-    name: bats
-    path: ~/.node

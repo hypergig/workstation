@@ -1,0 +1,62 @@
+# -*- ansible -*-
+- name: install sway packages
+  apt:
+    name:
+    - apparmor-utils
+    - fonts-font-awesome
+    - grim
+    - mako-notifier
+    - slurp
+    - sway
+    - swaybg
+    - swayidle
+    - swaylock
+    - v4l-utils
+    - v4l2loopback-dkms
+    - v4l2loopback-utils
+    - waybar
+    - wdisplays
+    - wl-clipboard
+    - wofi
+  become: true
+
+- name: link config
+  file:
+    state: link
+    src: "{{playbook_dir}}/config/sway/config.d"
+    dest: /etc/sway/config.d
+  become: true
+
+- name: chrome wayland
+  file:
+    state: link
+    src: "{{playbook_dir}}/config/sway/google-chrome-wayland.desktop"
+    dest: ~/.local/share/applications/google-chrome-wayland.desktop
+
+- name: allow mako
+  shell: 'aa-disable /etc/apparmor.d/fr.emersion.Mako ||:'
+  changed_when: "'Unable to remove' not in result.stderr"
+  register: result
+  become: true
+
+- name: setting up v4l module
+  copy:
+    dest: /etc/modules-load.d/v4l2loopback.conf
+    content: |
+      v4l2loopback
+  become: true
+
+- name: setting up v4l module options
+  copy:
+    dest: /etc/modprobe.d/v4l2loopback.conf
+    content: |
+      options v4l2loopback exclusive_caps=1
+      options v4l2loopback card_label=WfRecorder
+      options v4l2loopback video_nr=10
+  become: true
+
+- name: waybar config
+  file:
+    state: link
+    src: "{{playbook_dir}}/config/waybar"
+    dest: ~/.config/waybar
