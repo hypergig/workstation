@@ -12,23 +12,24 @@
     url: "https://github.com/laurent22/joplin/releases/download/v{{latest.version}}/{{latest.path}}"
   become: true
 
-- name: fetch joplin desktop file
-  command: joplin --appimage-extract joplin.desktop
-  args:
-    chdir: "{{playbook_dir}}/cache"
-    creates: "{{playbook_dir}}/cache/squashfs-root/joplin.desktop"
-
-- name: link joplin desktop file
-  file:
-    state: link
-    src: "{{playbook_dir}}/cache/squashfs-root/joplin.desktop"
+- name:  create desktop file
+  copy:
+    content: |
+      [Desktop Entry]
+      Encoding=UTF-8
+      Name=Joplin
+      Comment=Joplin for Desktop
+      Exec=joplin
+      Icon=joplin
+      StartupWMClass=Joplin
+      Type=Application
+      Categories=Office
     dest: ~/.local/share/applications/appimagekit-joplin.desktop
 
-- name: modify desktop file
-  lineinfile:
-    path: "{{playbook_dir}}/cache/squashfs-root/joplin.desktop"
-    regexp: '^Exec='
-    line: Exec=joplin
+- name: create icon directory
+  file:
+    state: directory
+    dest: ~/.local/share/icons/hicolor/512x512/apps
 
 - name: fetch joplin icon
   get_url:
