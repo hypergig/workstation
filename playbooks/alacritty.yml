@@ -1,14 +1,14 @@
 # -*- ansible -*-
 ---
-- name: add alacritty repo
-  apt_repository:
-    repo: "ppa:mmstick76/alacritty"
-  become: true
-
 - name: install alacritty
-  apt:
+  homebrew_cask:
     name: alacritty
-  become: true
+
+- name: install bash
+  homebrew:
+    name:
+      - bash
+      - bash-completion
 
 - name: create alacritty config dir
   file:
@@ -21,8 +21,19 @@
     src: "{{playbook_dir}}/config/alacritty.yml"
     dest: ~/.config/alacritty/alacritty.yml
 
-- name: setting default terminal
-  command: update-alternatives --set x-terminal-emulator /usr/bin/alacritty
-  register: result
-  changed_when: "result.stdout != ''"
+- name: add brew bash as shell
+  lineinfile:
+    path: /etc/shells
+    line: /usr/local/bin/bash
   become: true
+
+- name: set brew brash as default shell
+  shell: '[ "${SHELL}" == /usr/local/bin/bash ] && echo "shell is good" || chsh -s /usr/local/bin/bash'
+  register: result
+  changed_when: "'shell is good' not in result.stdout"
+
+- name: bash profile
+  file:
+    state: link
+    src: "{{playbook_dir}}/config/.bash_profile"
+    dest: ~/.bash_profile

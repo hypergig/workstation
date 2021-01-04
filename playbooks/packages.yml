@@ -1,69 +1,32 @@
 # -*- ansible -*-
 ---
-- name: install apts
-  apt:
+- name: brew pacakges
+  homebrew:
     name:
-    - apt-transport-https
-    - ca-certificates
-    - blueman
-    - curl
-    - dconf-editor
-    - direnv
-    - gnome-tweaks
-    - gnupg-agent
-    - htop
-    - jq
-    - make
-    - neofetch
-    - net-tools
-    - openjdk-14-jdk
-    - paprefs
-    - pavucontrol
-    - python3-pip
-    - software-properties-common
-    - tree
-    - vim
-  become: true
+      - coreutils
+      - diffutils
+      - direnv
+      - findutils
+      - gnu-getopt
+      - gnu-sed
+      - gnu-tar
+      - gnu-time
+      - gnu-which
+      - golang
+      - htop
+      - jq
+      - make
+      - node
 
-- name: Create cache directory
-  file:
-    dest: "{{playbook_dir}}/cache"
-    state: directory
-
-# debs need to be able to update them selves
-- name: installing debs
-  apt:
-    deb: "{{item}}"
-  with_items:
-  - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  - https://zoom.us/client/latest/zoom_amd64.deb
-  become: true
-
-- name: install snaps
-  snap:
+- name: brew casks
+  homebrew_cask:
     name:
-    - gimp
-    - spotify
-  become: true
-
-- name: install snaps (classic)
-  snap:
-    name:
-    - code
-    - go
-    - intellij-idea-ultimate
-    - pycharm-community
-    - slack
-    classic: true
-  become: true
-
-- name: install snaps (edge)
-  snap:
-    name:
-    - node
-    classic: true
-    channel: latest/edge
-  become: true
+      - google-chrome
+      - intellij-idea 
+      - slack
+      - spotify
+      - sublime-text
+      - zoom
 
 - name: install pips
   pip:
@@ -71,4 +34,3 @@
     - ansible
     - jmespath
     - pip
-    - pycodestyle

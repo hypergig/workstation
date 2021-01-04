@@ -1,10 +1,5 @@
 # -*- ansible -*-
 ---
-- name: bash profile
-  lineinfile:
-    path: ~/.profile
-    line: "source {{playbook_dir}}/config/.bash_profile"
-
 - name: property file
   file:
     state: touch
