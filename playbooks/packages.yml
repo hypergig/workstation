@@ -16,21 +16,23 @@
       - htop
       - jq
       - make
-      - node
+      - node@14
 
 - name: brew casks
   homebrew_cask:
     name:
+      - amethyst
       - google-chrome
-      - intellij-idea 
+      - intellij-idea
       - slack
       - spotify
       - sublime-text
+      - visual-studio-code
       - zoom
 
 - name: install pips
   pip:
     name:
-    - ansible
+    - ansible 
     - jmespath
     - pip
