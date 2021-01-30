@@ -80,6 +80,7 @@ source ~/repos/bash-git-prompt/gitprompt.sh
 # you complete me
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 source <(kubectl completion bash)
+if [ -f '/Users/jordancohen/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/jordancohen/Downloads/google-cloud-sdk/completion.bash.inc'; fi
 
 # my screen
 (( RANDOM % 10 )) || docker run -t hypergig/parrotsay
