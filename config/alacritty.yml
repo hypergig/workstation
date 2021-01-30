@@ -20,7 +20,7 @@
   # available, otherwise `xterm-256color` is used.
   #TERM: alacritty
 
-#window:
+window:
   # Window dimensions (changes require restart)
   #
   # Number of lines/columns (not pixels) in the terminal. The number of columns
@@ -58,7 +58,7 @@
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  #decorations: full
+  decorations: buttonless
 
   # Startup Mode (changes require restart)
   #
@@ -353,6 +353,7 @@ colors:
   #   command:
   #     program: notify-send
   #     args: ["Hello, World!"]
+
   #
   #command: None
 
@@ -362,13 +363,13 @@ colors:
 # The value `0.0` is completely transparent and `1.0` is opaque.
 #background_opacity: 1.0
 
-#selection:
+selection:
   # This string contains all characters that are used as separators for
   # "semantic words" in Alacritty.
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  #save_to_clipboard: false
+  save_to_clipboard: true
 
 #cursor:
   # Cursor style
