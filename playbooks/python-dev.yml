@@ -7,3 +7,15 @@
     - libssl-dev
     - python3-venv
   become: true
+
+- name: keyring dir
+  file:
+    state: directory
+    dest:  ~/.config/python_keyring
+
+- name: keyring config
+  copy:
+    content: |
+      [backend]
+      default-keyring=keyrings.alt.file.PlaintextKeyring
+    dest: ~/.config/python_keyring/keyringrc.cfg

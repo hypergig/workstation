@@ -5,6 +5,7 @@
     name:
     - apt-transport-https
     - ca-certificates
+    - blueman
     - curl
     - dconf-editor
     - direnv
