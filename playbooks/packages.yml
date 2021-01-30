@@ -21,12 +21,15 @@
 - name: brew casks
   homebrew_cask:
     name:
-      - amethyst
       - google-chrome
       - intellij-idea
+      - joplin
+      - kap
+      - menumeters
       - slack
       - spotify
       - sublime-text
+      - typora
       - visual-studio-code
       - zoom
 

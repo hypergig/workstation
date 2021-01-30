@@ -9,16 +9,3 @@
   pip:
     name:
     - docker-compose
-
-# - name: docker compose bash completion
-#   get_url:
-#     url:  https://raw.githubusercontent.com/docker/compose/master/contrib/completion/bash/docker-compose
-#     dest: /etc/bash_completion.d/docker-compose
-#   become: true
-
-# - name: add jordan to docker group
-#   user:
-#     name: jordan
-#     groups: docker
-#     append: yes
-#   become: true
