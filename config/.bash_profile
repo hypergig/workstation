@@ -15,6 +15,7 @@ _fav_containers=(alpine:latest ubuntu:latest debian:latest python:3 hypergig/par
 
 # path mods
 PATH="${_workstation_dir}/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/opt/make/libexec/gnubin:/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/opt/diffutils/libexec/gnubin:${HOME}/Library/Python/3.8/bin::${PATH}"
+if [ -f '/Users/jordancohen/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/jordancohen/Downloads/google-cloud-sdk/path.bash.inc'; fi
 
 # property_file.sh looks like, needs to be in the $HOME directory
 # export private_docker_repo=something.io/this
