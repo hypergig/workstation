@@ -3,5 +3,5 @@ my workstation of course
 
 ## bootstrap and install
 ```
-wget -qO - https://raw.githubusercontent.com/hypergig/workstation/master/bootstrap.sh | bash
+wget -qO - https://raw.githubusercontent.com/hypergig/workstation/master/bootstrap | bash
 ```
