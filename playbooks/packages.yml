@@ -6,6 +6,8 @@
       - coreutils
       - diffutils
       - direnv
+      - docker-completion
+      - docker-compose-completion
       - findutils
       - gnu-getopt
       - gnu-sed
@@ -17,6 +19,7 @@
       - jq
       - make
       - node@14
+      - watch
 
 - name: brew casks
   homebrew_cask:
