@@ -19,6 +19,7 @@
       - jq
       - make
       - node@14
+      - tree
       - watch
 
 - name: brew casks
