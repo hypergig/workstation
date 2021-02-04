@@ -1,7 +1,7 @@
 SHELL := time /usr/bin/env bash
 .SHELLFLAGS := -euo pipefail -c
 
-ansible := ansible-playbook -M modules -$(or $(v),v) playbook.yml
+ansible := ansible-playbook -$(or $(v),v) playbook.yml
 
 
 .PHONY: install
