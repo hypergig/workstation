@@ -87,8 +87,3 @@ if [ -f '/Users/jordancohen/Downloads/google-cloud-sdk/completion.bash.inc' ]; t
 
 # direnv
 eval "$(direnv hook bash)"
-
-# sway
-if [ "$(tty)" = "/dev/tty2" ]; then
-  exec start-sway
-fi
