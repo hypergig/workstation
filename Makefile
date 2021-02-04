@@ -29,3 +29,8 @@ sudo:
 .PHONY: clean
 clean:
 	-rm -vrf cache
+
+
+.PHONY: update-defaults
+update-defaults:
+	cd config/defaults; ls | xargs -I{} sh -c 'defaults export {} - > {}'
