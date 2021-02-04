@@ -30,3 +30,7 @@
       with_items: "{{ app | default(playbooks)}}"
       loop_control:
         loop_var: playbook
+  handlers:
+    - name: Need to reboot
+      debug:
+        msg: Some tasks changed that may require a reboot for them to take affect

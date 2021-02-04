@@ -1,0 +1,9 @@
+# -*- ansible -*-
+---
+- name: set defaults
+  command: "defaults import {{item | basename}} {{item}}"
+  when: lookup('pipe', 'defaults export ' + item | basename + ' -' ) != lookup('file', item)
+  with_fileglob:
+  - "{{playbook_dir}}/config/defaults/*"
+  notify:
+  - Need to reboot
