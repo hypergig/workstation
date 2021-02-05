@@ -77,7 +77,7 @@
 # ############################################################### #
 
 # shortcuts
-alt - return : open -n /Applications/Alacritty.app
+cmd - return : open -n /Applications/Alacritty.app
 shift + alt - c : brew services restart skhd; brew services restart yabai
 
 # move windows to spaces
@@ -85,11 +85,6 @@ shift + alt - 1 : yabai -m window --space 1
 shift + alt - 2 : yabai -m window --space 2
 shift + alt - 3 : yabai -m window --space 3
 shift + alt - 4 : yabai -m window --space 4
-shift + alt - 5 : yabai -m window --space 5
-shift + alt - 6 : yabai -m window --space 6
-shift + alt - 7 : yabai -m window --space 7
-shift + alt - 8 : yabai -m window --space 8
-shift + alt - 9 : yabai -m window --space 9
 
 # focus window
 alt - h : yabai -m window --focus west
@@ -102,6 +97,29 @@ shift + alt - h : yabai -m window --warp west
 shift + alt - l : yabai -m window --warp east
 shift + alt - j : yabai -m window --warp south
 shift + alt - k : yabai -m window --warp north
+
+# resize managed window
+:: default
+:: grow
+:: shrink
+
+default, shrink < alt - r ; grow
+grow < alt - r ; default
+
+default, grow < shift + alt - r ; shrink
+grow < shift + alt - r ; default
+
+grow < alt - h : yabai -m window --resize left:-20:0
+grow < alt - l : yabai -m window --resize right:20:0
+grow < alt - j : yabai -m window --resize bottom:0:20
+grow < alt - k : yabai -m window --resize top:0:-20
+
+shrink < alt - h : yabai -m window --resize left:20:0
+shrink < alt - l : yabai -m window --resize right:-20:0
+shrink < alt - j : yabai -m window --resize bottom:0:-20
+shrink < alt - k : yabai -m window --resize top:0:20
+
+alt - a : yabai -m space --balance
 
 # split
 alt - e : yabai -m window --toggle split

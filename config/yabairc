@@ -22,8 +22,8 @@ echo "$(date) - starting load"
 yabai -m config mouse_follows_focus          on
 yabai -m config focus_follows_mouse          autofocus
 yabai -m config window_placement             second_child
-yabai -m config window_topmost               on
-yabai -m config auto_balance                 on
+yabai -m config auto_balance                 off
+yabai -m config split_ratio                  .5
 
 # general space settings
 yabai -m config layout                       bsp
@@ -32,5 +32,9 @@ yabai -m config bottom_padding               06
 yabai -m config left_padding                 06
 yabai -m config right_padding                06
 yabai -m config window_gap                   06
+
+# rules
+yabai -m rule --add label='zoom' title='^Zoom$' app='^zoom.us$' manage='off'
+yabai -m rule --add label='system preferences' app='^System Preferences$' manage='off'
 
 echo "$(date) - yabai configuration loaded.."
