@@ -1,7 +1,0 @@
-#! /bin/bash
-set -euo pipefail
-
-mkdir -vp  ~/screenshots
-
-[ "${1:-}" != "full" ] && geo="$(slurp -d)"
-grim ${geo:+-g "${geo}"} ~/screenshots/$(date +"%Y_%m_%d_%I_%M_%p").png

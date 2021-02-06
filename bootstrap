@@ -1,0 +1,32 @@
+#! /usr/bin/env sh
+set -xeuo pipefail
+
+# make ssh key
+open https://github.com/settings/keys
+read -p "Create your ssh key for github, press entry when completed..."
+
+# xcode
+xcode-select --install ||:
+read -p "Installing xcode, press enter when completed..."
+
+# install brew
+open https://brew.sh/
+read -p "Install homebrew, press enter when completed..."
+
+# install bash git and make
+brew install bash git make
+
+# install ansible
+pip3 install --user --upgrade pip
+pip3 install --user ansible jmespath
+
+# workstation repo
+mkdir -vp ~/repos
+cd ~/repos
+git clone git@github.com:hypergig/workstation.git
+
+# install
+cd workstation
+PATH="usr/local/opt/make/libexec/gnubin:${PATH}"
+hash -r
+exec make install

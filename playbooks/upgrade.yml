@@ -1,16 +1,13 @@
 # -*- ansible -*-
 ---
-- name: upgrade apts
-  apt:
-    upgrade: yes
-  become: true
+- name: upgrade all brews
+  homebrew:
+    upgrade_all: yes
+
+- name: upgrade all casks
+  homebrew_cask:
+    upgrade_all: yes
 
 - name: upgrade pips
   pip:
     name: "{{lookup('lines', 'pip3 list --user --outdated --not-required --format=freeze | cut -d= -f1')}}"
-
-- name: upgrade snaps
-  shell: snap refresh
-  register: result
-  changed_when: result.stderr != 'All snaps up to date.'
-  become: true

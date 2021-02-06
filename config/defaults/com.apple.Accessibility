@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AXSClassicInvertColorsPreference</key>
+	<integer>0</integer>
+	<key>ApplicationAccessibilityEnabled</key>
+	<integer>0</integer>
+	<key>AutomationEnabled</key>
+	<integer>0</integer>
+	<key>BrailleInputDeviceConnected</key>
+	<integer>0</integer>
+	<key>CommandAndControlEnabled</key>
+	<integer>0</integer>
+	<key>DarkenSystemColors</key>
+	<integer>0</integer>
+	<key>DifferentiateWithoutColor</key>
+	<integer>0</integer>
+	<key>EnhancedBackgroundContrastEnabled</key>
+	<integer>0</integer>
+	<key>FullKeyboardAccessEnabled</key>
+	<integer>0</integer>
+	<key>FullKeyboardAccessFocusRingEnabled</key>
+	<integer>1</integer>
+	<key>GenericAccessibilityClientEnabled</key>
+	<integer>0</integer>
+	<key>GrayscaleDisplay</key>
+	<integer>0</integer>
+	<key>InvertColorsEnabled</key>
+	<integer>0</integer>
+	<key>KeyRepeatDelay</key>
+	<real>0.25</real>
+	<key>KeyRepeatEnabled</key>
+	<integer>1</integer>
+	<key>KeyRepeatInterval</key>
+	<real>0.033333332999999993</real>
+	<key>ReduceMotionEnabled</key>
+	<integer>1</integer>
+	<key>SpeakThisEnabled</key>
+	<integer>0</integer>
+	<key>VoiceOverTouchEnabled</key>
+	<integer>0</integer>
+</dict>
+</plist>

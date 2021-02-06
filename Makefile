@@ -13,7 +13,7 @@ apps := $(patsubst playbooks/%.yml,%,$(wildcard playbooks/*.yml))
 app_targets := $(addprefix install-,$(apps))
 .PHONY: $(app_targets)
 $(app_targets): install-%: sudo | cache
-	 $(ansible) -e app=playbooks/$*.yml
+	$(ansible) -e app=playbooks/$*.yml
 
 
 .PHONY: cache
@@ -29,3 +29,8 @@ sudo:
 .PHONY: clean
 clean:
 	-rm -vrf cache
+
+
+.PHONY: update-defaults
+update-defaults:
+	cd config/defaults; ls | xargs -I{} sh -c 'defaults export {} - > {}'

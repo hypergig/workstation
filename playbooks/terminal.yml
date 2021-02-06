@@ -1,0 +1,39 @@
+# -*- ansible -*-
+---
+- name: install alacritty
+  homebrew_cask:
+    name: alacritty
+
+- name: install bash
+  homebrew:
+    name:
+      - bash
+      - bash-completion
+
+- name: create alacritty config dir
+  file:
+    state: directory
+    dest: ~/.config/alacritty
+
+- name: link alacritty config
+  file:
+    state: link
+    src: "{{playbook_dir}}/config/alacritty.yml"
+    dest: ~/.config/alacritty/alacritty.yml
+
+- name: add brew bash as shell
+  lineinfile:
+    path: /etc/shells
+    line: /usr/local/bin/bash
+  become: true
+
+- name: set brew brash as default shell
+  shell: '[ "${SHELL}" == /usr/local/bin/bash ] && echo "shell is good" || chsh -s /usr/local/bin/bash'
+  register: result
+  changed_when: "'shell is good' not in result.stdout"
+
+- name: bash profile
+  file:
+    state: link
+    src: "{{playbook_dir}}/config/.bash_profile"
+    dest: ~/.bash_profile

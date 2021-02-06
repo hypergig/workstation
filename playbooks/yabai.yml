@@ -1,0 +1,40 @@
+# -*- ansible -*-
+---
+
+# - name: yabai sudoers entry
+#   copy:
+#     dest: /private/etc/sudoers.d/yabai
+#     content: |
+#       {{ansible_user_id}} ALL = (root) NOPASSWD: /usr/local/bin/yabai --load-sa
+#   become: true
+
+- name: create config directories
+  file:
+    state: directory
+    dest: "~/.config/{{item}}"
+  with_items:
+  - yabai
+  - skhd
+
+- name: link config files
+  file:
+    state: link
+    src: "{{playbook_dir}}/config/{{item | basename}}"
+    dest: "{{item}}"
+  with_items:
+  -  ~/.config/yabai/yabairc
+  -  ~/.config/skhd/skhdrc
+
+- name: install yabai and tools
+  homebrew:
+    name:
+    - koekeishiya/formulae/yabai
+    - koekeishiya/formulae/skhd
+
+- name: set to startup
+  command: "brew services start {{item}}"
+  with_items:
+  - skhd
+  - yabai
+  register: result
+  changed_when: "'==> Successfully started ' in result.stdout"
