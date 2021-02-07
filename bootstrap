@@ -14,7 +14,9 @@ open https://brew.sh/
 read -p "Install homebrew, press enter when completed..."
 
 # install bash git and make
-brew install bash git make glib-openssl
+brew install bash git make glib-openssl python@3.9
+
+# intel brew uses /usr/local/bin, so we just need to add m1 brew's paths here
 PATH="/opt/homebrew/bin:${PATH}"
 hash -r
 
