@@ -3,6 +3,11 @@ SHELL := time /usr/bin/env bash
 
 ansible := ansible-playbook -$(or $(v),v) playbook.yml
 
+ifeq ($(shell uname -p),arm64)
+	ifeq ($(_IS_ALACRITTY),true)
+$(error Alacritty is not m1 native yet and may have some strange side effects with brew right now, best to switch to the native terminal for this)
+	endif
+endif
 
 .PHONY: install
 install: sudo | cache
