@@ -1,25 +1,8 @@
-#! /bin/bash
+# -*- bash -*-
 set -o vi
 
-
-# default vars
-export VISUAL=vim
-export EDITOR="$VISUAL"
-_repos_dir="$HOME/repos"
-_workstation_dir="${_repos_dir}/workstation"
-_bash_profile_lib_dir="${_repos_dir}/workstation/lib"
-_fav_containers=(alpine:latest ubuntu:latest debian:latest python:3 hypergig/parrotsay)
-
-
-# path mods
-PATH="${_workstation_dir}/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/opt/make/libexec/gnubin:/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/opt/diffutils/libexec/gnubin:${HOME}/Library/Python/3.8/bin::${PATH}"
-if [ -f '/Users/jordancohen/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/jordancohen/Downloads/google-cloud-sdk/path.bash.inc'; fi
-
-# property_file.sh looks like, needs to be in the $HOME directory
-# export private_docker_repo=something.io/this
-# export most_common_repo=foo
-#
-
+# source stuff
+. $HOME/.vars
 . $HOME/.property_file.env
 
 
@@ -83,13 +66,13 @@ source ~/repos/bash-git-prompt/gitprompt.sh
 
 
 # you complete me
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-source <(kubectl completion bash)
+[[ -r "${_brew_prefix}/etc/profile.d/bash_completion.sh" ]] && . "${_brew_prefix}/etc/profile.d/bash_completion.sh"
 if [ -f '/Users/jordancohen/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/jordancohen/Downloads/google-cloud-sdk/completion.bash.inc'; fi
 
 
 # my screen
-(( RANDOM % 10 )) || docker run -t hypergig/parrotsay
+# docker not supported on apple silicon yet
+# (( RANDOM % 10 )) || docker run -t hypergig/parrotsay
 
 
 # direnv

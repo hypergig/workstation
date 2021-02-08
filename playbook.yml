@@ -17,6 +17,7 @@
       extra_args: --user
       state: latest
   vars:
+    brew_prefix: "{{ lookup('pipe', 'brew --prefix') }}"
     special_playbooks:
     - "{{playbook_dir}}/playbooks/packages.yml"
     - "{{playbook_dir}}/playbooks/upgrade.yml"
