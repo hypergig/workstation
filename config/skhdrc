@@ -76,9 +76,22 @@
 # A REFERENCE ONLY, WHEN MAKING YOUR OWN CONFIGURATION..          #
 # ############################################################### #
 
+# layout modes
+:: default : yabai -m config layout bsp
+:: float : yabai -m config layout float
+:: stack : yabai -m config layout stack
+
+# toggle between default and stack
+alt - s ; stack
+stack < alt - s ; default
+
+# toggle between default and float
+alt - d ; float
+float < alt - d ; default
+
 # shortcuts
-cmd - return : open -n /Applications/Alacritty.app
-shift + alt - c : brew services restart skhd; brew services restart yabai
+default, stack, float < cmd - return : open -n /Applications/Alacritty.app
+default, stack, float < shift + alt - c : brew services restart skhd; brew services restart yabai
 
 # move windows to spaces
 shift + alt - 1 : yabai -m window --space 1
@@ -88,36 +101,33 @@ shift + alt - 4 : yabai -m window --space 4
 
 # focus window
 alt - h : yabai -m window --focus west
-alt - l : yabai -m window --focus east
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# rotate stack
+stack < alt - j : yabai -m window --focus stack.next
+stack < alt - k : yabai -m window --focus stack.prev
 
 # move managed window
 shift + alt - h : yabai -m window --warp west
-shift + alt - l : yabai -m window --warp east
 shift + alt - j : yabai -m window --warp south
 shift + alt - k : yabai -m window --warp north
+shift + alt - l : yabai -m window --warp east
 
-# resize managed window
-:: default
-:: grow
-:: shrink
+# resize windows
 
-default, shrink < alt - r ; grow
-grow < alt - r ; default
+# grow
+default, float < alt - y : yabai -m window --resize left:-50:0
+default, float < alt - u : yabai -m window --resize bottom:0:50
+default, float < alt - i : yabai -m window --resize top:0:-50
+default, float < alt - o : yabai -m window --resize right:50:0
 
-default, grow < shift + alt - r ; shrink
-grow < shift + alt - r ; default
-
-grow < alt - h : yabai -m window --resize left:-20:0
-grow < alt - l : yabai -m window --resize right:20:0
-grow < alt - j : yabai -m window --resize bottom:0:20
-grow < alt - k : yabai -m window --resize top:0:-20
-
-shrink < alt - h : yabai -m window --resize left:20:0
-shrink < alt - l : yabai -m window --resize right:-20:0
-shrink < alt - j : yabai -m window --resize bottom:0:-20
-shrink < alt - k : yabai -m window --resize top:0:20
+# shrink
+default, float < alt - n : yabai -m window --resize left:50:0
+default, float < alt - m : yabai -m window --resize bottom:0:-50
+default, float < alt - 0x2B : yabai -m window --resize top:0:50
+default, float < alt - 0x2F : yabai -m window --resize right:-50:0
 
 alt - a : yabai -m space --balance
 
@@ -127,4 +137,4 @@ alt - v : yabai -m window --insert south
 alt - b : yabai -m window --insert east
 
 # float / unfloat window
-alt - f : yabai -m window --toggle float
+default, stack < alt - f : yabai -m window --toggle float

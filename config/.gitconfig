@@ -3,7 +3,7 @@
 	email = hypergig@gmail.com
 
 [core]
-editor = "subl -n -w"
+editor = "yabai -m window --insert stack; subl -n -w"
 
 [pull]
 rebase = false
