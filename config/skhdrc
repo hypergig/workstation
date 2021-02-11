@@ -90,7 +90,7 @@ alt - d ; float
 float < alt - d ; default
 
 # shortcuts
-default, stack, float < cmd - return : open -n /Applications/Alacritty.app
+default, stack, float < alt - return : open -n /Applications/Alacritty.app
 default, stack, float < shift + alt - c : brew services restart skhd; brew services restart yabai
 
 # move windows to spaces
