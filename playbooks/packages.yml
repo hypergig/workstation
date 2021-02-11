@@ -1,5 +1,9 @@
 # -*- ansible -*-
 ---
+
+- name: update homebrew
+  homebrew:
+
 - name: brew pacakges
   homebrew:
     name:
