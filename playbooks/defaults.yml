@@ -1,9 +1,22 @@
 # -*- ansible -*-
 ---
-- name: set defaults
-  command: "defaults import {{item | basename}} {{item}}"
-  when: lookup('pipe', 'defaults export ' + item | basename + ' -' ) != lookup('file', item)
+- name: defaults diff
+  shell: "bash -c 'diff -u --color <(defaults export {{item | basename}}  -) <(cat {{item}})'"
+  register: result
+  changed_when: result.rc == 1
+  failed_when: result.rc >= 2
   with_fileglob:
   - "{{playbook_dir}}/config/defaults/*"
+
+- name: output diffs
+  debug: msg="{{item.stdout_lines}}"
+  when: item is changed
+  changed_when: true
+  with_items: "{{result.results}}"
+
+- name: set defaults
+  command: "defaults import {{item.item | basename}} {{item.item}}"
+  when: item is changed
+  with_items: "{{result.results}}"
   notify:
   - Need to reboot
