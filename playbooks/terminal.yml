@@ -1,14 +1,27 @@
 # -*- ansible -*-
 ---
-- name: install alacritty
-  homebrew_cask:
-    name: alacritty
-
-- name: install bash
+- name: install terminal tools
   homebrew:
     name:
       - bash
       - bash-completion
+      - rust
+- name: pull alacritty repo
+  git:
+    repo: git@github.com:alacritty/alacritty.git
+    dest: ~/repos/alacritty
+  register: result
+
+- name: build alacritty
+  make:
+    chdir: ~/repos/alacritty
+  when: result is changed
+
+- name: create alacritty app
+  file:
+    state: link
+    src: ~/repos/alacritty/target/release/osx/Alacritty.app
+    dest: /Applications/Alacritty.app
 
 - name: create alacritty config dir
   file:
