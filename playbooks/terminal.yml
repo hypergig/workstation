@@ -18,10 +18,9 @@
   when: result is changed
 
 - name: create alacritty app
-  file:
-    state: link
+  synchronize:
     src: ~/repos/alacritty/target/release/osx/Alacritty.app
-    dest: /Applications/Alacritty.app
+    dest: /Applications
 
 - name: create alacritty config dir
   file:
