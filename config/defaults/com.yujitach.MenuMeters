@@ -8,6 +8,8 @@
 	<false/>
 	<key>CPUDisplayMode</key>
 	<integer>4</integer>
+	<key>CPUPercentDisplayMode</key>
+	<integer>1</integer>
 	<key>CPUSortByUsage</key>
 	<false/>
 	<key>CPUSumAllProcsPercent</key>
@@ -18,6 +20,8 @@
 	<integer>5</integer>
 	<key>MemDisplayMode</key>
 	<integer>3</integer>
+	<key>MemPagingIndicator</key>
+	<true/>
 	<key>NetDisplayMode</key>
 	<integer>7</integer>
 	<key>NetPreferInterface</key>
@@ -27,9 +31,9 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2021-02-17T15:46:41Z</date>
+	<date>2021-02-24T02:08:56Z</date>
 	<key>SULastProfileSubmissionDate</key>
-	<date>2021-02-14T00:22:15Z</date>
+	<date>2021-02-21T02:32:18Z</date>
 	<key>com.ragingmenace.MenuMeterCPU</key>
 	<true/>
 	<key>com.ragingmenace.MenuMeterDisk</key>
