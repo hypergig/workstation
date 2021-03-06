@@ -23,12 +23,14 @@
       - jq
       - make
       - node@14
+      - smartmontools
       - tree
       - watch
 
 - name: brew casks
   homebrew_cask:
     name:
+      - discord
       - google-chrome
       - intellij-idea
       - joplin
