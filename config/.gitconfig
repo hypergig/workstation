@@ -3,7 +3,7 @@
 	email = hypergig@gmail.com
 
 [core]
-editor = "yabai -m window --insert stack; subl -n -w"
+editor = "vim -c 'set spell spelllang=en_us spellcapcheck='"
 
 [pull]
 rebase = false
