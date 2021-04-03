@@ -13,6 +13,13 @@ alias jork="${_bash_profile_lib_dir}/jork.sh"
 alias ll='ls --color=auto -alF'
 
 
+function chromeapp(){
+  for url in $@; do
+    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --app="${url}"
+  done
+}
+
+
 # docker functions
 docker-dedangle(){
   docker rmi -f $(docker images -q --filter "dangling=true")
