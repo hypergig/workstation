@@ -30,6 +30,7 @@
 - name: brew casks
   homebrew_cask:
     name:
+      - cheatsheet
       - discord
       - google-chrome
       - intellij-idea
