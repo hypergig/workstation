@@ -4,7 +4,7 @@
   homebrew:
     name:
       - bash
-      - bash-completion
+      - bash-completion@2
       - rust
 - name: pull alacritty repo
   git:
