@@ -20,7 +20,6 @@ echo "$(date) - starting load"
 
 # global settings
 yabai -m config auto_balance          on
-yabai -m config focus_follows_mouse   autofocus
 yabai -m config split_ratio           .5
 yabai -m config window_placement      second_child
 yabai -m space --balance
@@ -30,7 +29,6 @@ yabai -m config layout                       bsp
 yabai -m config window_gap                   06
 
 # rules
-yabai -m rule --add label='intelliJ_sub' app='IntelliJ IDEA' title='^$' mouse_follows_focus='on'
 yabai -m rule --add label='preferences' title='^.*Preferences.*$' manage='off'
 yabai -m rule --add label='zoom' title='^Zoom$' app='^zoom.us$' manage='off'
 
