@@ -8,6 +8,8 @@
 	<false/>
 	<key>CPUDisplayMode</key>
 	<integer>4</integer>
+	<key>CPUMaxProcessCount</key>
+	<integer>25</integer>
 	<key>CPUPercentDisplayMode</key>
 	<integer>1</integer>
 	<key>CPUSortByUsage</key>
@@ -22,18 +24,34 @@
 	<integer>3</integer>
 	<key>MemPagingIndicator</key>
 	<true/>
+	<key>MemPressure</key>
+	<false/>
+	<key>NSStatusItem Preferred Position com.ragingmenace.MenuMeterDisk</key>
+	<real>702</real>
+	<key>NSStatusItem Preferred Position com.ragingmenace.MenuMeterMem</key>
+	<real>885</real>
+	<key>NSStatusItem Preferred Position com.ragingmenace.MenuMeterNet</key>
+	<real>784</real>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>2360 961 400 135 0 0 5120 1415 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>2285 590 550 628 0 0 5120 1415 </string>
 	<key>NetDisplayMode</key>
 	<integer>7</integer>
 	<key>NetPreferInterface</key>
 	<string>primary</string>
+	<key>SUAutomaticallyUpdate</key>
+	<true/>
 	<key>SUFeedURL</key>
 	<string>https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/MenuMeters-Update.xml</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2021-02-24T02:08:56Z</date>
+	<date>2021-07-26T13:00:34Z</date>
 	<key>SULastProfileSubmissionDate</key>
-	<date>2021-02-21T02:32:18Z</date>
+	<date>2021-07-20T11:28:16Z</date>
+	<key>SUUpdateRelaunchingMarker</key>
+	<false/>
 	<key>com.ragingmenace.MenuMeterCPU</key>
 	<true/>
 	<key>com.ragingmenace.MenuMeterDisk</key>
@@ -42,6 +60,8 @@
 	<true/>
 	<key>migratedFromRagingMenaceToYujitach</key>
 	<true/>
+	<key>tintPercentage</key>
+	<real>0.0</real>
 	<key>v2.0.8alertPresented</key>
 	<true/>
 </dict>

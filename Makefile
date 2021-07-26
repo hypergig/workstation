@@ -33,4 +33,4 @@ clean:
 
 .PHONY: update-defaults
 update-defaults:
-	cd config/defaults; ls | xargs -I{} sh -c 'defaults export {} - > {}'
+	cd config/defaults; ls | xargs -I{} sh -c 'defaults export "{}" - > "{}"'
