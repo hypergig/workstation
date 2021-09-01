@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AKLastEmailListRequestDateKey</key>
+	<date>2021-09-01T20:05:30Z</date>
 	<key>AKLastIDMSEnvironment</key>
 	<integer>0</integer>
 	<key>AppleAccentColor</key>
@@ -28,6 +30,10 @@
 	<integer>2000</integer>
 	<key>AppleLocale</key>
 	<string>en_US</string>
+	<key>AppleMeasurementUnits</key>
+	<string>Inches</string>
+	<key>AppleMetricUnits</key>
+	<false/>
 	<key>AppleMiniaturizeOnDoubleClick</key>
 	<false/>
 	<key>ApplePressAndHoldEnabled</key>
@@ -38,6 +44,8 @@
 	<string>Always</string>
 	<key>AppleSpacesSwitchOnActivate</key>
 	<true/>
+	<key>AppleTemperatureUnit</key>
+	<string>Fahrenheit</string>
 	<key>ContextMenuGesture</key>
 	<integer>1</integer>
 	<key>InitialKeyRepeat</key>

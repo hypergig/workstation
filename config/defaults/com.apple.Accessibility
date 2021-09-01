@@ -4,6 +4,8 @@
 <dict>
 	<key>AXSClassicInvertColorsPreference</key>
 	<integer>0</integer>
+	<key>AccessibilityEnabled</key>
+	<false/>
 	<key>ApplicationAccessibilityEnabled</key>
 	<integer>0</integer>
 	<key>AutomationEnabled</key>
