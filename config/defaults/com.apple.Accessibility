@@ -29,11 +29,11 @@
 	<key>InvertColorsEnabled</key>
 	<integer>0</integer>
 	<key>KeyRepeatDelay</key>
-	<real>0.5</real>
+	<real>0.25</real>
 	<key>KeyRepeatEnabled</key>
 	<integer>1</integer>
 	<key>KeyRepeatInterval</key>
-	<real>0.083333332999999996</real>
+	<real>0.033333332999999993</real>
 	<key>ReduceMotionEnabled</key>
 	<integer>1</integer>
 	<key>SpeakThisEnabled</key>
