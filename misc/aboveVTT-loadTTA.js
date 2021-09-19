@@ -3907,7 +3907,7 @@ function addTTATrack(songID, bucket) {
         "name": song.title,
         "src": song.mp3,
         "loop": true,
-        "volume": .7,
+        "volume": .5,
     })
 }
 
