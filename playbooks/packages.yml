@@ -10,8 +10,6 @@
       - coreutils
       - diffutils
       - direnv
-      - docker-completion
-      - docker-compose-completion
       - findutils
       - gnu-getopt
       - gnu-sed
