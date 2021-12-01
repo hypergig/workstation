@@ -23,6 +23,7 @@
       - node@14
       - smartmontools
       - tree
+      - vim
       - watch
 
 - name: brew casks
