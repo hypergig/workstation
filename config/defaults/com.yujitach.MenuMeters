@@ -28,6 +28,10 @@
 	<false/>
 	<key>NSStatusItem Preferred Position com.ragingmenace.MenuMeterDisk</key>
 	<real>702</real>
+	<key>NSStatusItem Preferred Position com.ragingmenace.MenuMeterMem</key>
+	<real>885</real>
+	<key>NSStatusItem Preferred Position com.ragingmenace.MenuMeterNet</key>
+	<real>784</real>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>2360 961 400 135 0 0 5120 1415 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
