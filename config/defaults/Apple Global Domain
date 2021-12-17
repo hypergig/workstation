@@ -67,7 +67,7 @@
 	<key>NSLinguisticDataAssetsRequestLastInterval</key>
 	<real>86400</real>
 	<key>NSLinguisticDataAssetsRequestTime</key>
-	<date>2021-12-01T15:24:02Z</date>
+	<date>2021-12-16T15:40:38Z</date>
 	<key>NSLinguisticDataAssetsRequested</key>
 	<array>
 		<string>en</string>
@@ -87,8 +87,8 @@
 	<integer>1</integer>
 	<key>NSNavRecentPlaces</key>
 	<array>
-		<string>~/repos/daml-cloud</string>
 		<string>~/Movies/Kaptures</string>
+		<string>~/repos/daml-cloud</string>
 		<string>~/repos/daml-cloud/deployment/azure/dev/jordan</string>
 		<string>~/repos/workstation/config</string>
 		<string>~/repos/daml-cloud/tools/installer/openjdk/cache/jdk-14.0.2.jdk</string>
@@ -130,9 +130,9 @@
 		<dict/>
 	</dict>
 	<key>com.apple.mouse.doubleClickThreshold</key>
-	<real>1.7</real>
+	<real>5</real>
 	<key>com.apple.mouse.scaling</key>
-	<real>2</real>
+	<real>2.5</real>
 	<key>com.apple.scrollwheel.scaling</key>
 	<real>0.3125</real>
 	<key>com.apple.sound.beep.feedback</key>
