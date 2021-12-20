@@ -6,14 +6,17 @@
       - bash
       - bash-completion@2
       - rust
+
 - name: pull alacritty repo
   git:
     repo: git@github.com:alacritty/alacritty.git
+    version: v0.9.0
     dest: ~/repos/alacritty
   register: result
 
 - name: build alacritty
   make:
+    target: app
     chdir: ~/repos/alacritty
   when: result is changed
 
