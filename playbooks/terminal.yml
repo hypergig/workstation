@@ -12,18 +12,19 @@
     repo: git@github.com:alacritty/alacritty.git
     version: v0.9.0
     dest: ~/repos/alacritty
-  register: result
 
 - name: build alacritty
   make:
     target: app
     chdir: ~/repos/alacritty
-  when: result is changed
+  register: result
+  changed_when: "result.stdout_lines | length > 4"
 
 - name: create alacritty app
   synchronize:
     src: ~/repos/alacritty/target/release/osx/Alacritty.app
     dest: /Applications
+  when: result is changed
 
 - name: create alacritty config dir
   file:
