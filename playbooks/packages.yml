@@ -25,6 +25,7 @@
       - tree
       - vim
       - watch
+      - wget
 
 - name: brew casks
   homebrew_cask:
