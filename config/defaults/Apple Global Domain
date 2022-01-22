@@ -67,7 +67,7 @@
 	<key>NSLinguisticDataAssetsRequestLastInterval</key>
 	<real>86400</real>
 	<key>NSLinguisticDataAssetsRequestTime</key>
-	<date>2021-12-16T15:40:38Z</date>
+	<date>2022-01-21T14:07:30Z</date>
 	<key>NSLinguisticDataAssetsRequested</key>
 	<array>
 		<string>en</string>
@@ -134,7 +134,7 @@
 	<key>com.apple.mouse.scaling</key>
 	<real>2.5</real>
 	<key>com.apple.scrollwheel.scaling</key>
-	<real>0.3125</real>
+	<real>0.1265</real>
 	<key>com.apple.sound.beep.feedback</key>
 	<integer>0</integer>
 	<key>com.apple.sound.beep.flash</key>
