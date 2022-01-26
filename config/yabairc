@@ -22,6 +22,7 @@ echo "$(date) - starting load"
 yabai -m config auto_balance          on
 yabai -m config split_ratio           .5
 yabai -m config window_placement      second_child
+yabai -m config mouse_follows_focus   on
 yabai -m space --balance
 
 # general space settings
