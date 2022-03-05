@@ -32,6 +32,8 @@
 	<string>en_US</string>
 	<key>AppleMeasurementUnits</key>
 	<string>Inches</string>
+	<key>AppleMenuBarVisibleInFullscreen</key>
+	<false/>
 	<key>AppleMetricUnits</key>
 	<false/>
 	<key>AppleMiniaturizeOnDoubleClick</key>
