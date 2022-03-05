@@ -13,6 +13,6 @@
   homebrew_cask:
     upgrade_all: yes
 
-- name: upgrade pips
-  pip:
-    name: "{{lookup('lines', 'pip3 list --user --outdated --not-required --format=freeze | cut -d= -f1')}}"
+# - name: upgrade pips
+#   pip:
+#     name: "{{lookup('lines', 'pip3 list --user --outdated --not-required --format=freeze | cut -d= -f1')}}"

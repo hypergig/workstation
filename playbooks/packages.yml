@@ -47,9 +47,9 @@
       - visual-studio-code
       - zoom
 
-- name: install pips
-  pip:
-    name:
-    - ansible 
-    - jmespath
-    - pip
+# - name: install pips
+#   pip:
+#     name:
+#     - ansible 
+#     - jmespath
+#     - pip
