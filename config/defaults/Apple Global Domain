@@ -52,6 +52,8 @@
 	<integer>1</integer>
 	<key>InitialKeyRepeat</key>
 	<integer>15</integer>
+	<key>InitialKeyRepeat_Level_Saved</key>
+	<integer>1</integer>
 	<key>KeyRepeat</key>
 	<integer>2</integer>
 	<key>NSAutomaticCapitalizationEnabled</key>
@@ -69,7 +71,7 @@
 	<key>NSLinguisticDataAssetsRequestLastInterval</key>
 	<real>86400</real>
 	<key>NSLinguisticDataAssetsRequestTime</key>
-	<date>2022-01-21T14:07:30Z</date>
+	<date>2022-03-10T14:54:44Z</date>
 	<key>NSLinguisticDataAssetsRequested</key>
 	<array>
 		<string>en</string>
@@ -89,8 +91,8 @@
 	<integer>1</integer>
 	<key>NSNavRecentPlaces</key>
 	<array>
-		<string>~/Movies/Kaptures</string>
 		<string>~/repos/daml-cloud</string>
+		<string>~/Movies/Kaptures</string>
 		<string>~/repos/daml-cloud/deployment/azure/dev/jordan</string>
 		<string>~/repos/workstation/config</string>
 		<string>~/repos/daml-cloud/tools/installer/openjdk/cache/jdk-14.0.2.jdk</string>
@@ -136,7 +138,7 @@
 	<key>com.apple.mouse.scaling</key>
 	<real>0.875</real>
 	<key>com.apple.scrollwheel.scaling</key>
-	<real>0.3125</real>
+	<real>1</real>
 	<key>com.apple.sound.beep.feedback</key>
 	<integer>1</integer>
 	<key>com.apple.sound.beep.flash</key>
@@ -148,9 +150,9 @@
 	<key>com.apple.sound.uiaudio.enabled</key>
 	<integer>0</integer>
 	<key>com.apple.springing.delay</key>
-	<real>0.5</real>
+	<real>0.0</real>
 	<key>com.apple.springing.enabled</key>
-	<true/>
+	<false/>
 	<key>com.apple.swipescrolldirection</key>
 	<true/>
 	<key>com.apple.trackpad.forceClick</key>
