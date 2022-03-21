@@ -1,3 +1,5 @@
+// ['name,src,tags',...Object.entries(SongList).map(([index, data]) => (`${data.title},${data.mp3},${dictionary[index.split("_")[1]].join('|')}`))].join('\n')
+
 // These just come from the site
 SongList = {
     "song_1": {
