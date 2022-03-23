@@ -107,6 +107,8 @@
 			<string>com.google.www</string>
 		</dict>
 	</dict>
+	<key>NSScrollAnimationEnabled</key>
+	<false/>
 	<key>NSTableViewDefaultSizeMode</key>
 	<integer>2</integer>
 	<key>NSUserDictionaryReplacementItems</key>
