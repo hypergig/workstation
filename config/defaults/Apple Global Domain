@@ -138,7 +138,7 @@
 	<key>com.apple.mouse.doubleClickThreshold</key>
 	<real>5</real>
 	<key>com.apple.mouse.scaling</key>
-	<real>1</real>
+	<real>0.5</real>
 	<key>com.apple.scrollwheel.scaling</key>
 	<real>0.5</real>
 	<key>com.apple.sound.beep.feedback</key>
