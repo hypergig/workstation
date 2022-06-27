@@ -52,6 +52,7 @@ function workstation_repo {
     else
         log "cloning workstation repo"
         mkdir -vp "${HOME}/repos"
+        cd "${HOME}/repos"
         setx git clone https://github.com/hypergig/workstation.git
     fi
     setx cd ${workstation_repo}
