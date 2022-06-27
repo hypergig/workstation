@@ -1,0 +1,102 @@
+#! /usr/bin/env sh
+set -euo pipefail
+
+function workstation_repo {
+    local workstation_repo="${HOME}/repos/workstation"
+    if [ -d "${workstation_repo}/.git" ]; then
+        echo "workstation repo looks ok"
+    else
+        mkdir -vp "${HOME}/repos"
+        git clone git@github.com:hypergig/workstation.git
+    fi
+    cd ${workstation_repo}
+}
+
+function install_xcode {
+    if xcode-select -p; then
+        echo "xcode looks ok"
+        return
+    fi
+    xcode-select --install
+    read -p "Installing xcode, press enter when completed..."
+}
+
+function install_brew {
+    if which brew; then
+        echo "brew looks ok"
+        return
+    fi
+    open https://brew.sh/
+    read -p "Install homebrew, press enter when completed..."
+    hash -r
+}
+
+function brew_bundle {
+    brew bundle --no-lock
+    hash -r
+
+    local start_up_services=(
+        'skhd'
+        'yabai'
+    )
+
+    for service in "${start_up_services[@]}"; do
+        brew services start "${service}"
+    done
+}
+
+function setup_vars {
+    source config/.vars
+    hash -r
+}
+
+function dot_files {
+    local links=(
+        "config/.gitconfig ${HOME}/.gitconfig"
+        "config/alacritty.yml ${HOME}/.config/alacritty/alacritty.yml"
+        "config/.bash_profile ${HOME}/.bash_profile"
+        "config/.vars ${HOME}/.vars"
+        "config/yabairc ${HOME}/.config/yabai/yabairc"
+        "config/skhdrc ${HOME}/.config/skhd/skhdrc"
+    )
+    for link in "${links[@]}"; do
+        read _ dest <<< "${link}"
+        mkdir -pv "$(dirname "${dest}")"
+        ln -srvf ${link}
+    done
+}
+
+function setup_shell {
+    local bash_shell="${_brew_prefix}/bin/bash"
+    local shells='/etc/shells'
+
+    if grep "${bash_shell}" "${shells}"; then
+        echo "bash shell is already listed in ${shells}"
+    else
+        sudo sh -c "echo ${bash_shell} >> ${shells}"
+    fi
+
+    if [ "${SHELL}" == "${bash_shell}" ]; then
+        echo "bash shell is already set as default shell"
+    else
+        chsh -s "${bash_shell}"
+    fi
+}
+
+function install_defaults {
+    cd config/defaults
+    for scope in *; do
+        defaults import "${scope}" "${scope}"
+    done
+    cd -
+}
+
+
+workstation_repo
+install_xcode
+install_brew
+brew_bundle
+setup_vars
+dot_files
+setup_shell
+install_defaults
