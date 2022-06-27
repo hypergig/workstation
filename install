@@ -23,19 +23,6 @@ function setx {
 
 # operations
 
-function workstation_repo {
-    local workstation_repo="${HOME}/repos/workstation"
-    if [ -d "${workstation_repo}/.git" ]; then
-        log "workstation repo looks ok"
-    else
-        log "cloning workstation repo"
-        mkdir -vp "${HOME}/repos"
-        setx git clone git@github.com:hypergig/workstation.git
-    fi
-    setx cd ${workstation_repo}
-    setx pwd
-}
-
 function install_xcode {
     if xcode-select -p; then
         log "xcode looks ok"
@@ -55,6 +42,23 @@ function install_brew {
     open https://brew.sh/
     read -p "press enter when completed..."
     hash -r
+}
+
+function bootstrap_git {
+    setx brew install git
+}
+
+function workstation_repo {
+    local workstation_repo="${HOME}/repos/workstation"
+    if [ -d "${workstation_repo}/.git" ]; then
+        log "workstation repo looks ok"
+    else
+        log "cloning workstation repo"
+        mkdir -vp "${HOME}/repos"
+        setx git clone git@github.com:hypergig/workstation.git
+    fi
+    setx cd ${workstation_repo}
+    setx pwd
 }
 
 function brew_bundle {
@@ -126,9 +130,10 @@ function install_defaults {
 # install
 
 operations=(
-    workstation_repo
     install_xcode
     install_brew
+    bootstrap_git
+    workstation_repo
     brew_bundle
     setup_vars
     dot_files
