@@ -1,53 +1,82 @@
 #! /usr/bin/env sh
 set -euo pipefail
 
+
+# helpers
+
+function log {
+    printf "\e[36m%s\e[0m\n" "${@}"
+}
+
+function run {
+    printf "\e[35;1m%s\e[0m\n" "- $(sed 's/_/ /g' <<< "$@") -"
+    $@
+    printf '\n\n'
+}
+
+function setx {
+    set -x
+    "$@"
+    { set +x; } 2> /dev/null
+}
+
+
+# operations
+
 function workstation_repo {
     local workstation_repo="${HOME}/repos/workstation"
     if [ -d "${workstation_repo}/.git" ]; then
-        echo "workstation repo looks ok"
+        log "workstation repo looks ok"
     else
+        log "cloning workstation repo"
         mkdir -vp "${HOME}/repos"
-        git clone git@github.com:hypergig/workstation.git
+        setx git clone git@github.com:hypergig/workstation.git
     fi
-    cd ${workstation_repo}
+    setx cd ${workstation_repo}
+    setx pwd
 }
 
 function install_xcode {
     if xcode-select -p; then
-        echo "xcode looks ok"
+        log "xcode looks ok"
         return
     fi
-    xcode-select --install
-    read -p "Installing xcode, press enter when completed..."
+    log "installing xcode"
+    setx xcode-select --install
+    read -p "press enter when completed..."
 }
 
 function install_brew {
     if which brew; then
-        echo "brew looks ok"
+        log "brew looks ok"
         return
     fi
+    log "install homebrew"
     open https://brew.sh/
-    read -p "Install homebrew, press enter when completed..."
+    read -p "press enter when completed..."
     hash -r
 }
 
 function brew_bundle {
-    brew bundle --no-lock
+    log "running brew bundle"
+    setx brew bundle --no-lock
     hash -r
 
+    log "setting up startup services"
     local start_up_services=(
         'skhd'
         'yabai'
     )
 
     for service in "${start_up_services[@]}"; do
-        brew services start "${service}"
+        setx brew services start "${service}"
     done
 }
 
 function setup_vars {
     source config/.vars
     hash -r
+    echo "brew prefix: ${_brew_prefix}"
 }
 
 function dot_files {
@@ -71,32 +100,42 @@ function setup_shell {
     local shells='/etc/shells'
 
     if grep "${bash_shell}" "${shells}"; then
-        echo "bash shell is already listed in ${shells}"
+        log "bash shell is already listed in ${shells}"
     else
-        sudo sh -c "echo ${bash_shell} >> ${shells}"
+        log "adding bash to list of shells"
+        setx sudo sh -c "echo ${bash_shell} >> ${shells}"
     fi
 
     if [ "${SHELL}" == "${bash_shell}" ]; then
-        echo "bash shell is already set as default shell"
+        log "bash shell is already set as default shell"
     else
-        chsh -s "${bash_shell}"
+        log "setting bash as default shell"
+        setx chsh -s "${bash_shell}"
     fi
 }
 
 function install_defaults {
-    cd config/defaults
+    setx cd config/defaults
     for scope in *; do
-        defaults import "${scope}" "${scope}"
+        setx defaults import "${scope}" "${scope}"
     done
-    cd -
+    setx cd -
 }
 
 
-workstation_repo
-install_xcode
-install_brew
-brew_bundle
-setup_vars
-dot_files
-setup_shell
-install_defaults
+# install
+
+operations=(
+    workstation_repo
+    install_xcode
+    install_brew
+    brew_bundle
+    setup_vars
+    dot_files
+    setup_shell
+    install_defaults
+)
+
+for operation in "${operations[@]}"; do
+    run "${operation}"
+done
