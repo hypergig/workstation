@@ -3,7 +3,7 @@ set -o vi
 
 # source stuff
 . $HOME/.vars
-. $HOME/.property_file.env
+[ -f "${HOME}/.property_file.env" ] && source "${HOME}/.property_file.env"
 
 
 # aliases
@@ -67,10 +67,10 @@ docker-watch(){
 
 
 # git bash prompt
-export GIT_PROMPT_ONLY_IN_REPO=1
-export GIT_PROMPT_THEME=Minimal
-source ~/repos/bash-git-prompt/gitprompt.sh
-
+GIT_PROMPT_THEME=Minimal
+__GIT_PROMPT_DIR="${_brew_prefix}/opt/bash-git-prompt/share"
+GIT_PROMPT_ONLY_IN_REPO=1
+source "${_brew_prefix}/opt/bash-git-prompt/share/gitprompt.sh"
 
 # you complete me
 [[ -r "${_brew_prefix}/etc/profile.d/bash_completion.sh" ]] && . "${_brew_prefix}/etc/profile.d/bash_completion.sh"
