@@ -31,6 +31,7 @@ function install_xcode {
     log "installing xcode"
     setx xcode-select --install
     read -p "press enter when completed..."
+    hash -r
 }
 
 function install_brew {
@@ -44,10 +45,6 @@ function install_brew {
     hash -r
 }
 
-function bootstrap_git {
-    setx brew install git
-}
-
 function workstation_repo {
     local workstation_repo="${HOME}/repos/workstation"
     if [ -d "${workstation_repo}/.git" ]; then
@@ -55,10 +52,16 @@ function workstation_repo {
     else
         log "cloning workstation repo"
         mkdir -vp "${HOME}/repos"
-        setx git clone git@github.com:hypergig/workstation.git
+        setx git clone https://github.com/hypergig/workstation.git
     fi
     setx cd ${workstation_repo}
     setx pwd
+}
+
+function setup_vars {
+    source config/.vars
+    hash -r
+    echo "brew prefix: ${_brew_prefix}"
 }
 
 function brew_bundle {
@@ -77,11 +80,6 @@ function brew_bundle {
     done
 }
 
-function setup_vars {
-    source config/.vars
-    hash -r
-    echo "brew prefix: ${_brew_prefix}"
-}
 
 function dot_files {
     local links=(
@@ -132,10 +130,9 @@ function install_defaults {
 operations=(
     install_xcode
     install_brew
-    bootstrap_git
     workstation_repo
-    brew_bundle
     setup_vars
+    brew_bundle
     dot_files
     setup_shell
     install_defaults
