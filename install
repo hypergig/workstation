@@ -34,6 +34,20 @@ function install_xcode {
     hash -r
 }
 
+function ssh_keys {
+    function check {
+        { ssh git@github.com ||:; } 2>&1 | grep "You've successfully authenticated"
+    }
+    if check; then
+        log "ssh keys look ok"
+        return
+    fi
+    log "install ssh keys"
+    open https://github.com/settings/keys
+    read -p "press enter when completed..."
+    check
+}
+
 function install_brew {
     if which brew; then
         log "brew looks ok"
@@ -53,7 +67,7 @@ function workstation_repo {
         log "cloning workstation repo"
         mkdir -vp "${HOME}/repos"
         cd "${HOME}/repos"
-        setx git clone https://github.com/hypergig/workstation.git
+        setx git clone git@github.com:hypergig/workstation.git
     fi
     setx cd ${workstation_repo}
     setx pwd
@@ -130,6 +144,7 @@ function install_defaults {
 
 operations=(
     install_xcode
+    ssh_keys
     install_brew
     workstation_repo
     setup_vars
