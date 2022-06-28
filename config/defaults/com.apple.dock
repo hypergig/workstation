@@ -4,6 +4,8 @@
 <dict>
 	<key>autohide</key>
 	<true/>
+	<key>expose-group-apps</key>
+	<true/>
 	<key>largesize</key>
 	<real>128</real>
 	<key>last-analytics-stamp</key>
@@ -18,6 +20,8 @@
 	<false/>
 	<key>mod-count</key>
 	<integer>20</integer>
+	<key>mru-spaces</key>
+	<false/>
 	<key>orientation</key>
 	<string>left</string>
 	<key>persistent-apps</key>

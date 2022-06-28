@@ -175,5 +175,7 @@
 			</dict>
 		</array>
 	</dict>
+	<key>spans-displays</key>
+	<false/>
 </dict>
 </plist>
