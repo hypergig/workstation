@@ -68,12 +68,12 @@ docker-watch(){
 
 # git bash prompt
 GIT_PROMPT_THEME=Minimal
-__GIT_PROMPT_DIR="${_brew_prefix}/opt/bash-git-prompt/share"
+__GIT_PROMPT_DIR="${HOMEBREW_PREFIX}/opt/bash-git-prompt/share"
 GIT_PROMPT_ONLY_IN_REPO=1
-source "${_brew_prefix}/opt/bash-git-prompt/share/gitprompt.sh"
+source "${HOMEBREW_PREFIX}/opt/bash-git-prompt/share/gitprompt.sh"
 
 # you complete me
-[[ -r "${_brew_prefix}/etc/profile.d/bash_completion.sh" ]] && . "${_brew_prefix}/etc/profile.d/bash_completion.sh"
+[[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
 if [ -f '/Users/jordancohen/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/jordancohen/Downloads/google-cloud-sdk/completion.bash.inc'; fi
 
 

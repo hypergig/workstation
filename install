@@ -76,7 +76,7 @@ function workstation_repo {
 function setup_vars {
     source config/.vars
     hash -r
-    echo "brew prefix: ${_brew_prefix}"
+    echo "brew prefix: ${HOMEBREW_PREFIX}"
 }
 
 function brew_bundle {
@@ -113,7 +113,7 @@ function dot_files {
 }
 
 function setup_shell {
-    local bash_shell="${_brew_prefix}/bin/bash"
+    local bash_shell="${HOMEBREW_PREFIX}/bin/bash"
     local shells='/etc/shells'
 
     if grep "${bash_shell}" "${shells}"; then
