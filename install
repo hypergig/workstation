@@ -139,6 +139,10 @@ function install_defaults {
     setx cd -
 }
 
+function set_desktop_background {
+    setx osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"${_workstation_dir}/config/backgrounds/solarizedBig.png\""
+}
+
 
 # install
 
@@ -152,6 +156,7 @@ operations=(
     dot_files
     setup_shell
     install_defaults
+    set_desktop_background
 )
 
 for operation in "${operations[@]}"; do
