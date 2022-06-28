@@ -40,8 +40,6 @@
 	<false/>
 	<key>ApplePressAndHoldEnabled</key>
 	<string>0</string>
-	<key>AppleShowAllExtensions</key>
-	<true/>
 	<key>AppleShowScrollBars</key>
 	<string>Always</string>
 	<key>AppleSpacesSwitchOnActivate</key>
