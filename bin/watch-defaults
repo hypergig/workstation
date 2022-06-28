@@ -2,8 +2,8 @@
 set -euo pipefail
 
 
-last="$(defaults read $1)"
-while buff="$(defaults read $1)"; do
+last="$(defaults read ${1:-})"
+while buff="$(defaults read ${1:-})"; do
     diff -u --color=always <(echo "${last}") <(echo "${buff}") ||:
     last="${buff}"
     sleep .5
