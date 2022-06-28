@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>autohide</key>
+	<true/>
+	<key>largesize</key>
+	<real>128</real>
+	<key>last-analytics-stamp</key>
+	<array>
+		<real>678122541.92572796</real>
+	</array>
+	<key>launchanim</key>
+	<false/>
+	<key>loc</key>
+	<string>en_US:US</string>
+	<key>magnification</key>
+	<false/>
+	<key>mod-count</key>
+	<integer>20</integer>
+	<key>orientation</key>
+	<string>left</string>
+	<key>persistent-apps</key>
+	<array/>
+	<key>persistent-others</key>
+	<array/>
+	<key>recent-apps</key>
+	<array/>
+	<key>region</key>
+	<string>US</string>
+	<key>show-process-indicators</key>
+	<true/>
+	<key>show-recents</key>
+	<false/>
+	<key>tilesize</key>
+	<real>16</real>
+	<key>trash-full</key>
+	<false/>
+	<key>version</key>
+	<integer>1</integer>
+	<key>wvous-br-corner</key>
+	<integer>14</integer>
+</dict>
+</plist>
