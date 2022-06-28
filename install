@@ -131,16 +131,16 @@ function setup_shell {
     fi
 }
 
+function set_desktop_background {
+    setx osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"${_workstation_dir}/config/backgrounds/solarizedBig.png\""
+}
+
 function install_defaults {
     setx cd config/defaults
     for scope in *; do
         setx defaults import "${scope}" "${scope}"
     done
     setx cd -
-}
-
-function set_desktop_background {
-    setx osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"${_workstation_dir}/config/backgrounds/solarizedBig.png\""
 }
 
 
@@ -155,8 +155,8 @@ operations=(
     brew_bundle
     dot_files
     setup_shell
-    install_defaults
     set_desktop_background
+    install_defaults
 )
 
 for operation in "${operations[@]}"; do
