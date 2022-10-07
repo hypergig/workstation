@@ -7,3 +7,5 @@ editor = "vim -c 'set spell spelllang=en_us spellcapcheck='"
 
 [pull]
 rebase = false
+[init]
+	defaultBranch = main

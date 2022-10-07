@@ -74,8 +74,7 @@ source "${HOMEBREW_PREFIX}/opt/bash-git-prompt/share/gitprompt.sh"
 
 # you complete me
 [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
-if [ -f '/Users/jordancohen/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/jordancohen/Downloads/google-cloud-sdk/completion.bash.inc'; fi
-
+source "${HOMEBREW_PREFIX}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
 
 # my screen
 # docker not supported on apple silicon yet
