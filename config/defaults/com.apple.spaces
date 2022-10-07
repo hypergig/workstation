@@ -7,7 +7,7 @@
 		<key>Management Data</key>
 		<dict>
 			<key>Age</key>
-			<real>43671.319047664001</real>
+			<real>38977.910733291676</real>
 			<key>Management Mode</key>
 			<integer>1</integer>
 			<key>Monitors</key>
@@ -78,16 +78,16 @@
 					<key>Collapsed Space</key>
 					<dict>
 						<key>ManagedSpaceID</key>
-						<integer>78</integer>
+						<integer>71</integer>
 						<key>id64</key>
-						<integer>78</integer>
+						<integer>71</integer>
 						<key>type</key>
 						<integer>0</integer>
 						<key>uuid</key>
 						<string>C942957F-02C0-4795-AE67-A967E44332AF</string>
 					</dict>
 					<key>Display Identifier</key>
-					<string>38065D53-6C4D-7A1A-073F-54C77B41D882</string>
+					<string>37D8832A-2D66-02CA-B9F7-8F30A301B230</string>
 				</dict>
 			</array>
 			<key>Primary</key>
@@ -132,14 +132,14 @@
 				<string></string>
 				<key>windows</key>
 				<array>
-					<integer>25819</integer>
-					<integer>26412</integer>
-					<integer>18218</integer>
-					<integer>26399</integer>
-					<integer>88</integer>
-					<integer>18248</integer>
-					<integer>75</integer>
-					<integer>64</integer>
+					<integer>20908</integer>
+					<integer>20902</integer>
+					<integer>13116</integer>
+					<integer>59</integer>
+					<integer>17510</integer>
+					<integer>4734</integer>
+					<integer>32</integer>
+					<integer>40</integer>
 				</array>
 			</dict>
 			<dict>
@@ -147,12 +147,11 @@
 				<string>3418248A-A1A1-42A3-8C6C-7E2F5EE5E218</string>
 				<key>windows</key>
 				<array>
-					<integer>75</integer>
-					<integer>114</integer>
-					<integer>6023</integer>
-					<integer>319</integer>
-					<integer>26400</integer>
-					<integer>65</integer>
+					<integer>32</integer>
+					<integer>64</integer>
+					<integer>16742</integer>
+					<integer>144</integer>
+					<integer>41</integer>
 				</array>
 			</dict>
 			<dict>
@@ -160,8 +159,8 @@
 				<string>ECDA2EA6-BBBE-41D1-949D-485D69F7B44D</string>
 				<key>windows</key>
 				<array>
-					<integer>75</integer>
-					<integer>66</integer>
+					<integer>32</integer>
+					<integer>42</integer>
 				</array>
 			</dict>
 			<dict>
@@ -169,8 +168,8 @@
 				<string>63C3E8FE-2F17-421A-A3FC-21E31EE31C81</string>
 				<key>windows</key>
 				<array>
-					<integer>75</integer>
-					<integer>67</integer>
+					<integer>32</integer>
+					<integer>43</integer>
 				</array>
 			</dict>
 		</array>

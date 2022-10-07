@@ -10,8 +10,10 @@
 	<real>128</real>
 	<key>last-analytics-stamp</key>
 	<array>
-		<real>678122541.92572796</real>
+		<real>686239053.96041596</real>
 	</array>
+	<key>lastShowIndicatorTime</key>
+	<real>686784970.76625097</real>
 	<key>launchanim</key>
 	<false/>
 	<key>loc</key>
@@ -39,7 +41,7 @@
 	<key>tilesize</key>
 	<real>16</real>
 	<key>trash-full</key>
-	<false/>
+	<true/>
 	<key>version</key>
 	<integer>1</integer>
 	<key>wvous-br-corner</key>
