@@ -51,7 +51,7 @@
 	<key>InitialKeyRepeat</key>
 	<integer>15</integer>
 	<key>InitialKeyRepeat_Level_Saved</key>
-	<integer>1</integer>
+	<integer>6</integer>
 	<key>KeyRepeat</key>
 	<integer>2</integer>
 	<key>NSAutomaticCapitalizationEnabled</key>
@@ -136,9 +136,9 @@
 	<key>com.apple.mouse.doubleClickThreshold</key>
 	<real>5</real>
 	<key>com.apple.mouse.scaling</key>
-	<real>2.5</real>
+	<real>3</real>
 	<key>com.apple.scrollwheel.scaling</key>
-	<real>0.3125</real>
+	<real>0.18379999999999999</real>
 	<key>com.apple.sound.beep.feedback</key>
 	<integer>1</integer>
 	<key>com.apple.sound.beep.flash</key>
