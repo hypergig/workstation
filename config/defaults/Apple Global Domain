@@ -106,7 +106,7 @@
 		</dict>
 	</dict>
 	<key>NSScrollAnimationEnabled</key>
-	<false/>
+	<true/>
 	<key>NSTableViewDefaultSizeMode</key>
 	<integer>2</integer>
 	<key>NSUserDictionaryReplacementItems</key>
@@ -138,7 +138,7 @@
 	<key>com.apple.mouse.scaling</key>
 	<real>3</real>
 	<key>com.apple.scrollwheel.scaling</key>
-	<real>0.18379999999999999</real>
+	<real>5</real>
 	<key>com.apple.sound.beep.feedback</key>
 	<integer>1</integer>
 	<key>com.apple.sound.beep.flash</key>
