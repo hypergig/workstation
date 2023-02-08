@@ -98,12 +98,15 @@ function brew_bundle {
 
 function dot_files {
     local links=(
-        "config/.gitconfig ${HOME}/.gitconfig"
-        "config/alacritty.yml ${HOME}/.config/alacritty/alacritty.yml"
         "config/.bash_profile ${HOME}/.bash_profile"
+        "config/.gitconfig ${HOME}/.gitconfig"
         "config/.vars ${HOME}/.vars"
-        "config/yabairc ${HOME}/.config/yabai/yabairc"
+        "config/init.vim ${HOME}/.config/nvim/init.vim"
+        "config/alacritty.yml ${HOME}/.config/alacritty/alacritty.yml"
+        "config/NeoSolarized.vim ${HOME}/.config/nvim/colors/NeoSolarized.vim"
         "config/skhdrc ${HOME}/.config/skhd/skhdrc"
+        "config/yabairc ${HOME}/.config/yabai/yabairc"
+        "config/yabairc ${HOME}/.config/yabai/yabairc"
     )
     for link in "${links[@]}"; do
         read _ dest <<< "${link}"
