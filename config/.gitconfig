@@ -3,9 +3,10 @@
 	email = hypergig@gmail.com
 
 [core]
-editor = "vim -c 'set spell spelllang=en_us spellcapcheck='"
+	editor = "vim -c 'set spell spelllang=en_us spellcapcheck='"
+	excludesfile = /Users/jordan/.gitignore
 
 [pull]
-rebase = false
+	rebase = false
 [init]
 	defaultBranch = main
