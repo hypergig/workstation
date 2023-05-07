@@ -85,14 +85,9 @@ function brew_bundle {
     hash -r
 
     log "setting up startup services"
-    local start_up_services=(
-        'skhd'
-        'yabai'
-    )
 
-    for service in "${start_up_services[@]}"; do
-        setx brew services start "${service}"
-    done
+    skhd --start-service
+    yabai --start-service
 }
 
 
