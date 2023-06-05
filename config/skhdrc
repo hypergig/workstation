@@ -91,7 +91,7 @@ float < alt - d ; default
 
 # shortcuts
 default, stack, float < alt - return : open -n /Applications/Alacritty.app
-default, stack, float < shift + alt - c : brew services restart skhd; brew services restart yabai
+default, stack, float < shift + alt - c : skhd --restart-service; yabai --restart-service;
 
 # move windows to spaces
 default, stack, float < shift + alt - 1 : yabai -m window --space 1
