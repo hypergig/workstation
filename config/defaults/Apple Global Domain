@@ -146,7 +146,7 @@
 	<key>com.apple.sound.beep.sound</key>
 	<string>/System/Library/Sounds/Tink.aiff</string>
 	<key>com.apple.sound.beep.volume</key>
-	<real>1</real>
+	<real>0.0</real>
 	<key>com.apple.sound.uiaudio.enabled</key>
 	<integer>1</integer>
 	<key>com.apple.springing.delay</key>
