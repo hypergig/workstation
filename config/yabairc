@@ -23,10 +23,10 @@ yabai -m space --balance
 yabai -m config auto_balance                 on
 yabai -m config split_ratio                  .5
 yabai -m config window_placement             second_child
-yabai -m config window_border                on
-yabai -m config window_border_blur           off
-yabai -m config normal_window_border_color   0x00ffffff
-yabai -m config active_window_border_color   0xffcb4b16
+# yabai -m config window_border                on
+# yabai -m config window_border_blur           off
+# yabai -m config normal_window_border_color   0x00ffffff
+# yabai -m config active_window_border_color   0xffcb4b16
 
 # general space settings
 yabai -m config layout                       bsp
