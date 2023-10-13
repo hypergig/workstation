@@ -158,6 +158,6 @@
 	<key>com.apple.trackpad.forceClick</key>
 	<false/>
 	<key>com.apple.trackpad.scaling</key>
-	<real>3</real>
+	<real>1.5</real>
 </dict>
 </plist>
