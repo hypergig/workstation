@@ -38,6 +38,8 @@
 	<true/>
 	<key>show-recents</key>
 	<false/>
+	<key>showAppExposeGestureEnabled</key>
+	<true/>
 	<key>tilesize</key>
 	<real>16</real>
 	<key>trash-full</key>
