@@ -97,7 +97,7 @@ function dot_files {
         "config/.gitconfig ${HOME}/.gitconfig"
         "config/.vars ${HOME}/.vars"
         "config/init.vim ${HOME}/.config/nvim/init.vim"
-        "config/alacritty.yml ${HOME}/.config/alacritty/alacritty.yml"
+        "config/alacritty.toml ${HOME}/.config/alacritty/alacritty.toml"
         "config/NeoSolarized.vim ${HOME}/.config/nvim/colors/NeoSolarized.vim"
         "config/skhdrc ${HOME}/.config/skhd/skhdrc"
         "config/yabairc ${HOME}/.config/yabai/yabairc"
