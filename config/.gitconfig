@@ -12,3 +12,5 @@
 	defaultBranch = main
 [alias]
 	top = for-each-ref --count=10 --sort='-committerdate:iso8601' --format='%(committerdate:iso8601)%09%(refname)' refs/heads
+	ammend = commit --amend --no-edit --all
+	force = push --force
