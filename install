@@ -1,6 +1,5 @@
-#! /usr/bin/env sh
+#! /bin/bash
 set -euo pipefail
-
 
 # helpers
 
@@ -9,17 +8,16 @@ function log {
 }
 
 function run {
-    printf "\e[35;1m%s\e[0m\n" "- $(sed 's/_/ /g' <<< "$@") -"
-    $@
+    printf "\e[35;1m%s\e[0m\n" "- $(sed 's/_/ /g' <<<"$@") -"
+    "$@"
     printf '\n\n'
 }
 
 function setx {
     set -x
     "$@"
-    { set +x; } 2> /dev/null
+    { set +x; } 2>/dev/null
 }
-
 
 # operations
 
@@ -36,7 +34,7 @@ function install_xcode {
 
 function ssh_keys {
     function check {
-        { ssh git@github.com ||:; } 2>&1 | grep "You've successfully authenticated"
+        { ssh git@github.com || :; } 2>&1 | grep "You've successfully authenticated"
     }
     if check; then
         log "ssh keys look ok"
@@ -90,7 +88,6 @@ function brew_bundle {
     yabai --start-service
 }
 
-
 function dot_files {
     local links=(
         "config/.bash_profile ${HOME}/.bash_profile"
@@ -104,7 +101,7 @@ function dot_files {
         "config/yabairc ${HOME}/.config/yabai/yabairc"
     )
     for link in "${links[@]}"; do
-        read _ dest <<< "${link}"
+        read _ dest <<<"${link}"
         mkdir -pv "$(dirname "${dest}")"
         ln -srvf ${link}
     done
@@ -140,7 +137,6 @@ function install_defaults {
     done
     setx cd -
 }
-
 
 # install
 
