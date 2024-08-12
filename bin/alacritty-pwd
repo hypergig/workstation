@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+set -euo pipefail
+
+args=("$@")
+
+read -r app title <<<"$(yabai -m query --windows | jq -r '.[0] | (.app + " " +.title)')"
+if [[ "${app}" == 'Alacritty' && -d "${title}" ]]; then
+    args+=("--working-directory" "${title}")
+fi
+
+open -n /Applications/Alacritty.app --args "${args[@]}"

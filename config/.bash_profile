@@ -5,33 +5,28 @@ set -o vi
 . $HOME/.vars
 [ -f "${HOME}/.property_file.env" ] && source "${HOME}/.property_file.env"
 
-
 # aliases
 alias gr="cd $_repos_dir"
 alias ga="cd $_repos_dir/$_most_common_repo"
 alias jork="${_bash_profile_lib_dir}/jork.sh"
 alias ll='ls --color=auto -alF'
 
-
-function chromeapp(){
+function chromeapp() {
   for url in $@; do
     /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --app="${url}"
   done
 }
 
-
 # docker functions
-docker-dedangle(){
+docker-dedangle() {
   docker rmi -f $(docker images -q --filter "dangling=true")
 }
 
-
-docker-warm(){
+docker-warm() {
   printf 'docker pull %s\n' ${_fav_containers[@]} | jork | grep 'Status'
 }
 
-
-docker-happy-compose(){
+docker-happy-compose() {
   docker-compose down -v && docker-compose build && docker-compose up
 }
 
@@ -45,26 +40,22 @@ docker-happy-compose(){
 #   echo 'docker is up!'
 # }
 
-
-docker-kill-all(){
+docker-kill-all() {
   docker ps -aq | xargs docker rm -fv
 }
 
-
-docker-nuke(){
+docker-nuke() {
   docker-kill-all
   docker volume ls -q | xargs docker volume rm
   docker images -aq | xargs docker rmi -f
   #docker-reboot
   echo 'warming docker cache background'
-  docker-warm &> /dev/null &
+  docker-warm &>/dev/null &
 }
 
-
-docker-watch(){
-  tmux -2 new-session htop -p $(cat /var/run/docker.pid)\; split-window -v docker stats\; split-window -v  watch -td docker ps\; attach
+docker-watch() {
+  tmux -2 new-session htop -p $(cat /var/run/docker.pid)\; split-window -v docker stats\; split-window -v watch -td docker ps\; attach
 }
-
 
 # git bash prompt
 GIT_PROMPT_THEME=Minimal
@@ -80,6 +71,11 @@ source "${HOMEBREW_PREFIX}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/com
 # docker not supported on apple silicon yet
 # (( RANDOM % 10 )) || docker run -t hypergig/parrotsay
 
-
 # direnv
 eval "$(direnv hook bash)"
+
+function _set_window_title() {
+  PS1="${PS1}\033]0;${PWD}\007"
+}
+
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND;}_set_window_title"
