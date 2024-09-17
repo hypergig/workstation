@@ -7,7 +7,7 @@
 		<key>Management Data</key>
 		<dict>
 			<key>Age</key>
-			<real>38977.910733291676</real>
+			<real>85492.62827070833</real>
 			<key>Management Mode</key>
 			<integer>1</integer>
 			<key>Monitors</key>
@@ -78,9 +78,9 @@
 					<key>Collapsed Space</key>
 					<dict>
 						<key>ManagedSpaceID</key>
-						<integer>71</integer>
+						<integer>50</integer>
 						<key>id64</key>
-						<integer>71</integer>
+						<integer>50</integer>
 						<key>type</key>
 						<integer>0</integer>
 						<key>uuid</key>
@@ -132,14 +132,14 @@
 				<string></string>
 				<key>windows</key>
 				<array>
-					<integer>20908</integer>
-					<integer>20902</integer>
-					<integer>13116</integer>
-					<integer>59</integer>
-					<integer>17510</integer>
-					<integer>4734</integer>
-					<integer>32</integer>
-					<integer>40</integer>
+					<integer>168</integer>
+					<integer>63</integer>
+					<integer>79</integer>
+					<integer>83</integer>
+					<integer>82</integer>
+					<integer>80</integer>
+					<integer>62</integer>
+					<integer>134</integer>
 				</array>
 			</dict>
 			<dict>
@@ -147,11 +147,7 @@
 				<string>3418248A-A1A1-42A3-8C6C-7E2F5EE5E218</string>
 				<key>windows</key>
 				<array>
-					<integer>32</integer>
-					<integer>64</integer>
-					<integer>16742</integer>
-					<integer>144</integer>
-					<integer>41</integer>
+					<integer>62</integer>
 				</array>
 			</dict>
 			<dict>
@@ -159,8 +155,7 @@
 				<string>ECDA2EA6-BBBE-41D1-949D-485D69F7B44D</string>
 				<key>windows</key>
 				<array>
-					<integer>32</integer>
-					<integer>42</integer>
+					<integer>62</integer>
 				</array>
 			</dict>
 			<dict>
@@ -168,8 +163,7 @@
 				<string>63C3E8FE-2F17-421A-A3FC-21E31EE31C81</string>
 				<key>windows</key>
 				<array>
-					<integer>32</integer>
-					<integer>43</integer>
+					<integer>62</integer>
 				</array>
 			</dict>
 		</array>

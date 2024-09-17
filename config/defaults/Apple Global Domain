@@ -27,7 +27,7 @@
 	<key>AppleLanguagesDidMigrate</key>
 	<string>12.6</string>
 	<key>AppleLanguagesSchemaVersion</key>
-	<integer>2000</integer>
+	<integer>4000</integer>
 	<key>AppleLocale</key>
 	<string>en_US</string>
 	<key>AppleMeasurementUnits</key>
