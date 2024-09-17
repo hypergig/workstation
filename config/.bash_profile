@@ -73,9 +73,3 @@ source "${HOMEBREW_PREFIX}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/com
 
 # direnv
 eval "$(direnv hook bash)"
-
-function _set_window_title() {
-  PS1="${PS1}\033]0;${PWD}\007"
-}
-
-PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND;}_set_window_title"
