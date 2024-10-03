@@ -10,6 +10,7 @@ alias gr="cd $_repos_dir"
 alias ga="cd $_repos_dir/$_most_common_repo"
 alias jork="${_bash_profile_lib_dir}/jork.sh"
 alias ll='ls --color=auto -alF'
+alias gitroot='cd "$(git rev-parse --show-toplevel)"'
 
 function chromeapp() {
   for url in $@; do
