@@ -92,9 +92,10 @@ function dot_files {
     local links=(
         "config/.bash_profile ${HOME}/.bash_profile"
         "config/.gitconfig ${HOME}/.gitconfig"
+        "config/.gitignore ${HOME}/.gitignore"
         "config/.vars ${HOME}/.vars"
-        "config/init.vim ${HOME}/.config/nvim/init.vim"
         "config/alacritty.toml ${HOME}/.config/alacritty/alacritty.toml"
+        "config/init.vim ${HOME}/.config/nvim/init.vim"
         "config/NeoSolarized.vim ${HOME}/.config/nvim/colors/NeoSolarized.vim"
         "config/skhdrc ${HOME}/.config/skhd/skhdrc"
         "config/yabairc ${HOME}/.config/yabai/yabairc"
