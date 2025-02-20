@@ -6,6 +6,8 @@
 	<date>2021-09-01T20:05:30Z</date>
 	<key>AKLastIDMSEnvironment</key>
 	<integer>0</integer>
+	<key>AKLastLocale</key>
+	<string>en_US</string>
 	<key>AppleAccentColor</key>
 	<integer>-1</integer>
 	<key>AppleAntiAliasingThreshold</key>
@@ -52,6 +54,15 @@
 	<integer>15</integer>
 	<key>InitialKeyRepeat_Level_Saved</key>
 	<integer>6</integer>
+	<key>KB_DoubleQuoteOption</key>
+	<string>“abc”</string>
+	<key>KB_SingleQuoteOption</key>
+	<string>‘abc’</string>
+	<key>KB_SpellingLanguage</key>
+	<dict>
+		<key>KB_SpellingLanguageIsAutomatic</key>
+		<true/>
+	</dict>
 	<key>KeyRepeat</key>
 	<integer>2</integer>
 	<key>NSAutomaticCapitalizationEnabled</key>
@@ -59,7 +70,7 @@
 	<key>NSAutomaticDashSubstitutionEnabled</key>
 	<true/>
 	<key>NSAutomaticPeriodSubstitutionEnabled</key>
-	<true/>
+	<false/>
 	<key>NSAutomaticQuoteSubstitutionEnabled</key>
 	<true/>
 	<key>NSAutomaticSpellingCorrectionEnabled</key>
@@ -87,14 +98,6 @@
 	<integer>1</integer>
 	<key>NSNavPanelFileListModeForOpenMode2</key>
 	<integer>1</integer>
-	<key>NSNavRecentPlaces</key>
-	<array>
-		<string>~/repos/daml-cloud</string>
-		<string>~/Movies/Kaptures</string>
-		<string>~/repos/daml-cloud/deployment/azure/dev/jordan</string>
-		<string>~/repos/workstation/config</string>
-		<string>~/repos/daml-cloud/tools/installer/openjdk/cache/jdk-14.0.2.jdk</string>
-	</array>
 	<key>NSPreferredWebServices</key>
 	<dict>
 		<key>NSWebServicesProviderWebSearch</key>
@@ -107,6 +110,12 @@
 	</dict>
 	<key>NSScrollAnimationEnabled</key>
 	<true/>
+	<key>NSSpellCheckerContainerTransitionComplete</key>
+	<true/>
+	<key>NSSpellCheckerDictionaryContainerTransitionComplete</key>
+	<true/>
+	<key>NSSpellCheckerInputAnalyticsTime</key>
+	<date>2024-09-16T05:29:53Z</date>
 	<key>NSTableViewDefaultSizeMode</key>
 	<integer>2</integer>
 	<key>NSUserDictionaryReplacementItems</key>
@@ -119,6 +128,13 @@
 			<key>with</key>
 			<string>On my way!</string>
 		</dict>
+	</array>
+	<key>NSUserQuotesArray</key>
+	<array>
+		<string>“</string>
+		<string>”</string>
+		<string>‘</string>
+		<string>’</string>
 	</array>
 	<key>NavPanelFileListModeForOpenMode</key>
 	<integer>1</integer>
