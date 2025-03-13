@@ -79,7 +79,7 @@ function setup_vars {
 
 function brew_bundle {
     log "running brew bundle"
-    setx brew bundle --no-lock
+    setx brew bundle
     hash -r
 
     log "setting up startup services"
