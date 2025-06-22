@@ -150,7 +150,7 @@
 		<dict/>
 	</dict>
 	<key>com.apple.mouse.doubleClickThreshold</key>
-	<real>5</real>
+	<real>1.3999999999999999</real>
 	<key>com.apple.mouse.scaling</key>
 	<real>3</real>
 	<key>com.apple.scrollwheel.scaling</key>
