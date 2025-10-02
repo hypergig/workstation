@@ -31,3 +31,8 @@ fi
 
 # direnv
 eval "$(direnv hook bash)"
+
+# prompt
+GIT_PROMPT_THEME=Minimal
+__GIT_PROMPT_DIR="${HOMEBREW_PREFIX}/opt/bash-git-prompt/share"
+source "${HOMEBREW_PREFIX}/opt/bash-git-prompt/share/gitprompt.sh"
