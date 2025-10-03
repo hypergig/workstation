@@ -24,6 +24,8 @@
 	<integer>32768</integer>
 	<key>AitermURL</key>
 	<string>https://api.openai.com/v1/responses</string>
+	<key>AllowSymbolicHotKeys</key>
+	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>ApplePressAndHoldEnabled</key>
@@ -1497,6 +1499,10 @@
 	<string>ECA27118-60C1-4C04-9C1E-C504C71B3BAA</string>
 	<key>EnableDivisionView</key>
 	<true/>
+	<key>ForceKeyboard</key>
+	<true/>
+	<key>GlobalKeyMap</key>
+	<dict/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HideMenuBarInFullscreen</key>
@@ -1507,6 +1513,8 @@
 	<true/>
 	<key>IRMemory</key>
 	<integer>4</integer>
+	<key>KeyboardLocale</key>
+	<string>com.apple.keylayout.US</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{1673, 935}</string>
 	<key>NSOSPLastRootDirectory</key>
@@ -1588,6 +1596,8 @@
 			<string>Yes</string>
 			<key>Allow Title Setting</key>
 			<true/>
+			<key>Allow modifyOtherKeys</key>
+			<false/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Animate Movement</key>
@@ -2153,7 +2163,7 @@
 				<real>0.79607843137254897</real>
 			</dict>
 			<key>Application Keypad Allowed</key>
-			<false/>
+			<true/>
 			<key>BM Growl</key>
 			<true/>
 			<key>Background Color</key>
@@ -2413,7 +2423,7 @@
 			<key>Disable Window Resizing</key>
 			<true/>
 			<key>Draw Powerline Glyphs</key>
-			<false/>
+			<true/>
 			<key>Faint Text Alpha (Dark)</key>
 			<real>0.5</real>
 			<key>Faint Text Alpha (Light)</key>
@@ -2475,7 +2485,36 @@
 				<string>telnet</string>
 			</array>
 			<key>Keyboard Map</key>
-			<dict/>
+			<dict>
+				<key>0xf702-0x300000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Apply Mode</key>
+					<integer>0</integer>
+					<key>Escaping</key>
+					<integer>1</integer>
+					<key>Text</key>
+					<string>OH</string>
+					<key>Version</key>
+					<integer>2</integer>
+				</dict>
+				<key>0xf703-0x300000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Apply Mode</key>
+					<integer>0</integer>
+					<key>Escaping</key>
+					<integer>1</integer>
+					<key>Text</key>
+					<string>OF</string>
+					<key>Version</key>
+					<integer>2</integer>
+				</dict>
+			</dict>
+			<key>Left Option Key Changeable</key>
+			<false/>
 			<key>Link Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -2516,7 +2555,7 @@
 				<real>0.0</real>
 			</dict>
 			<key>Load Shell Integration Automatically</key>
-			<false/>
+			<true/>
 			<key>Match Background Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -2562,6 +2601,8 @@
 			<real>0.0</real>
 			<key>Mouse Reporting</key>
 			<true/>
+			<key>Movement Keys Scroll Outside Interactive Apps</key>
+			<false/>
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
@@ -2680,6 +2721,8 @@
 			<integer>2</integer>
 			<key>Transparency</key>
 			<real>0.19766733156028368</real>
+			<key>Treat Option as Alt</key>
+			<true/>
 			<key>Unicode Normalization</key>
 			<integer>0</integer>
 			<key>Unicode Version</key>
@@ -2728,6 +2771,8 @@
 			<false/>
 			<key>Use Underline Color (Light)</key>
 			<false/>
+			<key>Use libtickit protocol</key>
+			<false/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
@@ -2752,9 +2797,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {2560, 1440}}</string>
+		<string>{{0, 0}, {5120, 1440}}</string>
 		<key>topLeft</key>
-		<string>{228, 963}</string>
+		<string>{2550, 779}</string>
 	</dict>
 	<key>NoSyncIgnoreSystemWindowRestoration</key>
 	<true/>
@@ -3705,6 +3750,8 @@
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
 	<true/>
+	<key>RemapModifiersGlobally</key>
+	<false/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
