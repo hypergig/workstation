@@ -1560,11 +1560,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>0 83 250 297 0 0 2560 1409 </string>
+	<string>0 83 250 297 0 0 5120 1409 </string>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>0 0 1673 935 0 0 2560 1409 </string>
+	<key>NSWindow Frame ProfilesPanel</key>
+	<string>2680 240 735 392 0 0 5120 1409 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1280 705 1280 704 0 0 2560 1409 </string>
+	<string>0 458 1512 948 0 0 5120 1409 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1280 0 1280 1409 0 0 2560 1409 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1597,7 +1599,7 @@
 			<key>Allow Title Setting</key>
 			<true/>
 			<key>Allow modifyOtherKeys</key>
-			<false/>
+			<true/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Animate Movement</key>
@@ -2163,7 +2165,7 @@
 				<real>0.79607843137254897</real>
 			</dict>
 			<key>Application Keypad Allowed</key>
-			<true/>
+			<false/>
 			<key>BM Growl</key>
 			<true/>
 			<key>Background Color</key>
@@ -2636,13 +2638,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.63048630952835083</real>
+				<real>0.83921568627450982</real>
 				<key>Color Space</key>
 				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.62964677810668945</real>
+				<real>0.90980392156862744</real>
 				<key>Red Component</key>
-				<real>0.5867035984992981</real>
+				<real>0.92549019607843142</real>
 			</dict>
 			<key>Selected Text Color (Dark)</key>
 			<dict>
@@ -2671,13 +2673,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.25098040699958801</real>
+				<real>0.80000000000000004</real>
 				<key>Color Space</key>
 				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.20784313976764679</real>
+				<real>0.53725490196078429</real>
 				<key>Red Component</key>
-				<real>0.086274512112140656</real>
+				<real>0.27450980392156865</real>
 			</dict>
 			<key>Selection Color (Dark)</key>
 			<dict>
@@ -2752,7 +2754,7 @@
 			<key>Use Non-ASCII Font</key>
 			<false/>
 			<key>Use Selected Text Color</key>
-			<false/>
+			<true/>
 			<key>Use Selected Text Color (Dark)</key>
 			<true/>
 			<key>Use Selected Text Color (Light)</key>
@@ -2806,17 +2808,19 @@
 	<key>NoSyncInstallationId</key>
 	<string>720AE432-6272-42A2-AF1F-177A96E6595C</string>
 	<key>NoSyncLastOSVersion</key>
-	<string>Version 26.0 (Build 25A354)</string>
+	<string>Version 26.0.1 (Build 25A362)</string>
 	<key>NoSyncLastSystemPythonVersionRequirement</key>
 	<string>1.17</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>5</integer>
+	<integer>6</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>781291998.33720505</real>
 	<key>NoSyncOpenLinksInApp</key>
 	<true/>
 	<key>NoSyncOpenLinksInApp_selection</key>
 	<integer>0</integer>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncRecordedVariables</key>
 	<dict>
 		<key>0</key>
@@ -3439,6 +3443,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentTab.currentSession.applicationKeypad</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>currentTab.currentSession.jobName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -3448,17 +3460,17 @@
 		<array>
 			<dict>
 				<key>isTerminal</key>
-				<false/>
+				<true/>
 				<key>name</key>
 				<string>currentSession</string>
 				<key>nonterminalContext</key>
-				<integer>1</integer>
+				<integer>0</integer>
 			</dict>
 			<dict>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentSession.bellCount</string>
+				<string>tmuxWindow</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -3499,6 +3511,14 @@
 				<true/>
 				<key>name</key>
 				<string>currentSession.terminalIconName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.applicationKeypad</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -3602,6 +3622,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentSession.bellCount</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>currentSession.termid</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -3648,25 +3676,17 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.path</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
+				<false/>
 				<key>name</key>
 				<string>currentSession</string>
 				<key>nonterminalContext</key>
-				<integer>0</integer>
+				<integer>1</integer>
 			</dict>
 			<dict>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>tmuxWindow</string>
+				<string>currentSession.path</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -3761,7 +3781,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2025-10-02T17:38:39Z</date>
+	<date>2025-10-07T16:47:07Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
