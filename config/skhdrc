@@ -12,7 +12,7 @@ alt - d ; float
 float < alt - d ; default
 
 # shortcuts
-default, stack, float < alt - return : open -a iTerm .
+default, stack, float < alt - return : open -a iTerm /Users/jordan/repos
 default, stack, float < shift + alt - c : skhd --restart-service; yabai --restart-service;
 
 # focus window

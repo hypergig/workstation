@@ -1574,13 +1574,13 @@
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>3840 0 1279 1409 0 0 5120 1409 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1920 0 1920 2129 0 0 3840 2129 </string>
+	<string>0 0 3840 2129 0 0 3840 2129 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>2560 0 1279 1064 0 0 3840 2129 </string>
+	<string>1925 0 1915 1059 0 0 3840 2129 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>2560 0 1279 709 0 0 3840 2129 </string>
+	<string>1925 1070 1915 1059 0 0 3840 2129 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>2880 0 959 709 0 0 3840 2129 </string>
+	<string>2888 0 952 1059 0 0 3840 2129 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
 	<string>2880 2 959 531 0 0 3840 2129 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
@@ -1609,7 +1609,7 @@
 			<key>AWDS Window Directory</key>
 			<string></string>
 			<key>AWDS Window Option</key>
-			<string>Yes</string>
+			<string>No</string>
 			<key>Allow Title Setting</key>
 			<true/>
 			<key>Allow modifyOtherKeys</key>
@@ -2796,7 +2796,7 @@
 			<key>Window Type</key>
 			<integer>12</integer>
 			<key>Working Directory</key>
-			<string>/Users/jordan</string>
+			<string>/Users/jordan/repos</string>
 		</dict>
 	</array>
 	<key>NoSyncAllAppVersions</key>
@@ -2816,7 +2816,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {3840, 2160}}</string>
 		<key>topLeft</key>
-		<string>{1458, 1334}</string>
+		<string>{1934, 1392}</string>
 	</dict>
 	<key>NoSyncHavePromotedJSONPrettyPrint</key>
 	<true/>
