@@ -921,26 +921,26 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.63048630952835083</real>
+				<real>0.83921569585800171</real>
 				<key>Color Space</key>
 				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.62964677810668945</real>
+				<real>0.90980392694473267</real>
 				<key>Red Component</key>
-				<real>0.5867035984992981</real>
+				<real>0.92549020051956177</real>
 			</dict>
 			<key>Selection Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.25098040699958801</real>
+				<real>0.80000001192092896</real>
 				<key>Color Space</key>
 				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.20784313976764679</real>
+				<real>0.5372549295425415</real>
 				<key>Red Component</key>
-				<real>0.086274512112140656</real>
+				<real>0.27450981736183167</real>
 			</dict>
 		</dict>
 		<key>Solarized Dark Patched</key>
@@ -1515,6 +1515,8 @@
 	<integer>4</integer>
 	<key>KeyboardLocale</key>
 	<string>com.apple.keylayout.US</string>
+	<key>NSAutoFillHeuristicControllerEnabled</key>
+	<false/>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{1673, 935}</string>
 	<key>NSOSPLastRootDirectory</key>
@@ -1560,17 +1562,29 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>0 83 250 297 0 0 5120 1409 </string>
+	<string>0 83 250 297 0 0 3840 2129 </string>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>0 0 1673 935 0 0 2560 1409 </string>
 	<key>NSWindow Frame ProfilesPanel</key>
 	<string>2680 240 735 392 0 0 5120 1409 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>1720 1492 400 139 0 0 3840 2129 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>1610 1295 620 402 0 0 3840 2129 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 458 1512 948 0 0 5120 1409 </string>
+	<string>3840 0 1279 1409 0 0 5120 1409 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1280 0 1280 1409 0 0 2560 1409 </string>
+	<string>1920 0 1920 2129 0 0 3840 2129 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>853 0 853 704 0 0 2560 1409 </string>
+	<string>2560 0 1279 1064 0 0 3840 2129 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>2560 0 1279 709 0 0 3840 2129 </string>
+	<key>NSWindow Frame iTerm Window 4</key>
+	<string>2880 0 959 709 0 0 3840 2129 </string>
+	<key>NSWindow Frame iTerm Window 5</key>
+	<string>2880 2 959 531 0 0 3840 2129 </string>
+	<key>NSWindow Frame iTerm Window 6</key>
+	<string>3072 2 767 531 0 0 3840 2129 </string>
 	<key>NeverBlockSystemShutdown</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_ECA27118-60C1-4C04-9C1E-C504C71B3BAA</key>
@@ -2788,6 +2802,7 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.6.2</string>
+		<string>3.6.4</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -2799,10 +2814,12 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {5120, 1440}}</string>
+		<string>{{0, 0}, {3840, 2160}}</string>
 		<key>topLeft</key>
-		<string>{2550, 779}</string>
+		<string>{1458, 1334}</string>
 	</dict>
+	<key>NoSyncHavePromotedJSONPrettyPrint</key>
+	<true/>
 	<key>NoSyncIgnoreSystemWindowRestoration</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
@@ -2812,7 +2829,7 @@
 	<key>NoSyncLastSystemPythonVersionRequirement</key>
 	<string>1.17</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>6</integer>
+	<integer>10</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>781291998.33720505</real>
 	<key>NoSyncOpenLinksInApp</key>
@@ -3781,8 +3798,12 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2025-10-07T16:47:07Z</date>
+	<date>2025-10-16T13:01:31Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>SUUpdateGroupIdentifier</key>
+	<integer>2308682093</integer>
+	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
@@ -3801,7 +3822,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.6.2</string>
+	<string>3.6.4</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>3</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
