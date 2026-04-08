@@ -12,6 +12,8 @@
 	<integer>0</integer>
 	<key>BrailleInputDeviceConnected</key>
 	<integer>0</integer>
+	<key>ButtonShapesEnabled</key>
+	<integer>0</integer>
 	<key>CommandAndControlEnabled</key>
 	<integer>0</integer>
 	<key>DarkenSystemColors</key>

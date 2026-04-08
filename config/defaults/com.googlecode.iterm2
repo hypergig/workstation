@@ -2803,6 +2803,7 @@
 	<array>
 		<string>3.6.2</string>
 		<string>3.6.4</string>
+		<string>3.6.9</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -2811,6 +2812,13 @@
 		<string>Menlo</string>
 		<string>Monaco</string>
 	</array>
+	<key>NoSyncFrame_SessionsPreferences</key>
+	<dict>
+		<key>screenFrame</key>
+		<string>{{0, 0}, {5120, 1440}}</string>
+		<key>topLeft</key>
+		<string>{2098, 965}</string>
+	</dict>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
@@ -2825,11 +2833,11 @@
 	<key>NoSyncInstallationId</key>
 	<string>720AE432-6272-42A2-AF1F-177A96E6595C</string>
 	<key>NoSyncLastOSVersion</key>
-	<string>Version 26.0.1 (Build 25A362)</string>
+	<string>Version 26.4 (Build 25E246)</string>
 	<key>NoSyncLastSystemPythonVersionRequirement</key>
 	<string>1.17</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>10</integer>
+	<integer>11</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>781291998.33720505</real>
 	<key>NoSyncOpenLinksInApp</key>
@@ -3822,7 +3830,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.6.4</string>
+	<string>3.6.9</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>3</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
