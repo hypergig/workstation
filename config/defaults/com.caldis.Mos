@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SULastCheckTime</key>
+	<date>2026-04-28T20:13:44Z</date>
 	<key>allowlist</key>
 	<false/>
 	<key>applications</key>
@@ -10,31 +12,49 @@
 	</data>
 	<key>block</key>
 	<data>
-	eyJ0eXBlIjoia2V5Ym9hcmQiLCJjb2RlIjowfQ==
+	eyJ0eXBlIjoia2V5Ym9hcmQiLCJjb2RlIjo1NX0=
+	</data>
+	<key>buttonBindings</key>
+	<data>
+	W10=
 	</data>
 	<key>dash</key>
 	<data>
-	eyJjb2RlIjowLCJ0eXBlIjoia2V5Ym9hcmQifQ==
+	eyJ0eXBlIjoia2V5Ym9hcmQiLCJjb2RlIjo1OH0=
 	</data>
+	<key>deadZone</key>
+	<real>1</real>
 	<key>duration</key>
-	<real>3.8999999999999999</real>
+	<real>4.3499999999999996</real>
 	<key>hideStatusItem</key>
 	<false/>
 	<key>optionsExist</key>
 	<string>optionsExist</string>
-	<key>precision</key>
-	<real>1</real>
 	<key>reverse</key>
 	<false/>
+	<key>reverseHorizontal</key>
+	<true/>
+	<key>reverseVertical</key>
+	<true/>
 	<key>smooth</key>
 	<true/>
+	<key>smoothHorizontal</key>
+	<true/>
+	<key>smoothSimTrackpad</key>
+	<false/>
+	<key>smoothVertical</key>
+	<true/>
 	<key>speed</key>
-	<real>3</real>
+	<real>2.7000000000000002</real>
 	<key>step</key>
-	<real>35</real>
+	<real>33.600000000000001</real>
 	<key>toggle</key>
 	<data>
 	eyJ0eXBlIjoia2V5Ym9hcmQiLCJjb2RlIjo1Nn0=
 	</data>
+	<key>updateCheckOnAppStart</key>
+	<false/>
+	<key>updateIncludingBetaVersion</key>
+	<false/>
 </dict>
 </plist>

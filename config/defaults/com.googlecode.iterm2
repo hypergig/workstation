@@ -1572,11 +1572,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>1610 1295 620 402 0 0 3840 2129 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3840 0 1279 1409 0 0 5120 1409 </string>
+	<string>2565 0 2555 1409 0 0 5120 1410 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 0 3840 2129 0 0 3840 2129 </string>
+	<string>1283 710 1272 699 0 0 5120 1410 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>1925 0 1915 1059 0 0 3840 2129 </string>
+	<string>1283 0 1272 699 0 0 5120 1410 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>1925 1070 1915 1059 0 0 3840 2129 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -1585,6 +1585,10 @@
 	<string>2880 2 959 531 0 0 3840 2129 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
 	<string>3072 2 767 531 0 0 3840 2129 </string>
+	<key>NSWindow Frame iTerm Window 7</key>
+	<string>2572 0 1268 699 0 0 5120 1410 </string>
+	<key>NSWindow Frame iTerm Window 8</key>
+	<string>3083 710 1011 699 0 0 5120 1410 </string>
 	<key>NeverBlockSystemShutdown</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_ECA27118-60C1-4C04-9C1E-C504C71B3BAA</key>
@@ -2801,8 +2805,9 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.6.2</string>
 		<string>3.6.4</string>
+		<string>3.6.10</string>
+		<string>3.6.2</string>
 		<string>3.6.9</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
@@ -2833,11 +2838,11 @@
 	<key>NoSyncInstallationId</key>
 	<string>720AE432-6272-42A2-AF1F-177A96E6595C</string>
 	<key>NoSyncLastOSVersion</key>
-	<string>Version 26.4 (Build 25E246)</string>
+	<string>Version 26.4.1 (Build 25E253)</string>
 	<key>NoSyncLastSystemPythonVersionRequirement</key>
 	<string>1.17</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>11</integer>
+	<integer>17</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>781291998.33720505</real>
 	<key>NoSyncOpenLinksInApp</key>
@@ -3748,6 +3753,27 @@
 	<integer>1</integer>
 	<key>NoSyncRestoreWindowsCount</key>
 	<integer>0</integer>
+	<key>NoSyncSavedWindowPositions</key>
+	<dict>
+		<key>0</key>
+		<string>{2565, 1409}</string>
+		<key>1</key>
+		<string>{1283, 1409}</string>
+		<key>2</key>
+		<string>{1283, 699}</string>
+		<key>3</key>
+		<string>{2572, 699}</string>
+		<key>4</key>
+		<string>{1029, 1409}</string>
+		<key>5</key>
+		<string>{1722, 699}</string>
+		<key>6</key>
+		<string>{3659, 1409}</string>
+		<key>7</key>
+		<string>{2572, 699}</string>
+		<key>8</key>
+		<string>{3083, 1409}</string>
+	</dict>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>781119198.33707201</real>
 	<key>NoSyncWindowRestoresWorkspaceAtLaunch</key>
@@ -3806,12 +3832,14 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2025-10-16T13:01:31Z</date>
+	<date>2026-04-28T14:35:24Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
 	<integer>2308682093</integer>
 	<key>SUUpdateRelaunchingMarker</key>
+	<false/>
+	<key>Secure Input</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
@@ -3830,7 +3858,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.6.9</string>
+	<string>3.6.10</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>3</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

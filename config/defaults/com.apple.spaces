@@ -7,7 +7,7 @@
 		<key>Management Data</key>
 		<dict>
 			<key>Age</key>
-			<real>20053.902869625002</real>
+			<real>28282.100790875</real>
 			<key>Management Mode</key>
 			<integer>1</integer>
 			<key>Monitors</key>
@@ -50,83 +50,27 @@
 							<key>type</key>
 							<integer>0</integer>
 							<key>uuid</key>
-							<string>3418248A-A1A1-42A3-8C6C-7E2F5EE5E218</string>
-						</dict>
-						<dict>
-							<key>ManagedSpaceID</key>
-							<integer>4</integer>
-							<key>id64</key>
-							<integer>4</integer>
-							<key>type</key>
-							<integer>0</integer>
-							<key>uuid</key>
 							<string>ECDA2EA6-BBBE-41D1-949D-485D69F7B44D</string>
 						</dict>
 						<dict>
 							<key>ManagedSpaceID</key>
-							<integer>5</integer>
+							<integer>4</integer>
 							<key>id64</key>
-							<integer>5</integer>
+							<integer>4</integer>
 							<key>type</key>
 							<integer>0</integer>
 							<key>uuid</key>
 							<string>63C3E8FE-2F17-421A-A3FC-21E31EE31C81</string>
 						</dict>
-					</array>
-				</dict>
-				<dict>
-					<key>Current Space</key>
-					<dict>
-						<key>ManagedSpaceID</key>
-						<integer>84</integer>
-						<key>id64</key>
-						<integer>84</integer>
-						<key>type</key>
-						<integer>0</integer>
-						<key>uuid</key>
-						<string>8D3C81EE-C790-490B-A04E-C876287F6124</string>
-					</dict>
-					<key>Display Identifier</key>
-					<string>822FC86E-D85B-43B1-84C4-7F881AFCEA88</string>
-					<key>Spaces</key>
-					<array>
 						<dict>
 							<key>ManagedSpaceID</key>
-							<integer>84</integer>
+							<integer>5</integer>
 							<key>id64</key>
-							<integer>84</integer>
+							<integer>5</integer>
 							<key>type</key>
 							<integer>0</integer>
 							<key>uuid</key>
-							<string>8D3C81EE-C790-490B-A04E-C876287F6124</string>
-						</dict>
-					</array>
-				</dict>
-				<dict>
-					<key>Current Space</key>
-					<dict>
-						<key>ManagedSpaceID</key>
-						<integer>85</integer>
-						<key>id64</key>
-						<integer>85</integer>
-						<key>type</key>
-						<integer>0</integer>
-						<key>uuid</key>
-						<string>C942957F-02C0-4795-AE67-A967E44332AF</string>
-					</dict>
-					<key>Display Identifier</key>
-					<string>37D8832A-2D66-02CA-B9F7-8F30A301B230</string>
-					<key>Spaces</key>
-					<array>
-						<dict>
-							<key>ManagedSpaceID</key>
-							<integer>85</integer>
-							<key>id64</key>
-							<integer>85</integer>
-							<key>type</key>
-							<integer>0</integer>
-							<key>uuid</key>
-							<string>C942957F-02C0-4795-AE67-A967E44332AF</string>
+							<string>E033C32D-9ACE-4418-A5CC-2264B1B16E4C</string>
 						</dict>
 					</array>
 				</dict>
@@ -134,9 +78,9 @@
 					<key>Collapsed Space</key>
 					<dict>
 						<key>ManagedSpaceID</key>
-						<integer>307</integer>
+						<integer>516</integer>
 						<key>id64</key>
-						<integer>307</integer>
+						<integer>516</integer>
 						<key>type</key>
 						<integer>0</integer>
 						<key>uuid</key>
@@ -145,21 +89,66 @@
 					<key>Display Identifier</key>
 					<string>1EC90D1A-1EE7-45E4-BAD1-08FE2A7E7A74</string>
 				</dict>
+				<dict>
+					<key>Collapsed Space</key>
+					<dict>
+						<key>ManagedSpaceID</key>
+						<integer>505</integer>
+						<key>id64</key>
+						<integer>505</integer>
+						<key>type</key>
+						<integer>0</integer>
+						<key>uuid</key>
+						<string>8D3C81EE-C790-490B-A04E-C876287F6124</string>
+					</dict>
+					<key>Display Identifier</key>
+					<string>822FC86E-D85B-43B1-84C4-7F881AFCEA88</string>
+				</dict>
+				<dict>
+					<key>Collapsed Space</key>
+					<dict>
+						<key>ManagedSpaceID</key>
+						<integer>507</integer>
+						<key>id64</key>
+						<integer>507</integer>
+						<key>type</key>
+						<integer>0</integer>
+						<key>uuid</key>
+						<string>C942957F-02C0-4795-AE67-A967E44332AF</string>
+					</dict>
+					<key>Display Identifier</key>
+					<string>37D8832A-2D66-02CA-B9F7-8F30A301B230</string>
+				</dict>
+				<dict>
+					<key>Collapsed Space</key>
+					<dict>
+						<key>ManagedSpaceID</key>
+						<integer>328</integer>
+						<key>id64</key>
+						<integer>328</integer>
+						<key>type</key>
+						<integer>0</integer>
+						<key>uuid</key>
+						<string>FF05B39B-B0FC-4541-89B3-FBCD76C8409F</string>
+					</dict>
+					<key>Display Identifier</key>
+					<string>79B893DF-C6AC-496C-ABF7-FDDBE504AE87</string>
+				</dict>
 			</array>
 			<key>Primary</key>
 			<dict>
 				<key>CreatedCount</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>DeletedCount</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>LifetimeEntryCount</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>LifetimeMax</key>
-				<real>0.0</real>
+				<real>1.2960194166664678</real>
 				<key>LifetimeMin</key>
-				<real>0.0</real>
+				<real>1.2960194166664678</real>
 				<key>LifetimeSum</key>
-				<real>0.0</real>
+				<real>1.2960194166664678</real>
 				<key>PersistedCount</key>
 				<integer>0</integer>
 			</dict>
@@ -188,25 +177,12 @@
 				<string></string>
 				<key>windows</key>
 				<array>
-					<integer>14846</integer>
-					<integer>14863</integer>
-					<integer>3354</integer>
-					<integer>128</integer>
-					<integer>13602</integer>
-					<integer>33</integer>
-				</array>
-			</dict>
-			<dict>
-				<key>name</key>
-				<string>3418248A-A1A1-42A3-8C6C-7E2F5EE5E218</string>
-				<key>windows</key>
-				<array>
-					<integer>33</integer>
-					<integer>468</integer>
-					<integer>10467</integer>
-					<integer>79</integer>
-					<integer>1294</integer>
-					<integer>14782</integer>
+					<integer>343</integer>
+					<integer>339</integer>
+					<integer>391</integer>
+					<integer>298</integer>
+					<integer>221</integer>
+					<integer>235</integer>
 				</array>
 			</dict>
 			<dict>
@@ -214,7 +190,7 @@
 				<string>ECDA2EA6-BBBE-41D1-949D-485D69F7B44D</string>
 				<key>windows</key>
 				<array>
-					<integer>33</integer>
+					<integer>221</integer>
 				</array>
 			</dict>
 			<dict>
@@ -222,24 +198,15 @@
 				<string>63C3E8FE-2F17-421A-A3FC-21E31EE31C81</string>
 				<key>windows</key>
 				<array>
-					<integer>33</integer>
+					<integer>221</integer>
 				</array>
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>8D3C81EE-C790-490B-A04E-C876287F6124</string>
+				<string>E033C32D-9ACE-4418-A5CC-2264B1B16E4C</string>
 				<key>windows</key>
 				<array>
-					<integer>14681</integer>
-				</array>
-			</dict>
-			<dict>
-				<key>name</key>
-				<string>C942957F-02C0-4795-AE67-A967E44332AF</string>
-				<key>windows</key>
-				<array>
-					<integer>92</integer>
-					<integer>14673</integer>
+					<integer>221</integer>
 				</array>
 			</dict>
 		</array>

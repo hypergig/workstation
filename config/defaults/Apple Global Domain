@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>ACDMonthlyAnalyticsLastPosted</key>
+	<real>796357893.73586798</real>
 	<key>AKLastEmailListRequestDateKey</key>
 	<date>2021-09-01T20:05:30Z</date>
 	<key>AKLastIDMSEnvironment</key>
@@ -51,7 +53,7 @@
 	<key>ContextMenuGesture</key>
 	<integer>1</integer>
 	<key>InitialKeyRepeat</key>
-	<integer>15</integer>
+	<real>15</real>
 	<key>InitialKeyRepeat_Level_Saved</key>
 	<integer>6</integer>
 	<key>KB_DoubleQuoteOption</key>
@@ -64,7 +66,7 @@
 		<true/>
 	</dict>
 	<key>KeyRepeat</key>
-	<integer>2</integer>
+	<real>2</real>
 	<key>NSAutomaticCapitalizationEnabled</key>
 	<true/>
 	<key>NSAutomaticDashSubstitutionEnabled</key>
@@ -80,7 +82,7 @@
 	<key>NSLinguisticDataAssetsRequestLastInterval</key>
 	<real>86400</real>
 	<key>NSLinguisticDataAssetsRequestTime</key>
-	<date>2022-10-06T17:59:12Z</date>
+	<date>2026-04-28T14:42:23Z</date>
 	<key>NSLinguisticDataAssetsRequested</key>
 	<array>
 		<string>en</string>
@@ -149,12 +151,47 @@
 		<key>dirMap</key>
 		<dict/>
 	</dict>
+	<key>com.apple.gms.availability.accessNotGrantedUseCases</key>
+	<data>
+	YnBsaXN0MDCgCAAAAAAAAAEBAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAJ
+	</data>
+	<key>com.apple.gms.availability.disabledUseCases</key>
+	<data>
+	YnBsaXN0MDChAV8QI2NvZGVMTS5kZW55VGhpc1VzZUNhc2VPbkp1bmU2b2YyMDI0CAoA
+	AAAAAAABAQAAAAAAAAACAAAAAAAAAAAAAAAAAAAAMA==
+	</data>
+	<key>com.apple.gms.availability.disallowedUseCases</key>
+	<data>
+	YnBsaXN0MDCgCAAAAAAAAAEBAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAJ
+	</data>
+	<key>com.apple.gms.availability.essentialAssetReadiness</key>
+	<data>
+	dHJ1ZQ==
+	</data>
+	<key>com.apple.gms.availability.key</key>
+	<data>
+	YnBsaXN0MDChARAACAoAAAAAAAABAQAAAAAAAAACAAAAAAAAAAAAAAAAAAAADA==
+	</data>
+	<key>com.apple.gms.availability.osEligibilityReasons</key>
+	<array>
+		<integer>1</integer>
+	</array>
+	<key>com.apple.gms.availability.useCasesWhoseAssetsAreOutOfStorage</key>
+	<data>
+	YnBsaXN0MDCgCAAAAAAAAAEBAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAJ
+	</data>
+	<key>com.apple.gms.availability.useCasesWhoseAssetsNotReady</key>
+	<data>
+	YnBsaXN0MDCgCAAAAAAAAAEBAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAJ
+	</data>
 	<key>com.apple.mouse.doubleClickThreshold</key>
 	<real>1.3999999999999999</real>
+	<key>com.apple.mouse.linear</key>
+	<false/>
 	<key>com.apple.mouse.scaling</key>
 	<real>3</real>
 	<key>com.apple.scrollwheel.scaling</key>
-	<real>1.7</real>
+	<real>1</real>
 	<key>com.apple.sound.beep.feedback</key>
 	<integer>1</integer>
 	<key>com.apple.sound.beep.flash</key>
@@ -166,7 +203,7 @@
 	<key>com.apple.sound.uiaudio.enabled</key>
 	<integer>1</integer>
 	<key>com.apple.springing.delay</key>
-	<real>0.0</real>
+	<real>1</real>
 	<key>com.apple.springing.enabled</key>
 	<false/>
 	<key>com.apple.swipescrolldirection</key>
@@ -175,5 +212,7 @@
 	<false/>
 	<key>com.apple.trackpad.scaling</key>
 	<real>1</real>
+	<key>shouldShowRSVPDataDetectors</key>
+	<false/>
 </dict>
 </plist>
