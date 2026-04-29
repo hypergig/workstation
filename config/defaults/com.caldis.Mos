@@ -45,7 +45,7 @@
 	<key>smoothVertical</key>
 	<true/>
 	<key>speed</key>
-	<real>2.7000000000000002</real>
+	<real>10</real>
 	<key>step</key>
 	<real>33.600000000000001</real>
 	<key>toggle</key>
