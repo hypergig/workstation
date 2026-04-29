@@ -15,13 +15,13 @@
 	<key>AITermAPI</key>
 	<integer>2</integer>
 	<key>AIVectorStore</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>AiMaxTokens</key>
-	<integer>1000000</integer>
+	<integer>400000</integer>
 	<key>AiModel</key>
-	<string>gpt-4.1</string>
+	<string>gpt-5.2</string>
 	<key>AiResponseMaxTokens</key>
-	<integer>32768</integer>
+	<integer>128000</integer>
 	<key>AitermURL</key>
 	<string>https://api.openai.com/v1/responses</string>
 	<key>AllowSymbolicHotKeys</key>
@@ -1562,7 +1562,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>0 83 250 297 0 0 3840 2129 </string>
+	<string>0 83 250 297 0 0 3360 1860 </string>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>0 0 1673 935 0 0 2560 1409 </string>
 	<key>NSWindow Frame ProfilesPanel</key>
@@ -1572,7 +1572,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>1610 1295 620 402 0 0 3840 2129 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2565 0 2555 1409 0 0 5120 1410 </string>
+	<string>1685 0 1675 1859 0 0 3360 1860 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1283 710 1272 699 0 0 5120 1410 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2827,9 +2827,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {3840, 2160}}</string>
+		<string>{{0, 0}, {3360, 1890}}</string>
 		<key>topLeft</key>
-		<string>{1934, 1392}</string>
+		<string>{1218, 1196}</string>
 	</dict>
 	<key>NoSyncHavePromotedJSONPrettyPrint</key>
 	<true/>
@@ -2842,7 +2842,7 @@
 	<key>NoSyncLastSystemPythonVersionRequirement</key>
 	<string>1.17</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>17</integer>
+	<integer>18</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>781291998.33720505</real>
 	<key>NoSyncOpenLinksInApp</key>
@@ -3756,7 +3756,7 @@
 	<key>NoSyncSavedWindowPositions</key>
 	<dict>
 		<key>0</key>
-		<string>{2565, 1409}</string>
+		<string>{1685, 1859}</string>
 		<key>1</key>
 		<string>{1283, 1409}</string>
 		<key>2</key>
@@ -3823,6 +3823,8 @@
 	<true/>
 	<key>RemapModifiersGlobally</key>
 	<false/>
+	<key>RequireCmdForDraggingText</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -3832,7 +3834,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2026-04-28T14:35:24Z</date>
+	<date>2026-04-29T14:35:24Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
