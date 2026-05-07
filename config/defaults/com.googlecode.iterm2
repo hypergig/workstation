@@ -2842,7 +2842,7 @@
 	<key>NoSyncLastSystemPythonVersionRequirement</key>
 	<string>1.17</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>18</integer>
+	<integer>20</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>781291998.33720505</real>
 	<key>NoSyncOpenLinksInApp</key>
@@ -3756,13 +3756,13 @@
 	<key>NoSyncSavedWindowPositions</key>
 	<dict>
 		<key>0</key>
-		<string>{1685, 1859}</string>
+		<string>{0, 924}</string>
 		<key>1</key>
-		<string>{1283, 1409}</string>
+		<string>{-0, 1129}</string>
 		<key>2</key>
-		<string>{1283, 699}</string>
+		<string>{3417, 1409}</string>
 		<key>3</key>
-		<string>{2572, 699}</string>
+		<string>{1122, 1859}</string>
 		<key>4</key>
 		<string>{1029, 1409}</string>
 		<key>5</key>
@@ -3834,7 +3834,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2026-04-29T14:35:24Z</date>
+	<date>2026-05-06T13:44:13Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
