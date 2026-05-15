@@ -31,7 +31,7 @@
 	<key>AppleLanguagesDidMigrate</key>
 	<string>12.6</string>
 	<key>AppleLanguagesSchemaVersion</key>
-	<integer>4000</integer>
+	<integer>5400</integer>
 	<key>AppleLocale</key>
 	<string>en_US</string>
 	<key>AppleMeasurementUnits</key>
@@ -82,7 +82,7 @@
 	<key>NSLinguisticDataAssetsRequestLastInterval</key>
 	<real>86400</real>
 	<key>NSLinguisticDataAssetsRequestTime</key>
-	<date>2026-04-28T14:42:23Z</date>
+	<date>2026-05-14T14:23:45Z</date>
 	<key>NSLinguisticDataAssetsRequested</key>
 	<array>
 		<string>en</string>

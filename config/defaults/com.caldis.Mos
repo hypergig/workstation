@@ -12,7 +12,7 @@
 	</data>
 	<key>block</key>
 	<data>
-	eyJjb2RlIjo1NSwidHlwZSI6ImtleWJvYXJkIn0=
+	eyJ0eXBlIjoia2V5Ym9hcmQiLCJjb2RlIjo1NX0=
 	</data>
 	<key>buttonBindings</key>
 	<data>
@@ -20,7 +20,7 @@
 	</data>
 	<key>dash</key>
 	<data>
-	eyJjb2RlIjo1OCwidHlwZSI6ImtleWJvYXJkIn0=
+	eyJ0eXBlIjoia2V5Ym9hcmQiLCJjb2RlIjo1OH0=
 	</data>
 	<key>deadZone</key>
 	<real>1</real>

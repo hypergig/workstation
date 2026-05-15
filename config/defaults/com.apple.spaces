@@ -7,7 +7,7 @@
 		<key>Management Data</key>
 		<dict>
 			<key>Age</key>
-			<real>28282.100790875</real>
+			<real>47139.969257500015</real>
 			<key>Management Mode</key>
 			<integer>1</integer>
 			<key>Monitors</key>
@@ -78,9 +78,9 @@
 					<key>Collapsed Space</key>
 					<dict>
 						<key>ManagedSpaceID</key>
-						<integer>516</integer>
+						<integer>19</integer>
 						<key>id64</key>
-						<integer>516</integer>
+						<integer>19</integer>
 						<key>type</key>
 						<integer>0</integer>
 						<key>uuid</key>
@@ -93,9 +93,9 @@
 					<key>Collapsed Space</key>
 					<dict>
 						<key>ManagedSpaceID</key>
-						<integer>505</integer>
+						<integer>6</integer>
 						<key>id64</key>
-						<integer>505</integer>
+						<integer>6</integer>
 						<key>type</key>
 						<integer>0</integer>
 						<key>uuid</key>
@@ -108,9 +108,9 @@
 					<key>Collapsed Space</key>
 					<dict>
 						<key>ManagedSpaceID</key>
-						<integer>507</integer>
+						<integer>7</integer>
 						<key>id64</key>
-						<integer>507</integer>
+						<integer>7</integer>
 						<key>type</key>
 						<integer>0</integer>
 						<key>uuid</key>
@@ -144,11 +144,11 @@
 				<key>LifetimeEntryCount</key>
 				<integer>1</integer>
 				<key>LifetimeMax</key>
-				<real>1.2960194166664678</real>
+				<real>1.2967892500018934</real>
 				<key>LifetimeMin</key>
-				<real>1.2960194166664678</real>
+				<real>1.2967892500018934</real>
 				<key>LifetimeSum</key>
-				<real>1.2960194166664678</real>
+				<real>1.2967892500018934</real>
 				<key>PersistedCount</key>
 				<integer>0</integer>
 			</dict>
@@ -177,12 +177,11 @@
 				<string></string>
 				<key>windows</key>
 				<array>
-					<integer>343</integer>
-					<integer>339</integer>
-					<integer>391</integer>
-					<integer>298</integer>
-					<integer>221</integer>
-					<integer>235</integer>
+					<integer>374</integer>
+					<integer>260</integer>
+					<integer>34</integer>
+					<integer>37</integer>
+					<integer>257</integer>
 				</array>
 			</dict>
 			<dict>
@@ -190,7 +189,10 @@
 				<string>ECDA2EA6-BBBE-41D1-949D-485D69F7B44D</string>
 				<key>windows</key>
 				<array>
-					<integer>221</integer>
+					<integer>37</integer>
+					<integer>265</integer>
+					<integer>48</integer>
+					<integer>53</integer>
 				</array>
 			</dict>
 			<dict>
@@ -198,7 +200,9 @@
 				<string>63C3E8FE-2F17-421A-A3FC-21E31EE31C81</string>
 				<key>windows</key>
 				<array>
-					<integer>221</integer>
+					<integer>37</integer>
+					<integer>49</integer>
+					<integer>52</integer>
 				</array>
 			</dict>
 			<dict>
@@ -206,7 +210,7 @@
 				<string>E033C32D-9ACE-4418-A5CC-2264B1B16E4C</string>
 				<key>windows</key>
 				<array>
-					<integer>221</integer>
+					<integer>37</integer>
 				</array>
 			</dict>
 		</array>
