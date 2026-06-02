@@ -45,12 +45,12 @@
 	<key>smoothVertical</key>
 	<true/>
 	<key>speed</key>
-	<real>5</real>
+	<real>2.7000000000000002</real>
 	<key>step</key>
 	<real>33.600000000000001</real>
 	<key>toggle</key>
 	<data>
-	eyJjb2RlIjo1NiwidHlwZSI6ImtleWJvYXJkIn0=
+	eyJ0eXBlIjoia2V5Ym9hcmQiLCJjb2RlIjo1Nn0=
 	</data>
 	<key>updateCheckOnAppStart</key>
 	<false/>
