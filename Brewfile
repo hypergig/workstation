@@ -1,6 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/services"
-tap "koekeishiya/formulae"
+tap "koekeishiya/formulae", trusted: true
 brew "bash-completion@2"
 brew "bash-git-prompt"
 brew "bash"

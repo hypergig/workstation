@@ -78,12 +78,24 @@ function setup_vars {
 }
 
 function brew_bundle {
+    log "outdated packages"
+    setx brew outdated
+
+    log "update brew"
+    setx brew update
+
+    log "upgrade all packages"
+    setx brew upgrade --greedy -y
+
     log "running brew bundle"
     setx brew bundle
+
+    log "cleaning up"
+    setx brew cleanup
+
     hash -r
 
     log "setting up startup services"
-
     skhd --start-service
     yabai --start-service
 }
