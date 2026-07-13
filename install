@@ -84,20 +84,16 @@ function brew_bundle {
     log "update brew"
     setx brew update
 
-    log "upgrade all packages"
-    setx brew upgrade --greedy -y
-
     log "running brew bundle"
     setx brew bundle
+
+    log "upgrade all packages"
+    setx brew upgrade --greedy -y
 
     log "cleaning up"
     setx brew cleanup
 
     hash -r
-
-    log "setting up startup services"
-    skhd --start-service
-    yabai --start-service
 }
 
 function dot_files {
@@ -146,6 +142,14 @@ function install_defaults {
         setx defaults import "${scope}" "${scope}"
     done
     setx cd -
+
+    defaults write com.apple.dock expose-group-apps -bool true
+    defaults write com.apple.dock mru-spaces -bool false
+    defaults write com.apple.spaces spans-displays -bool true
+    defaults write NSGlobalDomain AppleActionOnDoubleClick -string "Maximize"
+    defaults write NSGlobalDomain AppleSpacesSwitchOnActivate -bool false
+
+    killall Dock SystemUIServer
 }
 
 # install
