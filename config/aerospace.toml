@@ -8,9 +8,6 @@ auto-reload-config = true
 # In i3, all workspaces are phantom
 persistent-workspaces = []
 
-# Mouse follows focus when focused monitor changes
-on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
-
 gaps.inner.horizontal = 10
 gaps.inner.vertical = 10
 
