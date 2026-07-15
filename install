@@ -146,10 +146,11 @@ function install_defaults {
     defaults write com.apple.dock expose-group-apps -bool true
     defaults write com.apple.dock mru-spaces -bool false
     defaults write com.apple.spaces spans-displays -bool true
+    defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
     defaults write NSGlobalDomain AppleActionOnDoubleClick -string "Maximize"
     defaults write NSGlobalDomain AppleSpacesSwitchOnActivate -bool false
 
-    killall Dock SystemUIServer
+    killall Dock SystemUIServer WindowManager
 }
 
 # install
