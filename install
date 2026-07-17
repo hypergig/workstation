@@ -84,20 +84,16 @@ function brew_bundle {
     log "update brew"
     setx brew update
 
-    log "upgrade all packages"
-    setx brew upgrade --greedy -y
-
     log "running brew bundle"
     setx brew bundle
+
+    log "upgrade all packages"
+    setx brew upgrade --greedy -y
 
     log "cleaning up"
     setx brew cleanup
 
     hash -r
-
-    log "setting up startup services"
-    skhd --start-service
-    yabai --start-service
 }
 
 function dot_files {
@@ -106,12 +102,9 @@ function dot_files {
         "config/.gitconfig ${HOME}/.gitconfig"
         "config/.gitignore ${HOME}/.gitignore"
         "config/.vars ${HOME}/.vars"
-        "config/alacritty.toml ${HOME}/.config/alacritty/alacritty.toml"
         "config/init.vim ${HOME}/.config/nvim/init.vim"
         "config/NeoSolarized.vim ${HOME}/.config/nvim/colors/NeoSolarized.vim"
-        "config/skhdrc ${HOME}/.config/skhd/skhdrc"
-        "config/yabairc ${HOME}/.config/yabai/yabairc"
-        "config/yabairc ${HOME}/.config/yabai/yabairc"
+        "config/aerospace.toml ${HOME}/.aerospace.toml"
     )
     for link in "${links[@]}"; do
         read _ dest <<<"${link}"
@@ -149,6 +142,20 @@ function install_defaults {
         setx defaults import "${scope}" "${scope}"
     done
     setx cd -
+
+    defaults write -g com.apple.mouse.doubleClickThreshold 1.4
+    defaults write -g com.apple.mouse.scaling 3
+    defaults write -g com.apple.scrollwheel.scaling 1
+    defaults write -g InitialKeyRepeat -int 15
+    defaults write -g KeyRepeat -int 2
+    defaults write com.apple.dock expose-group-apps -bool true
+    defaults write com.apple.dock mru-spaces -bool false
+    defaults write com.apple.spaces spans-displays -bool true
+    defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
+    defaults write NSGlobalDomain AppleActionOnDoubleClick -string "Maximize"
+    defaults write NSGlobalDomain AppleSpacesSwitchOnActivate -bool false
+
+    killall Dock SystemUIServer WindowManager
 }
 
 # install
