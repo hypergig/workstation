@@ -26,10 +26,17 @@ alt-shift-j = 'move down'
 alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
-alt-y = 'join-with left'
-alt-u = 'join-with down'
-alt-i = 'join-with up'
-alt-o = 'join-with right'
+# Joining
+alt-shift-y = 'join-with left'
+alt-shift-u = 'join-with down'
+alt-shift-i = 'join-with up'
+alt-shift-o = 'join-with right'
+
+# Resizing
+alt-y = 'resize width +50'
+alt-u = 'resize height +50'
+alt-i = 'resize height -50'
+alt-o = 'resize width -50'
 
 alt-f = 'fullscreen'
 
@@ -72,12 +79,3 @@ alt-shift-0 = 'move-node-to-workspace 10'
 alt-shift-c = 'reload-config'
 
 alt-a = 'balance-sizes'
-alt-r = 'mode resize'
-
-[mode.resize.binding]
-h = 'resize width -50'
-j = 'resize height +50'
-k = 'resize height -50'
-l = 'resize width +50'
-enter = 'mode main'
-esc = 'mode main'
