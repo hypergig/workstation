@@ -143,6 +143,11 @@ function install_defaults {
     done
     setx cd -
 
+    defaults write -g com.apple.mouse.doubleClickThreshold 1.4
+    defaults write -g com.apple.mouse.scaling 3
+    defaults write -g com.apple.scrollwheel.scaling 1
+    defaults write -g InitialKeyRepeat -int 15
+    defaults write -g KeyRepeat -int 2
     defaults write com.apple.dock expose-group-apps -bool true
     defaults write com.apple.dock mru-spaces -bool false
     defaults write com.apple.spaces spans-displays -bool true
