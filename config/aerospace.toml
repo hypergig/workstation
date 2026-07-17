@@ -79,3 +79,7 @@ alt-shift-0 = 'move-node-to-workspace 10'
 alt-shift-c = 'reload-config'
 
 alt-a = 'balance-sizes'
+alt-esc = 'mode off'
+
+[mode.off.binding]
+alt-esc = 'mode main'
