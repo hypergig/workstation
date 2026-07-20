@@ -1,5 +1,3 @@
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "nikitabobko/tap", trusted: true
 brew "bash-completion@2"
 brew "bash-git-prompt"

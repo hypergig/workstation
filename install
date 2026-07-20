@@ -102,9 +102,11 @@ function dot_files {
         "config/.gitconfig ${HOME}/.gitconfig"
         "config/.gitignore ${HOME}/.gitignore"
         "config/.vars ${HOME}/.vars"
+        "config/aerospace.toml ${HOME}/.aerospace.toml"
+        "config/direnv.toml ${HOME}/.config/direnv/direnv.toml"
+        "config/direnvrc ${HOME}/.config/direnv/direnvrc"
         "config/init.vim ${HOME}/.config/nvim/init.vim"
         "config/NeoSolarized.vim ${HOME}/.config/nvim/colors/NeoSolarized.vim"
-        "config/aerospace.toml ${HOME}/.aerospace.toml"
     )
     for link in "${links[@]}"; do
         read _ dest <<<"${link}"
@@ -143,19 +145,28 @@ function install_defaults {
     done
     setx cd -
 
+    defaults write -g AppleAccentColor -int -1
+    defaults write -g AppleAquaColorVariant -int 6
+    defaults write -g AppleInterfaceStyle -string "Dark"
     defaults write -g com.apple.mouse.doubleClickThreshold 1.4
     defaults write -g com.apple.mouse.scaling 3
     defaults write -g com.apple.scrollwheel.scaling 1
     defaults write -g InitialKeyRepeat -int 15
     defaults write -g KeyRepeat -int 2
+    defaults write com.apple.dock autohide -bool true
+    defaults write com.apple.dock autohide-delay -float 1000
+    defaults write com.apple.dock autohide-time-modifier -float 0
     defaults write com.apple.dock expose-group-apps -bool true
     defaults write com.apple.dock mru-spaces -bool false
+    defaults write com.apple.finder CreateDesktop -bool false
     defaults write com.apple.spaces spans-displays -bool true
+    defaults write com.apple.universalaccess reduceMotion -bool true
     defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
+    defaults write com.apple.WindowManager StandardHideWidgets -bool true
     defaults write NSGlobalDomain AppleActionOnDoubleClick -string "Maximize"
     defaults write NSGlobalDomain AppleSpacesSwitchOnActivate -bool false
 
-    killall Dock SystemUIServer WindowManager
+    killall Dock Finder SystemUIServer WindowManager
 }
 
 # install

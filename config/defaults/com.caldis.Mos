@@ -12,7 +12,7 @@
 	</data>
 	<key>block</key>
 	<data>
-	eyJ0eXBlIjoia2V5Ym9hcmQiLCJjb2RlIjo1NX0=
+	eyJjb2RlIjo1NSwidHlwZSI6ImtleWJvYXJkIn0=
 	</data>
 	<key>buttonBindings</key>
 	<data>
@@ -20,7 +20,7 @@
 	</data>
 	<key>dash</key>
 	<data>
-	eyJ0eXBlIjoia2V5Ym9hcmQiLCJjb2RlIjo1OH0=
+	eyJjb2RlIjo1OCwidHlwZSI6ImtleWJvYXJkIn0=
 	</data>
 	<key>deadZone</key>
 	<real>1</real>
@@ -50,7 +50,7 @@
 	<real>33.600000000000001</real>
 	<key>toggle</key>
 	<data>
-	eyJ0eXBlIjoia2V5Ym9hcmQiLCJjb2RlIjo1Nn0=
+	eyJjb2RlIjo1NiwidHlwZSI6ImtleWJvYXJkIn0=
 	</data>
 	<key>updateCheckOnAppStart</key>
 	<false/>
