@@ -164,6 +164,7 @@ function install_defaults {
     defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
     defaults write com.apple.WindowManager StandardHideWidgets -bool true
     defaults write NSGlobalDomain AppleActionOnDoubleClick -string "Maximize"
+    defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
     defaults write NSGlobalDomain AppleSpacesSwitchOnActivate -bool false
     defaults write NSGlobalDomain com.apple.sound.beep.feedback -int 1
     defaults write NSGlobalDomain com.apple.sound.beep.volume -float 0.0
