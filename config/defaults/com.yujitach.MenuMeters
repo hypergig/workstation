@@ -5,7 +5,7 @@
 	<key>CPUAverageLowerHalfProcs</key>
 	<false/>
 	<key>CPUAverageMultiProcs</key>
-	<false/>
+	<true/>
 	<key>CPUDisplayMode</key>
 	<integer>4</integer>
 	<key>CPUMaxProcessCount</key>
@@ -15,7 +15,7 @@
 	<key>CPUSortByUsage</key>
 	<false/>
 	<key>CPUSumAllProcsPercent</key>
-	<false/>
+	<true/>
 	<key>CPUTemperature</key>
 	<true/>
 	<key>DiskImageSet</key>
