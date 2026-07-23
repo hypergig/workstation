@@ -163,6 +163,7 @@ function install_defaults {
     defaults write com.apple.universalaccess reduceMotion -bool true
     defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
     defaults write com.apple.WindowManager StandardHideWidgets -bool true
+    defaults write com.google.Keystone.Agent checkInterval 0
     defaults write NSGlobalDomain AppleActionOnDoubleClick -string "Maximize"
     defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
     defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
