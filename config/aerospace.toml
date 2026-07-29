@@ -81,5 +81,17 @@ alt-shift-c = 'reload-config'
 alt-a = 'balance-sizes'
 alt-esc = 'mode off'
 
+# multi-monitor mode
+alt-shift-x = [
+    'exec-and-forget bash -c "aerospace list-windows --all --format %{window-id} | xargs -I {} aerospace move-node-to-workspace --window-id {} 1"',
+    'workspace 1',
+    'move-workspace-to-monitor main',
+    'workspace 3',
+    'move-workspace-to-monitor "Built-in Retina Display"',
+    'workspace 4',
+    'move-workspace-to-monitor "DELL P2423DE"',
+    'workspace 1',
+]
+
 [mode.off.binding]
 alt-esc = 'mode main'
