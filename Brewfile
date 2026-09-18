@@ -1,4 +1,4 @@
-tap "nikitabobko/tap", trusted: true
+tap "asmvik/formulae", trusted: true
 brew "bash-completion@2"
 brew "bash-git-prompt"
 brew "bash"
@@ -35,7 +35,8 @@ brew "shfmt"
 brew "tree"
 brew "watch"
 brew "wget"
-cask "aerospace"
+brew "asmvik/formulae/skhd"
+brew "asmvik/formulae/yabai"
 cask "elgato-stream-deck"
 cask "gcloud-cli"
 cask "google-chrome"
