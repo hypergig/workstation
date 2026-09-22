@@ -59,4 +59,4 @@ alt - v : yabai -m window --insert south
 alt - b : yabai -m window --insert east
 
 # float / unfloat window
-default, stack < alt - f : yabai -m window --toggle float
+default, stack < alt - f : yabai -m window --toggle float && yabai -m window --grid 30:5:1:1:3:28
