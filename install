@@ -102,11 +102,12 @@ function dot_files {
         "config/.gitconfig ${HOME}/.gitconfig"
         "config/.gitignore ${HOME}/.gitignore"
         "config/.vars ${HOME}/.vars"
-        "config/aerospace.toml ${HOME}/.aerospace.toml"
         "config/direnv.toml ${HOME}/.config/direnv/direnv.toml"
         "config/direnvrc ${HOME}/.config/direnv/direnvrc"
         "config/init.vim ${HOME}/.config/nvim/init.vim"
         "config/NeoSolarized.vim ${HOME}/.config/nvim/colors/NeoSolarized.vim"
+        "config/skhdrc ${HOME}/.config/skhd/skhdrc"
+        "config/yabairc ${HOME}/.config/yabai/yabairc"
     )
     for link in "${links[@]}"; do
         read _ dest <<<"${link}"
@@ -156,10 +157,11 @@ function install_defaults {
     defaults write com.apple.dock autohide -bool true
     defaults write com.apple.dock autohide-delay -float 1000
     defaults write com.apple.dock autohide-time-modifier -float 0
+    defaults write com.apple.dock expose-animation-duration -float 0
     defaults write com.apple.dock expose-group-apps -bool true
     defaults write com.apple.dock mru-spaces -bool false
     defaults write com.apple.finder CreateDesktop -bool false
-    defaults write com.apple.spaces spans-displays -bool true
+    defaults write com.apple.spaces spans-displays -bool false
     defaults write com.apple.universalaccess reduceMotion -bool true
     defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
     defaults write com.apple.WindowManager StandardHideWidgets -bool true
@@ -170,8 +172,10 @@ function install_defaults {
     defaults write NSGlobalDomain AppleSpacesSwitchOnActivate -bool false
     defaults write NSGlobalDomain com.apple.sound.beep.feedback -int 1
     defaults write NSGlobalDomain com.apple.sound.beep.volume -float 0.0
+    defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 
     killall Dock Finder SystemUIServer WindowManager
+    /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
 }
 
 # install

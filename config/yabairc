@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+echo "$(date) - starting load"
+
+# global settings
+yabai -m config \
+    auto_balance on \
+    split_ratio .5 \
+    window_placement second_child \
+    layout bsp \
+    window_gap 10
+
+echo "$(date) - yabai configuration loaded.."
