@@ -10,4 +10,9 @@ yabai -m config \
     layout bsp \
     window_gap 10
 
+# Fixes the desktop shortcuts bug
+for event in display_added display_removed system_woke; do
+    yabai -m signal --add label="kill_dock_${event}" event="${event}" action="${HOME}/repos/workstation/bin/kill-dock ${event}"
+done
+
 echo "$(date) - yabai configuration loaded.."
