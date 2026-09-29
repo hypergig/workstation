@@ -85,7 +85,7 @@ function brew_bundle {
     setx brew update
 
     log "running brew bundle"
-    setx brew bundle
+    setx brew bundle install --force
 
     log "upgrade all packages"
     setx brew upgrade --greedy -y
