@@ -144,8 +144,15 @@ function install_defaults {
     for scope in *; do
         setx defaults import "${scope}" "${scope}"
     done
-    setx cd -
 
+    set -x +e
+    cd -
+
+    defaults delete com.apple.dock expose-animation-duration
+    defaults delete com.apple.dock expose-group-apps
+    defaults delete com.apple.spaces spans-displays
+    defaults delete NSGlobalDomain AppleActionOnDoubleClick
+    defaults delete NSGlobalDomain AppleSpacesSwitchOnActivate
     defaults write -g AppleAccentColor -int -1
     defaults write -g AppleAquaColorVariant -int 6
     defaults write -g AppleInterfaceStyle -string "Dark"
@@ -157,25 +164,23 @@ function install_defaults {
     defaults write com.apple.dock autohide -bool true
     defaults write com.apple.dock autohide-delay -float 1000
     defaults write com.apple.dock autohide-time-modifier -float 0
-    defaults write com.apple.dock expose-animation-duration -float 0
-    defaults write com.apple.dock expose-group-apps -bool true
     defaults write com.apple.dock mru-spaces -bool false
-    defaults write com.apple.finder CreateDesktop -bool true
-    defaults write com.apple.spaces spans-displays -bool false
+    defaults write com.apple.finder CreateDesktop -bool false
     defaults write com.apple.universalaccess reduceMotion -bool true
     defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
     defaults write com.apple.WindowManager StandardHideWidgets -bool true
     defaults write com.google.Keystone.Agent checkInterval 0
-    defaults write NSGlobalDomain AppleActionOnDoubleClick -string "Maximize"
     defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
     defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
-    defaults write NSGlobalDomain AppleSpacesSwitchOnActivate -bool true
     defaults write NSGlobalDomain com.apple.sound.beep.feedback -int 1
     defaults write NSGlobalDomain com.apple.sound.beep.volume -float 0.0
     defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+    set -e
 
     killall Dock Finder SystemUIServer WindowManager
     /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+
+    set +x
 }
 
 # install
