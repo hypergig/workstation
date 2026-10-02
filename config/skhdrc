@@ -1,0 +1,62 @@
+# layout modes
+:: default : yabai -m config layout bsp
+:: float : yabai -m config layout float
+:: stack : yabai -m config layout stack
+
+# toggle between default and stack
+alt - s ; stack
+stack < alt - s ; default
+
+# toggle between default and float
+alt - d ; float
+float < alt - d ; default
+
+# shortcuts
+default, stack, float < alt - return : open -a iTerm /Users/jordan/repos
+default, stack, float < shift + alt - c : skhd --restart-service; yabai --restart-service;
+
+# focus window
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# rotate stack
+stack < alt - j : yabai -m window --focus stack.next
+stack < alt - k : yabai -m window --focus stack.prev
+
+# move managed window
+shift + alt - h : yabai -m window --swap west
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - l : yabai -m window --swap east
+
+shift + alt - 1 : yabai -m window --space 1; skhd -k "alt - 1"
+shift + alt - 2 : yabai -m window --space 2; skhd -k "alt - 2"
+shift + alt - 3 : yabai -m window --space 3; skhd -k "alt - 3"
+shift + alt - 4 : yabai -m window --space 4; skhd -k "alt - 4"
+shift + alt - 5 : yabai -m window --space 5; skhd -k "alt - 5"
+
+# resize windows
+
+# grow
+default, float < alt - y : yabai -m window --resize left:-50:0
+default, float < alt - u : yabai -m window --resize bottom:0:50
+default, float < alt - i : yabai -m window --resize top:0:-50
+default, float < alt - o : yabai -m window --resize right:50:0
+
+# shrink
+default, float < alt - n : yabai -m window --resize left:50:0
+default, float < alt - m : yabai -m window --resize bottom:0:-50
+default, float < alt - 0x2B : yabai -m window --resize top:0:50
+default, float < alt - 0x2F : yabai -m window --resize right:-50:0
+
+alt - a : [ "$(yabai -m config auto_balance)" == 'on' ] && yabai -m config auto_balance off || { yabai -m config auto_balance on; yabai -m space --balance; }
+
+# split
+alt - e : yabai -m window --toggle split
+alt - v : yabai -m window --insert south
+alt - b : yabai -m window --insert east
+
+# float / unfloat window
+default, stack < alt - f : yabai -m window --toggle float && yabai -m window --grid 30:5:1:1:3:28
