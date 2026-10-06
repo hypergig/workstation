@@ -148,8 +148,7 @@ function install_defaults {
     set -x +e
     cd -
 
-    defaults delete com.apple.dock expose-animation-duration
-    defaults delete com.apple.dock expose-group-apps
+    defaults delete com.apple.dock
     defaults delete com.apple.spaces spans-displays
     defaults delete NSGlobalDomain AppleActionOnDoubleClick
     defaults delete NSGlobalDomain AppleSpacesSwitchOnActivate
@@ -165,6 +164,7 @@ function install_defaults {
     defaults write com.apple.dock autohide-delay -float 1000
     defaults write com.apple.dock autohide-time-modifier -float 0
     defaults write com.apple.dock mru-spaces -bool false
+    defaults write com.apple.dock static-only -bool true
     defaults write com.apple.finder CreateDesktop -bool false
     defaults write com.apple.universalaccess reduceMotion -bool true
     defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
