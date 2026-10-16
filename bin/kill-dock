@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+set -euo pipefail
+
+event="${1:-no event}"
+
+echo $$ >/tmp/kill-dock.pid
+sleep 3
+if [ "$(</tmp/kill-dock.pid)" = "$$" ]; then
+    echo "$(date) - ${event} - killing dock"
+    killall Dock
+else
+    echo "$(date) - ${event} - someone else is killing the dock"
+fi
