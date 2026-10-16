@@ -96,6 +96,13 @@ function brew_bundle {
     hash -r
 }
 
+function jamf_recon() (
+    if which -s jamf; then
+        set -x
+        sudo jamf recon
+    fi
+)
+
 function dot_files {
     local links=(
         "config/.bash_profile ${HOME}/.bash_profile"
@@ -192,6 +199,7 @@ operations=(
     workstation_repo
     setup_vars
     brew_bundle
+    jamf_recon
     dot_files
     setup_shell
     set_desktop_background
